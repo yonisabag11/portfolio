@@ -56,7 +56,7 @@
 </template>
 
 <script setup>
-import { ref, computed, inject, watch } from 'vue'
+import { ref, computed, inject, watch, onUnmounted } from 'vue'
 import { useLocaleStore } from '@/stores/localeStore'
 import WindowMinimize from '../components/Buttons/WindowMinimize.vue'
 import WindowMaximize from '../components/Buttons/WindowMaximize.vue'
@@ -117,9 +117,26 @@ watch(
   }
 )
 
-// App size constants
-const appHeight = window.innerHeight - 32
-const appWidth = window.innerWidth
+// Responsive breakpoints
+const getBreakpoint = () => {
+  const width = window.innerWidth
+  if (width < 375) return 'xxs'
+  if (width < 640) return 'xs'
+  if (width < 768) return 'sm'
+  if (width < 1024) return 'md'
+  if (width < 1280) return 'lg'
+  return 'xl'
+}
+
+// App size constants with reactive updates
+const appHeight = ref(window.innerHeight - 32)
+const appWidth = ref(window.innerWidth)
+
+// Update app dimensions on resize
+const updateAppDimensions = () => {
+  appHeight.value = window.innerHeight - 32
+  appWidth.value = window.innerWidth
+}
 
 // Dragging window constants
 const isDragging = ref(false)
@@ -131,9 +148,35 @@ let lastUpdateTimestamp = 0
 // Window resizing constants
 const maximized = ref(false)
 
+// Calculate responsive initial dimensions
+const calculateResponsiveSize = () => {
+  const breakpoint = getBreakpoint()
+  const isMobile = window.innerWidth <= 768
+  
+  if (isMobile) {
+    return {
+      width: window.innerWidth,
+      height: window.innerHeight - 32
+    }
+  }
+  
+  // Scale window size based on viewport for tablets and small screens
+  const widthScale = Math.min(1, window.innerWidth / 1280)
+  const heightScale = Math.min(1, window.innerHeight / 900)
+  const scale = Math.min(widthScale, heightScale)
+  
+  return {
+    width: Math.min(initWidth, window.innerWidth - 40) * scale,
+    height: Math.min(initHeight, window.innerHeight - 72) * scale
+  }
+}
+
 // Window position and size
-const windowSize = { width: initWidth, height: initHeight }
-const windowPosition = ref({ x: initPositionX, y: initPositionY })
+const windowSize = calculateResponsiveSize()
+const windowPosition = ref({ 
+  x: Math.max(0, Math.min(initPositionX, window.innerWidth - windowSize.width)), 
+  y: Math.max(0, Math.min(initPositionY, window.innerHeight - windowSize.height - 32))
+})
 const windowWidth = ref(windowSize.width)
 const windowHeight = ref(windowSize.height)
 const windowTransform = ref(`translate(${windowPosition.value.x}px, ${windowPosition.value.y}px)`)
@@ -147,25 +190,35 @@ const highestZIndex = inject('highestZIndex')
 
 /**
  * Window style added to window component.
- * If maximized or mobile, window will take up the whole screen else it will take the size of the window json
+ * Responsive on all devices with proper scaling
  */
 const windowStyle = computed(() => {
-  const isMobile = window.innerWidth <= 768 // Mobile breakpoint pixel value
-  const sizeStyle =
-    maximized.value || isMobile
-      ? {
-          width: '100vw',
-          height: 'calc(100dvh - 2rem)',
-          top: '0',
-          left: '0'
-        }
-      : {
-          width: `${windowWidth.value}px`,
-          height: `${windowHeight.value}px`,
-          transform: windowTransform.value
-        }
+  const isMobile = window.innerWidth <= 768
+  const isTablet = window.innerWidth <= 1024 && window.innerWidth > 768
+  
+  if (maximized.value || isMobile) {
+    return {
+      width: '100vw',
+      height: 'calc(100dvh - 2rem)',
+      top: '0',
+      left: '0',
+      minWidth: 'auto',
+      minHeight: 'auto'
+    }
+  }
+  
+  // On tablet and desktop, use calculated dimensions with constraints
+  const maxWidth = Math.min(windowWidth.value, appWidth.value - 20)
+  const maxHeight = Math.min(windowHeight.value, appHeight.value - 20)
+  
   return {
-    ...sizeStyle
+    width: `${maxWidth}px`,
+    height: `${maxHeight}px`,
+    transform: windowTransform.value,
+    minWidth: `${Math.min(minWidth, appWidth.value)}px`,
+    minHeight: `${Math.min(minHeight, appHeight.value)}px`,
+    maxWidth: `${appWidth.value}px`,
+    maxHeight: `${appHeight.value}px`
   }
 })
 
@@ -272,17 +325,17 @@ const resizeWindow = (event) => {
 
     if (resizeDirection.value === 'right') {
       let newWidth = initialWindowSize.value.width + deltaX
-      newWidth = Math.min(newWidth, appWidth)
+      newWidth = Math.min(newWidth, appWidth.value)
       windowWidth.value = newWidth < minWidth ? minWidth : newWidth
     } else if (resizeDirection.value === 'bottom') {
       let newHeight = initialWindowSize.value.height + deltaY
-      newHeight = Math.min(newHeight, appHeight)
+      newHeight = Math.min(newHeight, appHeight.value)
       windowHeight.value = newHeight < minHeight ? minHeight : newHeight
     } else if (resizeDirection.value === 'corner') {
       let newWidth = initialWindowSize.value.width + deltaX
       let newHeight = initialWindowSize.value.height + deltaY
-      newWidth = Math.min(newWidth, appWidth)
-      newHeight = Math.min(newHeight, appHeight)
+      newWidth = Math.min(newWidth, appWidth.value)
+      newHeight = Math.min(newHeight, appHeight.value)
       windowWidth.value = newWidth < minWidth ? minWidth : newWidth
       windowHeight.value = newHeight < minHeight ? minHeight : newHeight
     }
@@ -291,6 +344,47 @@ const resizeWindow = (event) => {
     windowTransform.value = `translate(${windowPosition.value.x}px, ${windowPosition.value.y}px)`
   }
 }
+
+// Handle window resize events
+const handleWindowResize = () => {
+  updateAppDimensions()
+  
+  const isMobile = window.innerWidth <= 768
+  
+  if (isMobile && !maximized.value) {
+    // Auto-maximize on mobile for better UX
+    maximized.value = true
+  }
+  
+  // Ensure window stays within viewport bounds
+  if (!maximized.value) {
+    const responsiveSize = calculateResponsiveSize()
+    windowWidth.value = Math.min(windowWidth.value, responsiveSize.width)
+    windowHeight.value = Math.min(windowHeight.value, responsiveSize.height)
+    
+    // Adjust position if window is now outside viewport
+    windowPosition.value.x = Math.max(0, Math.min(windowPosition.value.x, appWidth.value - windowWidth.value))
+    windowPosition.value.y = Math.max(0, Math.min(windowPosition.value.y, appHeight.value - windowHeight.value))
+    windowTransform.value = `translate(${windowPosition.value.x}px, ${windowPosition.value.y}px)`
+  }
+}
+
+// Add resize listener
+if (typeof window !== 'undefined') {
+  window.addEventListener('resize', handleWindowResize)
+}
+
+// Cleanup on unmount
+onUnmounted(() => {
+  if (typeof window !== 'undefined') {
+    window.removeEventListener('resize', handleWindowResize)
+  }
+  // Clean up drag and resize listeners if still active
+  document.removeEventListener('mouseup', stopDrag)
+  document.removeEventListener('mousemove', dragWindow)
+  document.removeEventListener('mouseup', stopResize)
+  document.removeEventListener('mousemove', resizeWindow)
+})
 </script>
 
 <style scoped>

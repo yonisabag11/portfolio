@@ -1,6 +1,9 @@
 <template>
   <MetaUpdater />
-  <section class="h-svh w-screen overflow-hidden bg-office-pic bg-no-repeat bg-cover bg-center relative" @mousedown="handleOutsideClick">
+  <section 
+    class="h-svh w-screen overflow-hidden bg-office-pic bg-no-repeat bg-cover bg-center relative touch-manipulation" 
+    @mousedown="handleOutsideClick"
+  >
     <Header
       v-if="showHeader"
       :entities="entities"
@@ -56,6 +59,19 @@
     <Footer :entities="windows" @toggle-header="toggleHeader" @toggle-window="handleWindowClick" />
   </section>
 </template>
+
+<style scoped>
+.touch-manipulation {
+  touch-action: manipulation;
+}
+
+/* Ensure proper scrolling on mobile */
+@media (max-width: 768px) {
+  section {
+    overscroll-behavior: none;
+  }
+}
+</style>
 
 <script setup>
 import { ref, shallowRef, provide, onMounted, onUnmounted } from 'vue'

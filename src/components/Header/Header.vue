@@ -1,20 +1,20 @@
 <template>
   <header class="header-component select-none">
-    <div class="absolute left-0 header-radius overflow-hidden bottom-0 mb-8 modal-size z-max bg-color-blue-window">
+    <div class="absolute left-0 sm:left-2 header-radius overflow-hidden bottom-0 mb-8 modal-size z-max bg-color-blue-window touch-manipulation">
       <div class="w-full h-full relative overflow-hidden">
-        <div class="h-16 flex items-center px-2 header-top-background">
-          <ProfilePicture class="w-11 h-11 stroke-white-1 header-profile-shadow" />
-          <h2 class="text-lg ml-2 text-white text-shadow-header">Yoni Sabag</h2>
+        <div class="h-12 sm:h-16 flex items-center px-2 header-top-background">
+          <ProfilePicture class="w-8 h-8 sm:w-11 sm:h-11 stroke-white-1 header-profile-shadow" />
+          <h2 class="text-sm sm:text-lg ml-2 text-white text-shadow-header truncate">Yoni Sabag</h2>
         </div>
         <section class="relative w-full h-full px-0.5">
           <hr class="absolute top-0 left-0 right-0 bg-orange-hr block" />
-          <div class="w-full h-full flex">
-            <div class="w-7/12 h-full bg-white px-1 py-1">
+          <div class="w-full h-full flex flex-col sm:flex-row">
+            <div class="w-full sm:w-7/12 h-1/2 sm:h-full bg-white px-1 py-1 overflow-y-auto">
               <div v-for="entity in localEntities" :key="entity.id">
-                <div v-if="entity.headerPosition === 'left'" class="flex flex-col gap-3 py-2">
+                <div v-if="entity.headerPosition === 'left'" class="flex flex-col gap-2 sm:gap-3 py-1 sm:py-2">
                   <HeaderLeftButton @toggle-button="toggleWindow" :buttonName="entity.id">
                     <template #img>
-                      <img :src="entity.imgSrc" :alt="$t('common.icon') + ' ' + getLocalizedTitle(entity)" />
+                      <img :src="entity.imgSrc" :alt="$t('common.icon') + ' ' + getLocalizedTitle(entity)" class="w-6 h-6 sm:w-8 sm:h-8" />
                     </template>
                     <template #title>
                       {{ getLocalizedTitle(entity) }}
@@ -26,13 +26,13 @@
                 </div>
               </div>
             </div>
-            <div class="w-1/2 h-full bg-color-blue-header-left left-blue-header-1 px-1">
-              <div class="py-2">
+            <div class="w-full sm:w-1/2 h-1/2 sm:h-full bg-color-blue-header-left left-blue-header-1 px-1 overflow-y-auto">
+              <div class="py-1 sm:py-2">
                 <div v-for="entity in localEntities" :key="entity.id">
                   <div v-if="entity.headerPosition === 'right'">
-                    <HeaderRightButton @toggle-button="toggleWindow" :buttonName="entity.id" class="cursor-pointer">
+                    <HeaderRightButton @toggle-button="toggleWindow" :buttonName="entity.id" class="cursor-pointer min-h-[44px]">
                       <template #img>
-                        <img :src="entity.iconSrc" :alt="getLocalizedTitle(entity)" />
+                        <img :src="entity.iconSrc" :alt="getLocalizedTitle(entity)" class="w-6 h-6 sm:w-8 sm:h-8" />
                       </template>
                       <template #text> {{ getLocalizedTitle(entity) }}</template>
                     </HeaderRightButton>
@@ -42,11 +42,11 @@
             </div>
           </div>
         </section>
-        <div class="absolute bottom-0 h-12 w-full">
+        <div class="absolute bottom-0 h-10 sm:h-12 w-full">
           <div class="header-bot-background h-full flex justify-end items-center">
-            <div class="flex h-5/6 gap-3 mr-2">
-              <HeaderDisconnect @click="turnOffHeader" class="cursor-pointer" />
-              <HeaderShutdown @click="shutdown" class="cursor-pointer" />
+            <div class="flex h-5/6 gap-2 sm:gap-3 mr-2">
+              <HeaderDisconnect @click="turnOffHeader" class="cursor-pointer touch-target" />
+              <HeaderShutdown @click="shutdown" class="cursor-pointer touch-target" />
             </div>
           </div>
         </div>
@@ -113,21 +113,48 @@ const getLocalizedSubtitle = (entity) => {
 }
 
 .modal-size {
-  width: 430px;
-  height: 530px;
+  width: min(430px, 95vw);
+  height: min(530px, 85vh);
+  max-width: 430px;
+  max-height: 85vh;
 }
 
-@media (max-width: 768px) {
+.touch-manipulation {
+  touch-action: manipulation;
+}
+
+/* Extra small devices (phones, less than 375px) */
+@media (max-width: 374px) {
   .modal-size {
-    width: 300px;
-    height: 410px;
+    width: 100vw;
+    height: 70vh;
+    left: 0 !important;
+    bottom: 2rem !important;
+    border-radius: 0;
   }
 }
 
-@media (min-height: 750px) and (max-width: 768px) {
+/* Small devices (phones, 375px to 640px) */
+@media (min-width: 375px) and (max-width: 640px) {
   .modal-size {
-    width: 320px;
-    height: 450px;
+    width: min(340px, 95vw);
+    height: min(480px, 80vh);
+  }
+}
+
+/* Medium devices (tablets, 641px to 768px) */
+@media (min-width: 641px) and (max-width: 768px) {
+  .modal-size {
+    width: min(400px, 90vw);
+    height: min(500px, 85vh);
+  }
+}
+
+/* Landscape mode on phones */
+@media (max-height: 500px) and (orientation: landscape) {
+  .modal-size {
+    width: min(350px, 45vw);
+    height: 90vh;
   }
 }
 </style>

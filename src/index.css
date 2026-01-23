@@ -1,3 +1,176 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Responsive utilities for flexible layouts */
+@layer utilities {
+  /* Prevent text overflow on small screens */
+  .text-responsive {
+    @apply text-xs sm:text-sm md:text-base;
+  }
+  
+  /* Flexible container that maintains aspect ratio */
+  .aspect-maintain {
+    @apply w-full h-auto;
+  }
+  
+  /* Touch-friendly minimum sizes */
+  .touch-target {
+    @apply min-h-[44px] min-w-[44px];
+  }
+  
+  /* Flexible spacing that scales with viewport */
+  .space-responsive {
+    @apply space-y-2 sm:space-y-3 md:space-y-4;
+  }
+  
+  /* Ensure content is always visible */
+  .safe-area {
+    @apply px-2 py-2 sm:px-4 sm:py-3 md:px-6 md:py-4;
+  }
+  
+  /* Aspect ratio utilities */
+  .aspect-16-9 {
+    aspect-ratio: 16 / 9;
+  }
+  
+  .aspect-4-3 {
+    aspect-ratio: 4 / 3;
+  }
+  
+  .aspect-square {
+    aspect-ratio: 1 / 1;
+  }
+  
+  /* Flexible font sizes */
+  .text-fluid-sm {
+    font-size: clamp(0.75rem, 2vw, 0.875rem);
+  }
+  
+  .text-fluid-base {
+    font-size: clamp(0.875rem, 2.5vw, 1rem);
+  }
+  
+  .text-fluid-lg {
+    font-size: clamp(1rem, 3vw, 1.125rem);
+  }
+  
+  .text-fluid-xl {
+    font-size: clamp(1.125rem, 4vw, 1.25rem);
+  }
+  
+  /* Container queries for responsive components */
+  .container-responsive {
+    container-type: inline-size;
+  }
+  
+  /* Flexible grid layouts */
+  .grid-auto-fit {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+  
+  .grid-auto-fill {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  }
+}
+
+/* Make sure all interactive elements are touch-friendly */
+@media (hover: none) and (pointer: coarse) {
+  button, a, .cursor-pointer {
+    @apply min-h-[44px] min-w-[44px];
+  }
+}
+
+/* Prevent zoom on input focus for iOS */
+@media screen and (max-width: 768px) {
+  input[type="text"],
+  input[type="email"],
+  input[type="tel"],
+  textarea {
+    font-size: 16px;
+  }
+}
+
+/* Smooth scrolling for all elements */
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+/* Better touch scrolling on iOS */
+body {
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior-y: none;
+}
+
+/* Responsive images and media */
+img, video, canvas, svg {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Prevent layout shifts */
+* {
+  box-sizing: border-box;
+}
+
+/* Better focus visibility for accessibility */
+*:focus-visible {
+  outline: 2px solid #0B61FF;
+  outline-offset: 2px;
+}
+
+/* Optimize for touch devices */
+@media (pointer: coarse) {
+  /* Larger hit areas for touch */
+  button, a, [role="button"] {
+    padding: 0.5rem 1rem;
+  }
+  
+  /* Disable hover effects on touch devices */
+  button:hover, a:hover {
+    opacity: 1;
+  }
+}
+
+/* Responsive breakpoint utilities */
+@media (max-width: 374px) {
+  .hide-on-tiny {
+    display: none !important;
+  }
+}
+
+@media (min-width: 375px) and (max-width: 639px) {
+  .hide-on-xs {
+    display: none !important;
+  }
+}
+
+@media (min-width: 640px) and (max-width: 767px) {
+  .hide-on-sm {
+    display: none !important;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .hide-on-md {
+    display: none !important;
+  }
+}
+
+/* Landscape mode optimizations */
+@media (orientation: landscape) and (max-height: 500px) {
+  .landscape-compact {
+    font-size: 0.75rem;
+    padding: 0.25rem;
+  }
+}
+
+/* Print styles */
+@media print {
+  * {
+    background: white !important;
+    color: black !important;
+  }
+}

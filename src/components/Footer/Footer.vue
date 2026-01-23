@@ -1,14 +1,20 @@
 <template>
   <footer>
     <div class="absolute bottom-0 footer-gradient shadow-footer w-full z-max">
-      <div class="h-8 flex items-center">
-        <div class="flex items-center h-full overflow-hidden">
-          <StartButton @click="toggleHeader" />
-          <div class="flex w-10/12 h-full ml-px sm:ml-2 sm:gap-0.5">
-            <PelletApp v-for="entity in entities" :key="entity.id" :entity="entity" @toggle-window="toggleWindow" class="flex-shrink" />
+      <div class="h-8 flex items-center touch-manipulation">
+        <div class="flex items-center h-full overflow-hidden flex-1 min-w-0">
+          <StartButton @click="toggleHeader" class="flex-shrink-0" />
+          <div class="flex flex-1 h-full ml-px sm:ml-2 gap-0.5 overflow-x-auto overflow-y-hidden scrollbar-hide">
+            <PelletApp 
+              v-for="entity in entities" 
+              :key="entity.id" 
+              :entity="entity" 
+              @toggle-window="toggleWindow" 
+              class="flex-shrink-0" 
+            />
           </div>
         </div>
-        <FooterRight />
+        <FooterRight class="flex-shrink-0" />
       </div>
     </div>
   </footer>
@@ -36,3 +42,20 @@ const props = defineProps({
   }
 })
 </script>
+
+<style scoped>
+/* Hide scrollbar but allow scrolling on mobile */
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+/* Better touch interaction */
+.touch-manipulation {
+  touch-action: manipulation;
+}
+</style>
