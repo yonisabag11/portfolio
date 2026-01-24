@@ -1,5 +1,33 @@
 [
   {
+    "id": "myCV",
+    "title": {
+      "en": "My CV",
+      "he": "קורות החיים שלי"
+    },
+    "subtitle": {
+      "en": "See the curriculum vitae",
+      "he": "ראה את קורות החיים"
+    },
+    "imgSrc": "/img/icons/cv/cv-icon-lg.webp",
+    "onDesktop": true,
+    "resizable": true,
+    "windowsHeaderLogo": true,
+    "isSearchVisible": true,
+    "headerPosition": "left",
+    "headerToolsId": "default",
+    "menuHeaderItemsId": "default",
+    "iconSrc": "/img/icons/cv/cv-icon-sm.webp",
+    "initPositionX": 240,
+    "initPositionY": 180,
+    "initWidth": 385,
+    "initHeight": 500,
+    "minWidth": 200,
+    "minHeight": 160,
+    "component": "MyCV",
+    "leftMenuType": ""
+  },
+  {
     "id": "myProjects",
     "title": {
       "en": "My Projects",
@@ -56,31 +84,27 @@
     "leftMenuType": ""
   },
   {
-    "id": "myCV",
+    "id": "notepad",
     "title": {
-      "en": "My CV",
-      "he": "קורות החיים שלי"
+      "en": "Notepad",
+      "he": "פנקס רשימות"
     },
-    "subtitle": {
-      "en": "See the curriculum vitae",
-      "he": "ראה את קורות החיים"
-    },
-    "imgSrc": "/img/icons/cv/cv-icon-lg.webp",
+    "imgSrc": "/img/icons/notepad/notepad-icon-lg.webp",
     "onDesktop": true,
     "resizable": true,
-    "windowsHeaderLogo": true,
+    "windowsHeaderLogo": false,
     "isSearchVisible": true,
-    "headerPosition": "left",
-    "headerToolsId": "default",
-    "menuHeaderItemsId": "default",
-    "iconSrc": "/img/icons/cv/cv-icon-sm.webp",
-    "initPositionX": 240,
-    "initPositionY": 180,
-    "initWidth": 385,
-    "initHeight": 500,
+    "headerPosition": "right",
+    "headerToolsId": "",
+    "menuHeaderItemsId": "notepad",
+    "iconSrc": "/img/icons/notepad/notepad-icon-sm.webp",
+    "initPositionX": 110,
+    "initPositionY": 480,
+    "initWidth": 230,
+    "initHeight": 270,
     "minWidth": 200,
     "minHeight": 160,
-    "component": "MyCV",
+    "component": "Notepad",
     "leftMenuType": ""
   },
   {
@@ -105,6 +129,58 @@
     "minWidth": 450,
     "minHeight": 166,
     "component": "Music",
+    "leftMenuType": ""
+  },
+  {
+    "id": "minesweeper",
+    "title": {
+      "en": "Minesweeper",
+      "he": "שולה מוקשים"
+    },
+    "imgSrc": "/img/icons/minesweeper/minesweeper-icon-lg.webp",
+    "onDesktop": true,
+    "resizable": false,
+    "windowsHeaderLogo": false,
+    "isSearchVisible": true,
+    "headerPosition": "right",
+    "headerToolsId": "",
+    "menuHeaderItemsId": "minesweeper",
+    "iconSrc": "/img/icons/minesweeper/minesweeper-icon-sm.webp",
+    "initPositionX": 160,
+    "initPositionY": 270,
+    "initWidth": 205,
+    "initHeight": 305,
+    "minWidth": 205,
+    "minHeight": 305,
+    "component": "Minesweeper",
+    "leftMenuType": ""
+  },
+  {
+    "id": "doom",
+    "title": {
+      "en": "Doom",
+      "he": "Doom"
+    },
+    "subtitle": {
+      "en": "Play doom thanks to js-dos",
+      "he": "שחק Doom בזכות js-dos"
+    },
+    "imgSrc": "/img/icons/doom/doom-icon-lg.webp",
+    "onDesktop": true,
+    "resizable": true,
+    "windowsHeaderLogo": false,
+    "isSearchVisible": true,
+    "headerPosition": "left",
+    "headerToolsId": "",
+    "menuHeaderItemsId": "none",
+    "iconSrc": "/img/icons/doom/doom-icon-sm.webp",
+    "initPositionX": 190,
+    "initPositionY": 310,
+    "initWidth": 660,
+    "initHeight": 500,
+    "minWidth": 200,
+    "minHeight": 160,
+    "component": "Doom",
     "leftMenuType": ""
   },
   {
@@ -177,82 +253,6 @@
     "minWidth": 200,
     "minHeight": 160,
     "component": "Calendar",
-    "leftMenuType": ""
-  },
-  {
-    "id": "minesweeper",
-    "title": {
-      "en": "Minesweeper",
-      "he": "שולה מוקשים"
-    },
-    "imgSrc": "/img/icons/minesweeper/minesweeper-icon-lg.webp",
-    "onDesktop": true,
-    "resizable": false,
-    "windowsHeaderLogo": false,
-    "isSearchVisible": true,
-    "headerPosition": "right",
-    "headerToolsId": "",
-    "menuHeaderItemsId": "minesweeper",
-    "iconSrc": "/img/icons/minesweeper/minesweeper-icon-sm.webp",
-    "initPositionX": 160,
-    "initPositionY": 270,
-    "initWidth": 205,
-    "initHeight": 305,
-    "minWidth": 205,
-    "minHeight": 305,
-    "component": "Minesweeper",
-    "leftMenuType": ""
-  },
-  {
-    "id": "notepad",
-    "title": {
-      "en": "Notepad",
-      "he": "פנקס רשימות"
-    },
-    "imgSrc": "/img/icons/notepad/notepad-icon-lg.webp",
-    "onDesktop": true,
-    "resizable": true,
-    "windowsHeaderLogo": false,
-    "isSearchVisible": true,
-    "headerPosition": "right",
-    "headerToolsId": "",
-    "menuHeaderItemsId": "notepad",
-    "iconSrc": "/img/icons/notepad/notepad-icon-sm.webp",
-    "initPositionX": 110,
-    "initPositionY": 480,
-    "initWidth": 230,
-    "initHeight": 270,
-    "minWidth": 200,
-    "minHeight": 160,
-    "component": "Notepad",
-    "leftMenuType": ""
-  },
-  {
-    "id": "doom",
-    "title": {
-      "en": "Doom",
-      "he": "Doom"
-    },
-    "subtitle": {
-      "en": "Play doom thanks to js-dos",
-      "he": "שחק Doom בזכות js-dos"
-    },
-    "imgSrc": "/img/icons/doom/doom-icon-lg.webp",
-    "onDesktop": true,
-    "resizable": true,
-    "windowsHeaderLogo": false,
-    "isSearchVisible": true,
-    "headerPosition": "left",
-    "headerToolsId": "",
-    "menuHeaderItemsId": "none",
-    "iconSrc": "/img/icons/doom/doom-icon-sm.webp",
-    "initPositionX": 190,
-    "initPositionY": 310,
-    "initWidth": 660,
-    "initHeight": 500,
-    "minWidth": 200,
-    "minHeight": 160,
-    "component": "Doom",
     "leftMenuType": ""
   },
   {
