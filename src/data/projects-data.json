@@ -100,20 +100,23 @@
     },
     {
       "name": {
-        "en": "Servers",
-        "he": "שרתים"
+        "en": "Football",
+        "he": "כדורגל"
       },
       "projects": [
         {
-          "name": "Homeserver",
+          "name": {
+            "en": "Football Clips",
+            "he": "קטעי כדורגל"
+          },
           "icon": "projects/homeserver-icon.webp",
           "title": {
-            "en": "Application server & NAS",
-            "he": "שרת אפליקציות & NAS"
+            "en": "Football in the USA",
+            "he": "כדורגל בארצות הברית"
           },
           "date": {
-            "en": "2023 - Current",
-            "he": "2023 - נוכחי"
+            "en": "2021-2025",
+            "he": "2021-2025"
           },
           "componentName": "HomeserverContent",
           "isFocus": false,

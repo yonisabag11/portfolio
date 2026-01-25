@@ -35,7 +35,7 @@
             <div class="flex justify-between items-center md:gap-8 gap-8">
               <div class="relative inline-block text-left text-white md:text-xl text-sm">
                 <div @click="toggleDropdown" class="flex items-center md:gap-3 gap-2 cursor-pointer">
-                  <img :src="flagSrc" :alt="$t('alt.currLang') + ' ' + localeNames[currentLocale]" class="md:w-12 w-9" />
+                  <img :src="flagSrc" :alt="$t('alt.currLang') + ' ' + localeNames[currentLocale]" class="md:w-9 md:h-5 w-22 h-22 object-cover" />
                   <button class="inline-flex justify-center items-center w-full focus:outline-none font-franklin">
                     {{ localeNames[currentLocale] }}
                     <svg class="mr-1 md:ml-2 md:h-5 md:w-5 h-3 w-3 ml-px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
@@ -48,15 +48,16 @@
                   </button>
                 </div>
 
-                <div v-if="dropdownOpen" class="origin-top-right absolute md:-right-14 -right-9 w-full">
-                  <div role="menu" aria-orientation="vertical" aria-labelledby="options-menu">
+                <div v-if="dropdownOpen" class="absolute left-0 mt-2">
+                  <div role="menu" aria-orientation="vertical" aria-labelledby="options-menu" class="bg-color-load-header-blue rounded shadow-lg">
                     <a
                       v-for="locale in filteredLocales"
                       :key="locale"
                       @click="changeLocale(locale)"
-                      class="block md:py-2 py-1.5 md:text-base md:ml-0 ml-0.5 text-xs cursor-pointer"
+                      class="flex items-center md:gap-3 gap-2 md:py-2 py-1.5 cursor-pointer hover:bg-opacity-80 font-franklin"
                     >
-                      {{ localeNames[locale] }}
+                      <img :src="`/img/icons/langs/flag-${locale}.webp`" :alt="localeNames[locale]" class="md:w-8 md:h-4.5 w-22 h-22 object-cover" />
+                      <span class="md:text-xl text-sm">{{ localeNames[locale] }}</span>
                     </a>
                   </div>
                 </div>

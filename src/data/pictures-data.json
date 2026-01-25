@@ -2,43 +2,108 @@
   "pictures": [
     {
       "id": 1,
-      "title": "colette.jpeg",
-      "url": "/img/icons/pictures/carroussel/colette.webp"
+      "title": "1ST_PACK!.webp",
+      "url": "/img/icons/pictures/carroussel/1ST_PACK!.webp"
     },
     {
       "id": 2,
-      "title": "paris.png",
-      "url": "/img/icons/pictures/carroussel/paris.webp"
+      "title": "Autumn.webp",
+      "url": "/img/icons/pictures/carroussel/Autumn.webp"
     },
     {
       "id": 3,
-      "title": "rennes.jpg",
-      "url": "/img/icons/pictures/carroussel/rennes.webp"
+      "title": "Baseball1.webp",
+      "url": "/img/icons/pictures/carroussel/Baseball1.webp"
     },
     {
       "id": 4,
-      "title": "lorient.jpg",
-      "url": "/img/icons/pictures/carroussel/lorient.webp"
+      "title": "Baseball2.webp",
+      "url": "/img/icons/pictures/carroussel/Baseball2.webp"
     },
     {
       "id": 5,
-      "title": "berlin.png",
-      "url": "/img/icons/pictures/carroussel/berlin.webp"
+      "title": "Dead_Sea1.webp",
+      "url": "/img/icons/pictures/carroussel/Dead_Sea1.webp"
     },
     {
       "id": 6,
-      "title": "gdansk.jpg",
-      "url": "/img/icons/pictures/carroussel/gdansk.webp"
+      "title": "Dead_Sea2.webp",
+      "url": "/img/icons/pictures/carroussel/Dead_Sea2.webp"
     },
     {
       "id": 7,
-      "title": "poznan.jpeg",
-      "url": "/img/icons/pictures/carroussel/poznan.webp"
+      "title": "Degree.webp",
+      "url": "/img/icons/pictures/carroussel/Degree.webp"
     },
     {
       "id": 8,
-      "title": "warszawa.gif",
-      "url": "/img/icons/pictures/carroussel/warszawa.webp"
+      "title": "Fall.webp",
+      "url": "/img/icons/pictures/carroussel/Fall.webp"
+    },
+    {
+      "id": 9,
+      "title": "Geese.webp",
+      "url": "/img/icons/pictures/carroussel/Geese.webp"
+    },
+    {
+      "id": 10,
+      "title": "Goose.webp",
+      "url": "/img/icons/pictures/carroussel/Goose.webp"
+    },
+    {
+      "id": 11,
+      "title": "Greece1.webp",
+      "url": "/img/icons/pictures/carroussel/Greece1.webp"
+    },
+    {
+      "id": 12,
+      "title": "Greece2.webp",
+      "url": "/img/icons/pictures/carroussel/Greece2.webp"
+    },
+    {
+      "id": 13,
+      "title": "Katydid.webp",
+      "url": "/img/icons/pictures/carroussel/Katydid.webp"
+    },
+    {
+      "id": 14,
+      "title": "Picaso.webp",
+      "url": "/img/icons/pictures/carroussel/Picaso.webp"
+    },
+    {
+      "id": 15,
+      "title": "Portugal1.webp",
+      "url": "/img/icons/pictures/carroussel/Portugal1.webp"
+    },
+    {
+      "id": 16,
+      "title": "Portugal2.webp",
+      "url": "/img/icons/pictures/carroussel/Portugal2.webp"
+    },
+    {
+      "id": 17,
+      "title": "Portugal3.webp",
+      "url": "/img/icons/pictures/carroussel/Portugal3.webp"
+    },
+    {
+      "id": 18,
+      "title": "Spring.webp",
+      "url": "/img/icons/pictures/carroussel/Spring.webp"
+    },
+    {
+      "id": 19,
+      "title": "Summer.webp",
+      "url": "/img/icons/pictures/carroussel/Summer.webp"
+    },
+    {
+      "id": 20,
+      "title": "Tommy.webp",
+      "url": "/img/icons/pictures/carroussel/Tommy.webp"
+    },
+    {
+      "id": 21,
+      "title": "🗿.webp",
+      "url": "/img/icons/pictures/carroussel/🗿.webp"
     }
   ]
 }

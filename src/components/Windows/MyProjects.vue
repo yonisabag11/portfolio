@@ -105,6 +105,14 @@ const localizedDate = computed(() => {
   return goBackStore.currentActiveProject?.date[localeStore.currentLocale] || goBackStore.currentActiveProject?.date['en']
 })
 
+// Computed property to get the localized project name
+const getLocalizedProjectName = (project) => {
+  if (typeof project.name === 'object') {
+    return project.name[localeStore.currentLocale] || project.name['en']
+  }
+  return project.name
+}
+
 // Watch for changes in currentActiveProject
 watch(
   () => goBackStore.currentActiveProject,
@@ -171,7 +179,7 @@ window.addEventListener('click', (e) => {
                 color: project.isFocus ? 'white' : 'black'
               }"
             >
-              {{ project.name }}
+              {{ getLocalizedProjectName(project) }}
             </p>
           </div>
         </div>
