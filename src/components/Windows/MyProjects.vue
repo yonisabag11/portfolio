@@ -12,6 +12,7 @@ import PangaiaContent from '@/components/Windows/MyProjects/PangaiaContent.vue'
 import FannyContent from './MyProjects/FannyContent.vue'
 import Emc2Content from './MyProjects/Emc2Content.vue'
 import AidellaContent from './MyProjects/AidellaContent.vue'
+import DiscreteMathEscapeRoomContent from './MyProjects/DiscreteMathEscapeRoomContent.vue'
 
 const props = defineProps({
   leftMenuType: String
@@ -37,11 +38,9 @@ const state = reactive({
 })
 
 const focusProject = (project) => {
-  if (project.isFocus) {
-    return
-  }
-
-  project.isFocus = !project.isFocus
+  // Don't prevent re-focusing the same project
+  // This allows single-click to work properly
+  project.isFocus = true
 
   categories.value.forEach((category) => {
     category.projects.forEach((p) => {
@@ -80,7 +79,8 @@ const componentMap = {
   PangaiaContent,
   Emc2Content,
   FannyContent,
-  AidellaContent
+  AidellaContent,
+  DiscreteMathEscapeRoomContent
 }
 
 // Computed property that returns the component object based on the componentName of the selected project

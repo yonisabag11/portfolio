@@ -95,6 +95,21 @@
           "componentName": "FannyContent",
           "isFocus": false,
           "isActive": false
+        },
+        {
+          "name": "Discrete Math Escape Room",
+          "icon": "projects/folder-discrete-math-escape-room-icon.webp",
+          "title": {
+            "en": "Discrete Math Escape Room - Educational Game",
+            "he": "חדר בריחה למתמטיקה בדידה - משחק חינוכי"
+          },
+          "date": {
+            "en": "September 2025 - December 2025",
+            "he": "ספטמבר 2025 - דצמבר 2025"
+          },
+          "componentName": "DiscreteMathEscapeRoomContent",
+          "isFocus": false,
+          "isActive": false
         }
       ]
     },
@@ -105,10 +120,7 @@
       },
       "projects": [
         {
-          "name": {
-            "en": "Football Clips",
-            "he": "קטעי כדורגל"
-          },
+          "name": "Football Clips",
           "icon": "projects/homeserver-icon.webp",
           "title": {
             "en": "Football in the USA",

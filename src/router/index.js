@@ -23,11 +23,11 @@ const router = createRouter({
           {
             name: 'description',
             content:
-              "Discover the portfolio of Yoni Sabag, passionate game developer and web developer. Creator of games like Doom and Minesweeper, and web applications."
+              "Discover the portfolio of Yoni Sabag, passionate game developer and web developer. Creator of games like Maze Escape and Discrete Math Escape Room, and web applications."
           },
           {
             name: 'keywords',
-            content: 'portfolio, yoni sabag, game developer, web developer, doom, minesweeper, games, web applications'
+            content: 'portfolio, yoni sabag, game developer, web developer, maze escape, discrete math, games, web applications, itch.io'
           },
           {
             name: 'author',
@@ -68,7 +68,7 @@ const router = createRouter({
           {
             name: 'twitter:description',
             content:
-              "Discover the portfolio of Yoni Sabag, passionate game developer and web developer. Creator of games like Doom and Minesweeper, and web applications."
+              "Discover the portfolio of Yoni Sabag, passionate game developer and web developer. Creator of games like Maze Escape and Discrete Math Escape Room, and web applications."
           },
           {
             name: 'twitter:image',
@@ -89,7 +89,7 @@ const router = createRouter({
           {
             property: 'og:description',
             content:
-              "Discover the portfolio of Yoni Sabag, passionate game developer and web developer. Creator of games like Doom and Minesweeper, and web applications."
+              "Discover the portfolio of Yoni Sabag, passionate game developer and web developer. Creator of games like Maze Escape and Discrete Math Escape Room, and web applications."
           },
           {
             property: 'og:site_name',
@@ -136,11 +136,11 @@ const router = createRouter({
           {
             name: 'description',
             content:
-              "Discover the office of Yoni Sabag, passionate game developer and web developer. Creator of games like Doom and Minesweeper, and web applications."
+              "Discover the office of Yoni Sabag, passionate game developer and web developer. Creator of games like Maze Escape and Discrete Math Escape Room, and web applications."
           },
           {
             name: 'keywords',
-            content: 'office, yoni sabag, game developer, web developer, doom, minesweeper, games, web applications'
+            content: 'office, yoni sabag, game developer, web developer, maze escape, discrete math, games, web applications, itch.io'
           },
           {
             name: 'author',
@@ -181,7 +181,7 @@ const router = createRouter({
           {
             name: 'twitter:description',
             content:
-              "Discover the office of Yoni Sabag, passionate game developer and web developer. Creator of games like Doom and Minesweeper, and web applications."
+              "Discover the office of Yoni Sabag, passionate game developer and web developer. Creator of games like Maze Escape and Discrete Math Escape Room, and web applications."
           },
           {
             name: 'twitter:image',
@@ -202,7 +202,7 @@ const router = createRouter({
           {
             name: 'og:description',
             content:
-              "Discover the office of Yoni Sabag, passionate game developer and web developer. Creator of games like Doom and Minesweeper, and web applications."
+              "Discover the office of Yoni Sabag, passionate game developer and web developer. Creator of games like Maze Escape and Discrete Math Escape Room, and web applications."
           },
           {
             name: 'og:site_name',

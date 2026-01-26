@@ -132,40 +132,40 @@
     "leftMenuType": ""
   },
   {
-    "id": "minesweeper",
+    "id": "discreteMath",
     "title": {
-      "en": "Minesweeper",
-      "he": "שולה מוקשים"
+      "en": "Discrete Math Escape Room",
+      "he": "חדר בריחה מתמטיקה בדידה"
     },
-    "imgSrc": "/img/icons/minesweeper/minesweeper-icon-lg.webp",
+    "imgSrc": "/img/icons/discrete-math/discrete-math-icon-lg.webp",
     "onDesktop": true,
-    "resizable": false,
+    "resizable": true,
     "windowsHeaderLogo": false,
     "isSearchVisible": true,
     "headerPosition": "right",
     "headerToolsId": "",
-    "menuHeaderItemsId": "minesweeper",
-    "iconSrc": "/img/icons/minesweeper/minesweeper-icon-sm.webp",
+    "menuHeaderItemsId": "discreteMath",
+    "iconSrc": "/img/icons/discrete-math/discrete-math-icon-sm.webp",
     "initPositionX": 160,
     "initPositionY": 270,
-    "initWidth": 205,
-    "initHeight": 305,
-    "minWidth": 205,
-    "minHeight": 305,
-    "component": "Minesweeper",
+    "initWidth": 660,
+    "initHeight": 400,
+    "minWidth": 400,
+    "minHeight": 300,
+    "component": "DiscreteMath",
     "leftMenuType": ""
   },
   {
-    "id": "doom",
+    "id": "mazeEscape",
     "title": {
-      "en": "Doom",
-      "he": "Doom"
+      "en": "Maze Escape",
+      "he": "בריחה מהמבוך"
     },
     "subtitle": {
-      "en": "Play doom thanks to js-dos",
-      "he": "שחק Doom בזכות js-dos"
+      "en": "Play Maze Escape on itch.io",
+      "he": "שחק בריחה מהמבוך ב-itch.io"
     },
-    "imgSrc": "/img/icons/doom/doom-icon-lg.webp",
+    "imgSrc": "/img/icons/maze-escape/maze-escape-icon-lg.webp",
     "onDesktop": true,
     "resizable": true,
     "windowsHeaderLogo": false,
@@ -173,14 +173,14 @@
     "headerPosition": "left",
     "headerToolsId": "",
     "menuHeaderItemsId": "none",
-    "iconSrc": "/img/icons/doom/doom-icon-sm.webp",
+    "iconSrc": "/img/icons/maze-escape/maze-escape-icon-sm.webp",
     "initPositionX": 190,
     "initPositionY": 310,
     "initWidth": 660,
     "initHeight": 500,
     "minWidth": 200,
     "minHeight": 160,
-    "component": "Doom",
+    "component": "MazeEscape",
     "leftMenuType": ""
   },
   {
