@@ -13,6 +13,10 @@ import FannyContent from './MyProjects/FannyContent.vue'
 import Emc2Content from './MyProjects/Emc2Content.vue'
 import AidellaContent from './MyProjects/AidellaContent.vue'
 import DiscreteMathEscapeRoomContent from './MyProjects/DiscreteMathEscapeRoomContent.vue'
+import MazeEscapeContent from './MyProjects/MazeEscapeContent.vue'
+import NourishNetContent from './MyProjects/NourishNetContent.vue'
+import GameAssetAiAgentContent from './MyProjects/GameAssetAiAgentContent.vue'
+import PortfolioXPContent from './MyProjects/PortfolioXPContent.vue'
 
 const props = defineProps({
   leftMenuType: String
@@ -80,7 +84,11 @@ const componentMap = {
   Emc2Content,
   FannyContent,
   AidellaContent,
-  DiscreteMathEscapeRoomContent
+  DiscreteMathEscapeRoomContent,
+  MazeEscapeContent,
+  NourishNetContent,
+  GameAssetAiAgentContent,
+  PortfolioXPContent
 }
 
 // Computed property that returns the component object based on the componentName of the selected project
@@ -107,10 +115,7 @@ const localizedDate = computed(() => {
 
 // Computed property to get the localized project name
 const getLocalizedProjectName = (project) => {
-  if (typeof project.name === 'object') {
-    return project.name[localeStore.currentLocale] || project.name['en']
-  }
-  return project.name
+  return project.title[localeStore.currentLocale] || project.title['en']
 }
 
 // Watch for changes in currentActiveProject

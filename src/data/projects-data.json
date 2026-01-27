@@ -97,17 +97,93 @@
           "isActive": false
         },
         {
+          "name": "Game Asset AI Agent",
+          "icon": "projects/folder-game-asset-ai-agent-icon.webp",
+          "title": {
+            "en": "Game Asset AI Agent - Web Application",
+            "he": "Game Asset AI Agent - אפליקציית אינטרנט"
+          },
+          "date": {
+            "en": "January 2026",
+            "he": "ינואר 2026"
+          },
+          "componentName": "GameAssetAiAgentContent",
+          "isFocus": false,
+          "isActive": false
+        },
+        {
+          "name": "PortfolioXP",
+          "icon": "projects/folder-logo-portfolio-black-icon.webp",
+          "title": {
+            "en": "PortfolioXP - Interactive Portfolio Website",
+            "he": "PortfolioXP - תיק עבודות אינטראקטיבי"
+          },
+          "date": {
+            "en": "2023 - 2026",
+            "he": "2023 - 2026"
+          },
+          "componentName": "PortfolioXPContent",
+          "isFocus": false,
+          "isActive": false
+        }
+      ]
+    },
+    {
+      "name": {
+        "en": "Games",
+        "he": "משחקים"
+      },
+      "projects": [
+        {
           "name": "Discrete Math Escape Room",
           "icon": "projects/folder-discrete-math-escape-room-icon.webp",
           "title": {
-            "en": "Discrete Math Escape Room - Educational Game",
-            "he": "חדר בריחה למתמטיקה בדידה - משחק חינוכי"
+            "en": "Discrete Math Escape Room",
+            "he": "חדר בריחה למתמטיקה בדידה"
           },
           "date": {
             "en": "September 2025 - December 2025",
             "he": "ספטמבר 2025 - דצמבר 2025"
           },
           "componentName": "DiscreteMathEscapeRoomContent",
+          "isFocus": false,
+          "isActive": false
+        },
+        {
+          "name": "Maze Escape",
+          "icon": "projects/folder-maze-escape.webp",
+          "title": {
+            "en": "Maze Escape",
+            "he": "בריחה מהמבוך"
+          },
+          "date": {
+            "en": "Fall 2024",
+            "he": "סתיו 2024"
+          },
+          "componentName": "MazeEscapeContent",
+          "isFocus": false,
+          "isActive": false
+        }
+      ]
+    },
+    {
+      "name": {
+        "en": "Mobile Apps",
+        "he": "אפליקציות מובייל"
+      },
+      "projects": [
+        {
+          "name": "NourishNet",
+          "icon": "projects/folder-nourishnet-icon.webp",
+          "title": {
+            "en": "NourishNet - Mobile Application",
+            "he": "NourishNet - אפליקציית מובייל"
+          },
+          "date": {
+            "en": "November 2025 - December 2025",
+            "he": "נובמבר 2025 - דצמבר 2025"
+          },
+          "componentName": "NourishNetContent",
           "isFocus": false,
           "isActive": false
         }

@@ -67,15 +67,15 @@ Use this template structure (based on Discrete Math Escape Room example)
 **Naming**: `[ComponentName]Content.vue`
 
 **⚠️ CRITICAL - Template Wrapper:**
-- **MUST use `<div>` as the wrapper**, NOT `<section>`
-- The website link button (if present) must be positioned **outside the main `<div>` but inside `<template>`**
+- **MUST use `<section>` as the wrapper**, NOT `<div>`
+- The website link button (if present) must be positioned **outside the main `<section>` but inside `<template>`**
 - This structure is required for proper rendering and click detection
 
 Use this template structure:
 
 ```vue
 <template>
-  <div class="text-xs md:text-header-window">
+  <section class="text-xs md:text-header-window">
     <!-- Tools/Technologies Section -->
     <div class="flex w-full text-xs items-center justify-center md:justify-start ml-px flex-wrap gap-4 md:min-w-80 md:ml-1">
       <div class="flex flex-col items-center flex-wrap">
@@ -130,8 +130,8 @@ Use this template structure:
         <img src="/img/projects/[ProjectFolderName]/[image-name].webp" :alt="ProjectName + ' - Preview'" class="w-full rounded-lg shadow-lg" />
       </div>
     </div>
-  </div>
-  <!-- NOTE: Website button is OUTSIDE the main div but INSIDE template -->
+  </section>
+  <!-- NOTE: Website button is OUTSIDE the main section but INSIDE template -->
   <a rel="noopener" href="https://project-url.com" target="_blank"
     class="absolute bottom-2 right-1 md:right-6 h-6 text-xxs border border-twilight-blue bg-button-submit rounded-sm leading-loose px-3 hover:shadow-button-submit-hover cursor-pointer active:bg-button-clicked flex items-center justify-center">
     <img src="/img/icons/projects/tools/web.svg" :alt="'View website ' + ProjectName" class="w-3 h-3 mr-0.5" />
@@ -145,14 +145,59 @@ let ProjectName = 'Your Project Name';
 ```
 
 **Component Structure Rules:**
-1. Main wrapper MUST be `<div>`, not `<section>`
-2. Website link button (if needed) goes AFTER the closing `</div>` but BEFORE `</template>`
+1. Main wrapper MUST be `<section>`, not `<div>`
+2. Website link button (if needed) goes AFTER the closing `</section>` but BEFORE `</template>`
 3. Button uses `position: absolute` to stay at bottom-right
-4. If no website button needed, just close with `</div></template>`
+4. If no website button needed, just close with `</section></template>`
+
+**⚠️ IMPORTANT - Don't Forget:**
+1. **Design/Preview Section**: Always add a design section with at least a placeholder image (can use the project icon)
+   - Use `/img/icons/projects/folder-[project-name].webp` as placeholder initially
+   - Replace with actual screenshots when available in `/img/projects/[ProjectFolderName]/`
+2. **Website Button**: Include the website button at bottom-right even if using a placeholder URL
+   - Update the href to actual URL when project is live
+   - Remove entirely if project has no website
+3. **Name Translation**: Remember that `name` is a simple string for click detection, while `title` handles all display translations
+   - Project cards display the `title` property (which has translations)
+   - Internal click handling uses `name` property (simple string only)
 
 ---
 
-### 5. Add Translations
+### 5. Register Component in MyProjects.vue
+
+**⚠️ CRITICAL STEP - Component won't load without this!**
+
+**File**: `src/components/Windows/MyProjects.vue`
+
+You must add two things:
+
+1. **Import the component** at the top:
+```javascript
+import GameAssetAiAgentContent from './MyProjects/GameAssetAiAgentContent.vue'
+```
+
+2. **Add to componentMap** object:
+```javascript
+const componentMap = {
+  HomeserverContent,
+  ClenchContent,
+  LogmaContent,
+  PangaiaContent,
+  Emc2Content,
+  FannyContent,
+  AidellaContent,
+  DiscreteMathEscapeRoomContent,
+  MazeEscapeContent,
+  NourishNetContent,
+  GameAssetAiAgentContent  // <- Add your component here
+}
+```
+
+**Why this is needed**: The componentMap is used to dynamically load components based on the `componentName` in `projects-data.json`. Without this registration, Vue won't know which component to render.
+
+---
+
+### 6. Add Translations
 
 Add translations for all three languages under the `"project"` object. Use a descriptive key (e.g., "discreteMath", "aidella", "pangaia").
 
@@ -258,8 +303,8 @@ Check the `tools/` folder for all available icons.
   - [ ] Context (3 paragraphs)
   - [ ] Objectives (6 items)
   - [ ] Tasks Done (4 subsections with titles and details)
-  - [ ] Images/design section (if applicable)
-  - [ ] Website button positioned **outside `</div>` but inside `</template>`** (if applicable)
+  - [ ] ⚠️ **Design section with preview image** (use icon as placeholder: `/img/icons/projects/folder-[name].webp`)
+  - [ ] ⚠️ **Website button positioned outside `</div>` but inside `</template>`** (use placeholder URL initially)
 - [ ] English translations added to `src/locales/en.json` under `"project.[projectKey]"`
 - [ ] Hebrew translations added to `src/locales/he.json` under `"project.[projectKey]"`
 - [ ] French translations added to `src/locales/fr.json` under `"project.[projectKey]"`
@@ -271,7 +316,12 @@ Check the `tools/` folder for all available icons.
 ## Important Notes & Tips
 
 ### 1. **⚠️ CRITICAL: Project Name Structure**
-   - The `name` field in `projects-data.json` **MUST be a simple STRING**
+   - The `name` field in `projects-data.json` **MUST be a simple STRING**, not an object
+   - ❌ **WRONG**: `"name": {"en": "My Project", "he": "הפרויקט שלי"}`
+   - ✅ **CORRECT**: `"name": "My Project"`
+   - The `name` is used for internal click detection only
+   - Display translations come from the `title` field (which has `en`, `he`, `fr` objects)
+   - When language is switched, project cards display the translated `title`, not the `name`
 ### 2. **⚠️ CRITICAL: Component Template Structure**
    - Main wrapper **MUST be `<div>`**, not `<section>`
    - ❌ **WRONG**: `<template><section>...</section></template>`
@@ -287,10 +337,12 @@ Check the `tools/` folder for all available icons.
    - Use descriptive, unique keys for each project (e.g., "discreteMath", not "project1")
    - Keep consistent structure across all three language files (en, he, fr)
 
-### 5. **Component Content Structure**
+### 6. **Component Content Structure - Required Sections**
    - Always include 3 context paragraphs
    - Always include 6 objectives
    - Include 4 task subsections (each with title and details)
+   - **Always include design/preview section** with image (use icon as placeholder)
+   - **Always include website button** at bottom-right (use placeholder URL, remove only if truly no website)
    - Use consistent class names and styling as shown in the template
 
 ### 6. **Image Paths**
@@ -303,12 +355,15 @@ Check the `tools/` folder for all available icons.
 ### 8. **Optional Sections**
    Common Mistakes to Avoid
 
-1. ❌ **Using object for `name`** - Will break click detection
+1. ❌ **Using object for `name`** - Will break click detection and prevent translations from showing
+   - The `title` field provides translations, not `name`
 2. ❌ **Using `<section>` wrapper** - Will cause rendering issues
 3. ❌ **Placing button inside main div** - Will interfere with scrolling
 4. ❌ **Forgetting to add component to `componentMap`** - Component won't load
 5. ❌ **Inconsistent translation keys** - Will show missing translation warnings
 6. ❌ **Wrong icon path format** - Icons won't display in project list
+7. ❌ **Forgetting design/preview section** - Projects look incomplete without images
+8. ❌ **Not adding website button** - Consider adding with placeholder URL even if not live yet
 
 ---
 
