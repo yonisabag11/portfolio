@@ -4,7 +4,7 @@
       <div class="w-full h-full relative overflow-hidden">
         <div class="h-12 sm:h-16 flex items-center px-2 header-top-background">
           <ProfilePicture class="w-8 h-8 sm:w-11 sm:h-11 stroke-white-1 header-profile-shadow" />
-          <h2 class="text-sm sm:text-lg ml-2 text-white text-shadow-header truncate">Yoni Sabag</h2>
+          <h2 class="text-sm sm:text-lg ml-2 text-white text-shadow-header truncate">{{ displayName }}</h2>
         </div>
         <section class="relative w-full h-full px-0.5">
           <hr class="absolute top-0 left-0 right-0 bg-orange-hr block" />
@@ -56,7 +56,7 @@
 </template>
 
 <script setup>
-import { ref, watchEffect } from 'vue'
+import { ref, computed, watchEffect } from 'vue'
 import { useVolumeStore } from '@/stores/volumeStore.js'
 import { useLocaleStore } from '@/stores/localeStore'
 
@@ -81,6 +81,10 @@ const localEntities = ref([...props.entities])
 
 watchEffect(() => {
   localEntities.value = [...props.entities]
+})
+
+const displayName = computed(() => {
+  return localeStore.currentLocale === 'he' ? 'יוני סבג' : 'Yoni Sabag'
 })
 
 const turnOffHeader = () => {

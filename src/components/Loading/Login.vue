@@ -14,8 +14,8 @@
               </div>
             </div>
             <div class="w-full flex justify-end">
-              <div class="w-10/12 mr-12">
-                <h2 class="text-white text-lg text-right">
+              <div class="w-2/3">
+                <h2 class="text-white text-lg" :class="localeStore.currentLocale === 'he' ? 'text-right' : 'text-left'">
                   {{ $t('message.toBegin') }}
                 </h2>
               </div>
@@ -35,9 +35,9 @@
             <div class="flex justify-between items-center md:gap-8 gap-8">
               <div class="relative inline-block text-left text-white md:text-xl text-sm">
                 <div @click="toggleDropdown" class="flex items-center md:gap-3 gap-2 cursor-pointer">
-                  <img :src="flagSrc" :alt="$t('alt.currLang') + ' ' + localeNames[currentLocale]" class="md:w-9 md:h-5 w-22 h-22 object-cover" />
+                  <img :src="flagSrc" :alt="$t('alt.currLang') + ' ' + localeNames[localeStore.currentLocale]" class="md:w-9 md:h-5 w-22 h-22 object-cover" />
                   <button class="inline-flex justify-center items-center w-full focus:outline-none font-franklin">
-                    {{ localeNames[currentLocale] }}
+                    {{ localeNames[localeStore.currentLocale] }}
                     <svg class="mr-1 md:ml-2 md:h-5 md:w-5 h-3 w-3 ml-px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                       <path
                         fill-rule="evenodd"
@@ -76,12 +76,14 @@
 </template>
 
 <script setup>
-import { ref, computed, watch } from 'vue'
+import { ref, computed, onMounted } from 'vue'
 import { useI18n } from 'vue-i18n'
+import { useLocaleStore } from '@/stores/localeStore'
 import LoginForm from '@/components/Loading/LoginForm.vue'
 import ContentCenter from '@/layouts/ContentCenter.vue'
 
 const { locale } = useI18n()
+const localeStore = useLocaleStore()
 const dropdownOpen = ref(false)
 const locales = ['en', 'he']
 const localeNames = {
@@ -89,21 +91,13 @@ const localeNames = {
   he: 'עברית'
 }
 
-// Initialize currentLocale from localStorage if it exists, otherwise use the default locale
-const storedLocale = localStorage.getItem('currentLocale')
-const currentLocale = ref(storedLocale || locale.value)
-
-// Set the initial locale value
-locale.value = currentLocale.value
-
-// Watch for changes in currentLocale and update localStorage and locale.value
-watch(currentLocale, (newLocale) => {
-  localStorage.setItem('currentLocale', newLocale)
-  locale.value = newLocale
+// Ensure i18n locale is synced with localeStore on mount
+onMounted(() => {
+  locale.value = localeStore.currentLocale
 })
 
 const flagSrc = computed(() => {
-  return `/img/icons/langs/flag-${currentLocale.value}.webp`
+  return `/img/icons/langs/flag-${localeStore.currentLocale}.webp`
 })
 
 const toggleDropdown = () => {
@@ -111,11 +105,12 @@ const toggleDropdown = () => {
 }
 
 const changeLocale = (newLocale) => {
-  currentLocale.value = newLocale
+  locale.value = newLocale
+  localeStore.setLocale(newLocale)
   dropdownOpen.value = false
 }
 
 const filteredLocales = computed(() => {
-  return locales.filter((l) => l !== currentLocale.value)
+  return locales.filter((l) => l !== localeStore.currentLocale)
 })
 </script>

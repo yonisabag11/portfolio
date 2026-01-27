@@ -134,7 +134,7 @@ window.addEventListener('click', (e) => {
       <div class="m-2">
         <div class="w-full gap-4 mb-3">
           <h2 class="text-lg md:text-xl">{{ localizedTitle }}</h2>
-          <div class="flex items-center text-sm gap-0.5 mt-1" v-if="goBackStore.currentActiveProject.date">
+          <div class="flex items-center text-sm gap-0.5 mt-1" :class="{ 'flex-row-reverse': localeStore.currentLocale === 'he' }" v-if="goBackStore.currentActiveProject.date">
             <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24">
               <path
                 fill="#000000"
@@ -152,17 +152,22 @@ window.addEventListener('click', (e) => {
     <div v-else class="flex flex-col w-full h-full bg-white overflow-auto pt-0.5">
       <div v-for="category in categories" :key="category.name" class="relative group mb-3">
         <h1 class="text-xs font-semibold px-3">{{ getLocalizedCategoryName(category) }}</h1>
-        <div class="absolute left-[-12px] top-5 w-80 h-px bg-gradient-to-r from-blue-300 to-white"></div>
+        <div 
+          class="absolute top-5 w-80 h-px"
+          :class="[
+            localeStore.currentLocale === 'he' ? 'right-[-12px] bg-gradient-to-l from-blue-300 to-white' : 'left-[-12px] bg-gradient-to-r from-blue-300 to-white'
+          ]"
+        ></div>
 
         <!-- Content for the projects -->
-        <div class="flex flex-wrap gap-2 pt-2 md:pt-3 pb-3 w-full">
+        <div class="flex flex-wrap gap-2 pt-2 md:pt-3 pb-3 w-full" :class="{ 'flex-row-reverse': localeStore.currentLocale === 'he' }">
           <div
             v-for="project in category.projects"
             :key="project.name"
             @click="focusProject(project)"
             @dblclick="toggleProject(project)"
             class="flex items-center px-4 pb-2 gap-2.5 cursor-pointer project-card"
-            :class="{ active: project.isFocus }"
+            :class="{ active: project.isFocus, 'flex-row-reverse': localeStore.currentLocale === 'he' }"
           >
             <img :src="'/img/icons/' + project.icon" :alt="$t('alt.project')" class="w-10 h-10" :style="{ opacity: project.isFocus ? 0.5 : 1 }" />
             <p

@@ -174,3 +174,79 @@ img, video, canvas, svg {
     color: black !important;
   }
 }
+
+/* RTL (Right-to-Left) support for Hebrew - Text direction and alignment */
+[data-lang="he"] p,
+[data-lang="he"] span:not(.flex):not(.inline-flex):not(.grid):not(.inline-grid),
+[data-lang="he"] h1,
+[data-lang="he"] h2,
+[data-lang="he"] h3,
+[data-lang="he"] h4,
+[data-lang="he"] h5,
+[data-lang="he"] h6,
+[data-lang="he"] li,
+[data-lang="he"] label,
+[data-lang="he"] a,
+[data-lang="he"] td,
+[data-lang="he"] th,
+[data-lang="he"] div.text-content,
+[data-lang="he"] ul,
+[data-lang="he"] ol {
+  direction: rtl;
+  text-align: right;
+}
+
+/* LTR (Left-to-Right) for English - Text direction and alignment */
+[data-lang="en"] p,
+[data-lang="en"] span:not(.flex):not(.inline-flex):not(.grid):not(.inline-grid),
+[data-lang="en"] h1,
+[data-lang="en"] h2,
+[data-lang="en"] h3,
+[data-lang="en"] h4,
+[data-lang="en"] h5,
+[data-lang="en"] h6,
+[data-lang="en"] li,
+[data-lang="en"] label,
+[data-lang="en"] a,
+[data-lang="en"] td,
+[data-lang="en"] th,
+[data-lang="en"] div.text-content,
+[data-lang="en"] ul,
+[data-lang="en"] ol {
+  direction: ltr;
+  text-align: left;
+}
+
+/* Keep centered text centered */
+[data-lang="he"] .text-center,
+[data-lang="en"] .text-center {
+  text-align: center !important;
+}
+
+/* RTL support for tech stack icons in project details */
+[data-lang="he"] .project-tech-stack {
+  flex-direction: row-reverse;
+}
+
+
+/* Fix bullet points in Hebrew to appear on the right */
+[data-lang="he"] ul {
+  padding-right: 2rem;
+  padding-left: 0;
+}
+
+[data-lang="he"] ol {
+  padding-right: 2rem;
+  padding-left: 0;
+}
+
+/* Keep English bullets on the left */
+[data-lang="en"] ul {
+  padding-left: 2rem;
+  padding-right: 0;
+}
+
+[data-lang="en"] ol {
+  padding-left: 2rem;
+  padding-right: 0;
+}

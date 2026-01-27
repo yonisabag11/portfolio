@@ -25,6 +25,11 @@ const i18n = createI18n({
   }
 })
 
+// Set initial language attribute
+const savedLocale = localStorage.getItem('currentLocale') || 'en'
+document.documentElement.setAttribute('lang', savedLocale)
+document.documentElement.setAttribute('data-lang', savedLocale)
+
 app.use(pinia)
 app.use(router)
 app.use(head)

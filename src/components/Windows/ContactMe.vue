@@ -1,11 +1,13 @@
 <script setup>
 import { ref, watch } from 'vue'
 import { useI18n } from 'vue-i18n'
+import { useLocaleStore } from '@/stores/localeStore'
 
 import emailjs from 'emailjs-com'
 import Button from '../Buttons/Button.vue'
 
 const { t } = useI18n()
+const localeStore = useLocaleStore()
 const userEmail = ref('')
 const emailSubject = ref('')
 const userMessage = ref('')
@@ -188,15 +190,17 @@ watch([userEmail, userMessage, emailSubject], ([newUserEmail, newUserMessage, ne
     </div>
     <!-- Main content -->
     <div class="flex flex-col w-full h-content-contact bg-white overflow-auto gap-2 font-trebuchet-pixel">
-      <div class="m-2">
-        <div class="max-w-prose">
+      <div class="m-2 flex-1 flex flex-col">
+        <div class="flex-1 w-full">
           <textarea
             v-model="userMessage"
-            class="w-full h-40 border border-input-blue p-2 text-xs outline-none"
+            class="w-full h-full min-h-40 border border-input-blue p-2 text-xs outline-none resize-none"
+            :class="{ 'text-right': localeStore.currentLocale === 'he' }"
             :placeholder="$t('windows.contact.msgPlaceholder')"
+            :dir="localeStore.currentLocale === 'he' ? 'rtl' : 'ltr'"
           ></textarea>
         </div>
-        <p class="text-xs font-trebuchet-pixel italic mb-2">
+        <p class="text-xs font-trebuchet-pixel italic mb-2 mt-2">
           {{ $t('windows.contact.description') }}
         </p>
         <div class="flex gap-2 items-center">

@@ -8,7 +8,7 @@
       frameborder="0"
       class="w-full h-full"
     >
-      <a href="https://misterchopy.itch.io/maze-escape">Play Maze Escape on itch.io</a>
+      Play Maze Escape on itch.io
     </iframe>
   </div>
 </template>

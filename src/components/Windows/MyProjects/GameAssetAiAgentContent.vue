@@ -1,6 +1,6 @@
 <template>
   <section class="text-xs md:text-header-window">
-    <div class="flex w-full text-xs items-center justify-center md:justify-start ml-px flex-wrap gap-4 md:min-w-80 md:ml-1">
+    <div class="flex w-full text-xs items-center justify-center md:justify-start ml-px flex-wrap gap-4 md:min-w-80 md:ml-1 project-tech-stack">
       <div class="flex flex-col items-center flex-wrap">
         <img src="/img/icons/projects/tools/react.svg" :alt="$t('common.icon') + ' React'" class="w-9 h-9" />
         <p class="font-bold mt-px">React</p>

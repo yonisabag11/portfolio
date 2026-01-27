@@ -8,7 +8,7 @@
       frameborder="0"
       class="w-full h-full"
     >
-      <a href="https://misterchopy.itch.io/discrete-math-escape-room">Play Discrete Math Escape Room on itch.io</a>
+      Play Discrete Math Escape Room on itch.io
     </iframe>
   </div>
 </template>

@@ -1,5 +1,4 @@
 import { defineStore } from 'pinia'
-import { useI18n } from 'vue-i18n'
 
 export const useLocaleStore = defineStore('locale', {
   state: () => ({
@@ -9,8 +8,10 @@ export const useLocaleStore = defineStore('locale', {
     setLocale(newLocale) {
       this.currentLocale = newLocale
       localStorage.setItem('currentLocale', newLocale)
-      const { locale } = useI18n()
-      locale.value = newLocale
+      
+      // Set language attribute and data attribute for text direction
+      document.documentElement.setAttribute('lang', newLocale)
+      document.documentElement.setAttribute('data-lang', newLocale)
     }
   }
 })
