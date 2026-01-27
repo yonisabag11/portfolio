@@ -6,12 +6,6 @@ import { useGoBackStore } from '@/stores/goBackStore'
 import projectData from '@/data/projects-data.json'
 import WindowLeftMenu from '@/components/Windows/WindowLeftMenu.vue'
 import HomeserverContent from '@/components/Windows/MyProjects/HomeserverContent.vue'
-import ClenchContent from '@/components/Windows/MyProjects/ClenchContent.vue'
-import LogmaContent from '@/components/Windows/MyProjects/LogmaContent.vue'
-import PangaiaContent from '@/components/Windows/MyProjects/PangaiaContent.vue'
-import FannyContent from './MyProjects/FannyContent.vue'
-import Emc2Content from './MyProjects/Emc2Content.vue'
-import AidellaContent from './MyProjects/AidellaContent.vue'
 import DiscreteMathEscapeRoomContent from './MyProjects/DiscreteMathEscapeRoomContent.vue'
 import MazeEscapeContent from './MyProjects/MazeEscapeContent.vue'
 import NourishNetContent from './MyProjects/NourishNetContent.vue'
@@ -78,12 +72,6 @@ const closeAllProjects = () => {
 // Map of component names to component objects
 const componentMap = {
   HomeserverContent,
-  ClenchContent,
-  LogmaContent,
-  PangaiaContent,
-  Emc2Content,
-  FannyContent,
-  AidellaContent,
   DiscreteMathEscapeRoomContent,
   MazeEscapeContent,
   NourishNetContent,

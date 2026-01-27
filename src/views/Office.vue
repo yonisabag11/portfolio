@@ -107,7 +107,7 @@ const localeStore = useLocaleStore()
 
 onMounted(() => {
   // Ensure the localeStore is updated with the correct locale from localStorage
-  const storedLocale = localStorage.getItem('currentLocale') || 'fr'
+  const storedLocale = localStorage.getItem('currentLocale') || 'en'
   localeStore.setLocale(storedLocale)
 
   windowsStore.loadState()

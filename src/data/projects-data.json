@@ -7,101 +7,11 @@
       },
       "projects": [
         {
-          "name": "Logma Production",
-          "icon": "projects/folder-logma-icon.webp",
-          "title": {
-            "en": "Logma Production - Showcase website",
-            "he": "Logma Production - אתר תדמית"
-          },
-          "date": {
-            "en": "2023 - 2 months",
-            "he": "2023 - חודשיים"
-          },
-          "componentName": "LogmaContent",
-          "isFocus": false,
-          "isActive": false
-        },
-        {
-          "name": "Pangaia",
-          "icon": "projects/folder-pangaia-icon.webp",
-          "title": {
-            "en": "Pangaia - Web Application",
-            "he": "Pangaia - אפליקציית אינטרנט"
-          },
-          "date": {
-            "en": "2023 - Current",
-            "he": "2023 - נוכחי"
-          },
-          "componentName": "PangaiaContent",
-          "isFocus": false,
-          "isActive": false
-        },
-        {
-          "name": "Clench",
-          "icon": "projects/folder-clench-icon.webp",
-          "title": {
-            "en": "Clench - Web Application",
-            "he": "Clench - אפליקציית אינטרנט"
-          },
-          "date": {
-            "en": "2024 - 1 weeks",
-            "he": "2024 - שבוע אחד"
-          },
-          "componentName": "ClenchContent",
-          "isFocus": false,
-          "isActive": false
-        },
-        {
-          "name": "EMC2 (ScreenUp)",
-          "icon": "projects/folder-emc2-icon.webp",
-          "title": {
-            "en": "L'EMC2 - Wordpress website (ScreenUp)",
-            "he": "L'EMC2 - אתר Wordpress (ScreenUp)"
-          },
-          "date": {
-            "en": "2024 - 1 month",
-            "he": "2024 - חודש אחד"
-          },
-          "componentName": "Emc2Content",
-          "isFocus": false,
-          "isActive": false
-        },
-        {
-          "name": "Aidella",
-          "icon": "projects/folder-aidella-icon.webp",
-          "title": {
-            "en": "Les Terres d'Aidella - Blog website",
-            "he": "Les Terres d'Aidella - בלוג"
-          },
-          "date": {
-            "en": "2025 - 3 weeks",
-            "he": "2025 - 3 שבועות"
-          },
-          "componentName": "AidellaContent",
-          "isFocus": false,
-          "isActive": false
-        },
-        {
-          "name": "Portfolio Fanny",
-          "icon": "projects/folder-fanny-icon.webp",
-          "title": {
-            "en": "Fanny Séraudie - Portfolio website",
-            "he": "Fanny Séraudie - תיק עבודות"
-          },
-          "date": {
-            "en": "2025 - 2 weeks",
-            "he": "2025 - שבועיים"
-          },
-          "componentName": "FannyContent",
-          "isFocus": false,
-          "isActive": false
-        },
-        {
           "name": "Game Asset AI Agent",
           "icon": "projects/folder-game-asset-ai-agent-icon.webp",
           "title": {
-            "en": "Game Asset AI Agent - Web Application",
-            "he": "Game Asset AI Agent - אפליקציית אינטרנט"
+            "en": "Game Asset AI Agent",
+            "he": "סוכן AI לנכסי משחק"
           },
           "date": {
             "en": "January 2026",
@@ -112,11 +22,26 @@
           "isActive": false
         },
         {
+          "name": "NourishNet",
+          "icon": "projects/folder-nourishnet-icon.webp",
+          "title": {
+            "en": "NourishNet",
+            "he": "NourishNet"
+          },
+          "date": {
+            "en": "November 2025 - December 2025",
+            "he": "נובמבר 2025 - דצמבר 2025"
+          },
+          "componentName": "NourishNetContent",
+          "isFocus": false,
+          "isActive": false
+        },
+        {
           "name": "PortfolioXP",
           "icon": "projects/folder-logo-portfolio-black-icon.webp",
           "title": {
-            "en": "PortfolioXP - Interactive Portfolio Website",
-            "he": "PortfolioXP - תיק עבודות אינטראקטיבי"
+            "en": "PortfolioXP",
+            "he": "PortfolioXP"
           },
           "date": {
             "en": "2023 - 2026",
@@ -161,29 +86,6 @@
             "he": "סתיו 2024"
           },
           "componentName": "MazeEscapeContent",
-          "isFocus": false,
-          "isActive": false
-        }
-      ]
-    },
-    {
-      "name": {
-        "en": "Mobile Apps",
-        "he": "אפליקציות מובייל"
-      },
-      "projects": [
-        {
-          "name": "NourishNet",
-          "icon": "projects/folder-nourishnet-icon.webp",
-          "title": {
-            "en": "NourishNet - Mobile Application",
-            "he": "NourishNet - אפליקציית מובייל"
-          },
-          "date": {
-            "en": "November 2025 - December 2025",
-            "he": "נובמבר 2025 - דצמבר 2025"
-          },
-          "componentName": "NourishNetContent",
           "isFocus": false,
           "isActive": false
         }

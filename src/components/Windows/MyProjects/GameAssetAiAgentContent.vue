@@ -68,7 +68,7 @@
         <h3 class="mb-2">{{ $t('common.design') }}</h3>
       </div>
       <div class="w-full max-w-[750px] mb-2">
-        <img src="/img/icons/projects/folder-game-asset-ai-agent-icon.webp" :alt="ProjectName + ' - Preview'" class="w-full rounded-lg shadow-lg" />
+        <img src="/img/projects/GameAssetAiAgent/game-asset-ai-agent-preview.webp" :alt="ProjectName + ' - Preview'" class="w-full rounded-lg shadow-lg" />
       </div>
     </div>
   </section>

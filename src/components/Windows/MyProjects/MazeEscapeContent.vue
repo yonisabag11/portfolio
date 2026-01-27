@@ -56,7 +56,7 @@
         <h3 class="mb-2">{{ $t('common.design') }}</h3>
       </div>
       <div class="w-full max-w-[750px] mb-2">
-        <img src="/img/icons/projects/folder-maze-escape.webp" :alt="ProjectName + ' - Preview'" class="w-full rounded-lg shadow-lg" />
+        <img src="/img/projects/MazeEscape/maze-escape-preview.webp" :alt="ProjectName + ' - Preview'" class="w-full rounded-lg shadow-lg" />
       </div>
     </div>
   </div>
