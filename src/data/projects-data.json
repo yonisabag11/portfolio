@@ -14,8 +14,8 @@
             "he": "סוכן AI לנכסי משחק"
           },
           "date": {
-            "en": "January 2026",
-            "he": "ינואר 2026"
+            "en": "October 2025 - December 2025",
+            "he": "אוקטובר 2025 - דצמבר 2025"
           },
           "componentName": "GameAssetAiAgentContent",
           "isFocus": false,
@@ -44,8 +44,8 @@
             "he": "פורטפוליוXP"
           },
           "date": {
-            "en": "2023 - 2026",
-            "he": "2023 - 2026"
+            "en": "January 2026 - Present",
+            "he": "ינואר 2026 - היום"
           },
           "componentName": "PortfolioXPContent",
           "isFocus": false,
@@ -82,8 +82,8 @@
             "he": "בריחה מהמבוך"
           },
           "date": {
-            "en": "Fall 2024",
-            "he": "סתיו 2024"
+            "en": "September 2024 - December 2024",
+            "he": "ספטמבר 2024 - דצמבר 2024"
           },
           "componentName": "MazeEscapeContent",
           "isFocus": false,

@@ -1,10 +1,10 @@
 <template>
   <div class="absolute bottom-0 w-full bg-player h-14 shadow-inner">
-    <div class="flex items-center justify-between h-full px-2">
+    <div class="flex items-center justify-between h-full px-2" :class="localeStore.currentLocale === 'he' ? 'flex-row-reverse' : ''">
       <div class="w-1/3">
-        <div class="flex items-center gap-2">
+        <div class="flex items-center gap-2" :class="localeStore.currentLocale === 'he' ? 'flex-row-reverse' : ''">
           <img v-if="currentTrack.album && currentTrack.album.images" :src="currentTrack.album.images[0].url" :alt="$t('alt.albumCover')" class="w-10 h-10 rounded-sm" />
-          <div class="flex flex-col mr-5 w-full">
+          <div class="flex flex-col w-full" :class="localeStore.currentLocale === 'he' ? 'ml-5' : 'mr-5'">
             <p class="text-xs font-trebuchet-pixel truncate">{{ currentTrack.name }}</p>
             <p class="text-xs font-trebuchet-pixel truncate">
               {{ currentTrack.artists ? currentTrack.artists[0].name : '' }}
@@ -35,6 +35,7 @@
 <script setup>
 import { ref, onUnmounted, watch } from 'vue'
 import { useVolumeStore } from '@/stores/volumeStore'
+import { useLocaleStore } from '@/stores/localeStore'
 
 const props = defineProps({
   playlist: {
@@ -45,6 +46,7 @@ const props = defineProps({
 })
 
 const volumeStore = useVolumeStore()
+const localeStore = useLocaleStore()
 const currentTrack = ref(props.playlist[0])
 const isPlaying = ref(false)
 const currentTime = ref(0)

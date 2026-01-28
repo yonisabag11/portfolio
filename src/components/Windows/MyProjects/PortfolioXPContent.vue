@@ -30,11 +30,11 @@
         <p class="font-bold mt-px">Jenkins</p>
       </div>
     </div>
-    <h3 class="mt-5 mb-2 text-md">{{ $t('common.context') }}</h3>
+    <h3 class="mt-5 mb-2 text-md font-bold">{{ $t('common.context') }}</h3>
     <p class="mb-2">{{ $t('project.portfolioXP.contextFirstParagraph') }}</p>
     <p class="mb-2">{{ $t('project.portfolioXP.contextSecondParagraph') }}</p>
     <p class="mb-2">{{ $t('project.portfolioXP.contextThirdParagraph') }}</p>
-    <h3 class="mt-5 mb-2">{{ $t('common.objectives') }}</h3>
+    <h3 class="mt-5 mb-2 font-bold">{{ $t('common.objectives') }}</h3>
     <ul class="list-disc ml-3">
       <li>{{ $t('project.portfolioXP.goalFirst') }}</li>
       <li>{{ $t('project.portfolioXP.goalSecond') }}</li>
@@ -43,7 +43,7 @@
       <li>{{ $t('project.portfolioXP.goalFifth') }}</li>
       <li>{{ $t('project.portfolioXP.goalSixth') }}</li>
     </ul>
-    <h3 class="mt-5 mb-2">{{ $t('common.tasksDone') }}</h3>
+    <h3 class="mt-5 mb-2 font-bold">{{ $t('common.tasksDone') }}</h3>
     <div>
       <p class="font-semibold italic text-gray-500 mb-2">{{ $t('project.portfolioXP.tasksDoneFirst') }}</p>
       <p class="mb-2">{{ $t('project.portfolioXP.tasksDoneFirstDetails') }}</p>
@@ -69,7 +69,7 @@
     </div>
     <div class="w-full flex items-center flex-col mt-5">
       <div class="w-full">
-        <h3 class="mb-2">{{ $t('common.design') }}</h3>
+        <h3 class="mb-2 font-bold">{{ $t('common.design') }}</h3>
       </div>
       <div class="w-full max-w-[750px] mb-2">
         <img src="/img/projects/PortfolioXP/portfolioxp-preview.webp" :alt="ProjectName + ' - Preview'" class="w-full rounded-lg shadow-lg" />

@@ -14,11 +14,11 @@
         <p class="font-bold mt-px">VsCode</p>
       </div>
     </div>
-    <h3 class="mt-5 mb-2 text-md">{{ $t('common.context') }}</h3>
+    <h3 class="mt-5 mb-2 text-md font-bold">{{ $t('common.context') }}</h3>
     <p class="mb-2">{{ $t('project.mazeEscape.contextFirstParagraph') }}</p>
     <p class="mb-2">{{ $t('project.mazeEscape.contextSecondParagraph') }}</p>
     <p class="mb-2">{{ $t('project.mazeEscape.contextThirdParagraph') }}</p>
-    <h3 class="mt-5 mb-2">{{ $t('common.objectives') }}</h3>
+    <h3 class="mt-5 mb-2 font-bold">{{ $t('common.objectives') }}</h3>
     <ul class="list-disc ml-3">
       <li>{{ $t('project.mazeEscape.goalFirst') }}</li>
       <li>{{ $t('project.mazeEscape.goalSecond') }}</li>
@@ -27,7 +27,7 @@
       <li>{{ $t('project.mazeEscape.goalFifth') }}</li>
       <li>{{ $t('project.mazeEscape.goalSixth') }}</li>
     </ul>
-    <h3 class="mt-5 mb-2">{{ $t('common.tasksDone') }}</h3>
+    <h3 class="mt-5 mb-2 font-bold">{{ $t('common.tasksDone') }}</h3>
     <div>
       <p class="font-semibold italic text-gray-500 mb-2">{{ $t('project.mazeEscape.tasksDoneFirst') }}</p>
       <p class="mb-2">{{ $t('project.mazeEscape.tasksDoneFirstDetails') }}</p>
@@ -53,10 +53,11 @@
     </div>
     <div class="w-full flex items-center flex-col mt-5">
       <div class="w-full">
-        <h3 class="mb-2">{{ $t('common.design') }}</h3>
+        <h3 class="mb-2 font-bold">{{ $t('common.design') }}</h3>
       </div>
-      <div class="w-full max-w-[750px] mb-2">
-        <img src="/img/projects/MazeEscape/maze-escape-preview.webp" :alt="ProjectName + ' - Preview'" class="w-full rounded-lg shadow-lg" />
+      <div class="w-full grid grid-cols-1 md:grid-cols-2 gap-3 mb-2">
+        <img src="/img/projects/MazeEscape/MazeEscape1.webp" :alt="ProjectName + ' - Screenshot 1'" class="w-full rounded-lg shadow-lg" />
+        <img src="/img/projects/MazeEscape/MazeEscape2.webp" :alt="ProjectName + ' - Screenshot 2'" class="w-full rounded-lg shadow-lg" />
       </div>
     </div>
   </div>

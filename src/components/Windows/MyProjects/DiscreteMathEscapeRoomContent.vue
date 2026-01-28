@@ -10,11 +10,11 @@
         <p class="font-bold mt-px">VsCode</p>
       </div>
     </div>
-    <h3 class="mt-5 mb-2 text-md">{{ $t('common.context') }}</h3>
+    <h3 class="mt-5 mb-2 text-md font-bold">{{ $t('common.context') }}</h3>
     <p class="mb-2">{{ $t('project.discreteMath.contextFirstParagraph') }}</p>
     <p class="mb-2">{{ $t('project.discreteMath.contextSecondParagraph') }}</p>
     <p class="mb-2">{{ $t('project.discreteMath.contextThirdParagraph') }}</p>
-    <h3 class="mt-5 mb-2">{{ $t('common.objectives') }}</h3>
+    <h3 class="mt-5 mb-2 font-bold">{{ $t('common.objectives') }}</h3>
     <ul class="list-disc ml-3">
       <li>{{ $t('project.discreteMath.goalFirst') }}</li>
       <li>{{ $t('project.discreteMath.goalSecond') }}</li>
@@ -23,7 +23,7 @@
       <li>{{ $t('project.discreteMath.goalFifth') }}</li>
       <li>{{ $t('project.discreteMath.goalSixth') }}</li>
     </ul>
-    <h3 class="mt-5 mb-2">{{ $t('common.tasksDone') }}</h3>
+    <h3 class="mt-5 mb-2 font-bold">{{ $t('common.tasksDone') }}</h3>
     <div>
       <p class="font-semibold italic text-gray-500 mb-2">{{ $t('project.discreteMath.tasksDoneFirst') }}</p>
       <p class="mb-2">{{ $t('project.discreteMath.tasksDoneFirstDetails') }}</p>
@@ -49,10 +49,15 @@
     </div>
     <div class="w-full flex items-center flex-col mt-5">
       <div class="w-full">
-        <h3 class="mb-2">{{ $t('common.design') }}</h3>
+        <h3 class="mb-2 font-bold">{{ $t('common.design') }}</h3>
       </div>
-      <div class="w-full max-w-[750px] mb-2">
-        <img src="/img/projects/DiscreteMathEscapeRoom/discrete-math-escape-room-icon.webp" :alt="ProjectName + ' - Preview'" class="w-full rounded-lg shadow-lg" />
+      <div class="w-full grid grid-cols-2 md:grid-cols-3 gap-4 mb-2">
+        <img src="/img/projects/DiscreteMathEscapeRoom/DiscreteMath1.webp" :alt="ProjectName + ' - Screenshot 1'" class="w-full rounded-lg shadow-lg" />
+        <img src="/img/projects/DiscreteMathEscapeRoom/DiscreteMath2.webp" :alt="ProjectName + ' - Screenshot 2'" class="w-full rounded-lg shadow-lg" />
+        <img src="/img/projects/DiscreteMathEscapeRoom/DiscreteMath3.webp" :alt="ProjectName + ' - Screenshot 3'" class="w-full rounded-lg shadow-lg" />
+        <img src="/img/projects/DiscreteMathEscapeRoom/DiscreteMath4.webp" :alt="ProjectName + ' - Screenshot 4'" class="w-full rounded-lg shadow-lg" />
+        <img src="/img/projects/DiscreteMathEscapeRoom/DiscreteMath5.webp" :alt="ProjectName + ' - Screenshot 5'" class="w-full rounded-lg shadow-lg" />
+        <img src="/img/projects/DiscreteMathEscapeRoom/DiscreteMath6.webp" :alt="ProjectName + ' - Screenshot 6'" class="w-full rounded-lg shadow-lg" />
       </div>
     </div>
   </div>

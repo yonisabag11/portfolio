@@ -30,11 +30,11 @@
         <p class="font-bold mt-px">VsCode</p>
       </div>
     </div>
-    <h3 class="mt-5 mb-2 text-md">{{ $t('common.context') }}</h3>
+    <h3 class="mt-5 mb-2 text-md font-bold">{{ $t('common.context') }}</h3>
     <p class="mb-2">{{ $t('project.nourishNet.contextFirstParagraph') }}</p>
     <p class="mb-2">{{ $t('project.nourishNet.contextSecondParagraph') }}</p>
     <p class="mb-2">{{ $t('project.nourishNet.contextThirdParagraph') }}</p>
-    <h3 class="mt-5 mb-2">{{ $t('common.objectives') }}</h3>
+    <h3 class="mt-5 mb-2 font-bold">{{ $t('common.objectives') }}</h3>
     <ul class="list-disc ml-3">
       <li>{{ $t('project.nourishNet.goalFirst') }}</li>
       <li>{{ $t('project.nourishNet.goalSecond') }}</li>
@@ -43,7 +43,7 @@
       <li>{{ $t('project.nourishNet.goalFifth') }}</li>
       <li>{{ $t('project.nourishNet.goalSixth') }}</li>
     </ul>
-    <h3 class="mt-5 mb-2">{{ $t('common.tasksDone') }}</h3>
+    <h3 class="mt-5 mb-2 font-bold">{{ $t('common.tasksDone') }}</h3>
     <div>
       <p class="font-semibold italic text-gray-500 mb-2">{{ $t('project.nourishNet.tasksDoneFirst') }}</p>
       <p class="mb-2">{{ $t('project.nourishNet.tasksDoneFirstDetails') }}</p>
@@ -69,10 +69,23 @@
     </div>
     <div class="w-full flex items-center flex-col mt-5">
       <div class="w-full">
-        <h3 class="mb-2">{{ $t('common.design') }}</h3>
+        <h3 class="mb-2 font-bold">{{ $t('common.design') }}</h3>
       </div>
-      <div class="w-full max-w-[750px] mb-2">
-        <img src="/img/projects/NourishNet/nourishnet-preview.webp" :alt="ProjectName + ' - Preview'" class="w-full rounded-lg shadow-lg" />
+      <div class="w-full grid grid-cols-3 md:grid-cols-6 gap-3 mb-2">
+        <img src="/img/projects/NourishNet/NourishNet1.webp" :alt="ProjectName + ' - Screenshot 1'" class="w-full rounded-lg shadow-lg" />
+        <img src="/img/projects/NourishNet/NourishNet2.webp" :alt="ProjectName + ' - Screenshot 2'" class="w-full rounded-lg shadow-lg" />
+        <img src="/img/projects/NourishNet/NourishNet3.webp" :alt="ProjectName + ' - Screenshot 3'" class="w-full rounded-lg shadow-lg" />
+        <img src="/img/projects/NourishNet/NourishNet4.webp" :alt="ProjectName + ' - Screenshot 4'" class="w-full rounded-lg shadow-lg" />
+        <img src="/img/projects/NourishNet/NourishNet5.webp" :alt="ProjectName + ' - Screenshot 5'" class="w-full rounded-lg shadow-lg" />
+        <img src="/img/projects/NourishNet/NourishNet6.webp" :alt="ProjectName + ' - Screenshot 6'" class="w-full rounded-lg shadow-lg" />
+      </div>
+      <div class="w-full grid grid-cols-3 md:grid-cols-6 gap-3 mb-2 mt-4">
+        <img src="/img/projects/NourishNet/NourishNet7.webp" :alt="ProjectName + ' - Screenshot 7'" class="w-full rounded-lg shadow-lg" />
+        <img src="/img/projects/NourishNet/NourishNet8.webp" :alt="ProjectName + ' - Screenshot 8'" class="w-full rounded-lg shadow-lg" />
+        <img src="/img/projects/NourishNet/NourishNet9.webp" :alt="ProjectName + ' - Screenshot 9'" class="w-full rounded-lg shadow-lg" />
+        <img src="/img/projects/NourishNet/NourishNet10.webp" :alt="ProjectName + ' - Screenshot 10'" class="w-full rounded-lg shadow-lg" />
+        <img src="/img/projects/NourishNet/NourishNet11.webp" :alt="ProjectName + ' - Screenshot 11'" class="w-full rounded-lg shadow-lg" />
+        <img src="/img/projects/NourishNet/NourishNet12.webp" :alt="ProjectName + ' - Screenshot 12'" class="w-full rounded-lg shadow-lg" />
       </div>
     </div>
   </div>
