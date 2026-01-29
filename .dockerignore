@@ -4,6 +4,7 @@ dist
 .git
 .gitignore
 README.md
+HOW_TO_ADD_NEW_PROJECT.md
 .env
 .nyc_output
 coverage

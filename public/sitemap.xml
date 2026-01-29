@@ -3,14 +3,14 @@
   
   <!-- The Office page -->
   <url>
-    <loc>https://yonisabag.github.io/portfolio/office</loc>
+    <loc>https://yonisabag11.github.io/portfolio/office</loc>
     <priority>0.8</priority>
     <changefreq>monthly</changefreq>
   </url>
   
   <!-- Loader page -->
   <url>
-    <loc>https://yonisabag.github.io/portfolio/</loc>
+    <loc>https://yonisabag11.github.io/portfolio/</loc>
     <priority>0.5</priority>
     <changefreq>monthly</changefreq>
   </url>

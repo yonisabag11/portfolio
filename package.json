@@ -4,15 +4,13 @@
   "private": false,
   "author": "Yoni Sabag <yonisabag11@gmail.com>",
   "license": "MIT",
-  "homepage": "https://yonisabag.github.io/portfolio",
+  "homepage": "https://yonisabag11.github.io/portfolio",
   "scripts": {
     "dev": "vite --host",
     "sass": "sass --watch sass/main.scss:css/main.css",
     "dev:all": "npm-run-all --parallel dev sass",
     "build": "vite build",
     "preview": "vite preview",
-    "test:e2e": "nightwatch tests/e2e",
-    "test:unit": "nightwatch src/components/**/__tests__/*",
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs --fix --ignore-path .gitignore",
     "format": "prettier --write src/"
   },

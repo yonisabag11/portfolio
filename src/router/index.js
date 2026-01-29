@@ -14,7 +14,7 @@ const router = createRouter({
         metaTags: [
           {
             rel: 'canonical',
-            href: 'https://yonisabag.github.io/portfolio'
+            href: 'https://yonisabag11.github.io/portfolio'
           },
           {
             name: 'title',
@@ -97,11 +97,11 @@ const router = createRouter({
           },
           {
             property: 'og:url',
-            content: 'https://yonisabag.github.io/portfolio'
+            content: 'https://yonisabag11.github.io/portfolio'
           },
           {
             property: 'og:image',
-            content: 'https://yonisabag.github.io/portfolio/img/logo-portfolio-white.webp'
+            content: 'https://yonisabag11.github.io/portfolio/img/logo-portfolio-white.webp'
           },
           {
             property: 'og:image:alt',
@@ -127,7 +127,7 @@ const router = createRouter({
         metaTags: [
           {
             rel: 'canonical',
-            href: 'https://yonisabag.github.io/portfolio/office'
+            href: 'https://yonisabag11.github.io/portfolio/office'
           },
           {
             name: 'title',
@@ -210,11 +210,11 @@ const router = createRouter({
           },
           {
             name: 'og:url',
-            content: 'https://yonisabag.github.io/portfolio/office'
+            content: 'https://yonisabag11.github.io/portfolio/office'
           },
           {
             name: 'og:image',
-            content: 'https://yonisabag.github.io/portfolio/img/logo-portfolio-white.webp'
+            content: 'https://yonisabag11.github.io/portfolio/img/logo-portfolio-white.webp'
           },
           {
             name: 'og:image:alt',

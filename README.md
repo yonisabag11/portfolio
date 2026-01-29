@@ -1,96 +1,141 @@
-# <img src="https://lh6.googleusercontent.com/proxy/O0jtLgr-_kq0MLNcfc-mNens2PSj9oDn4296O8SgMRO2hv4SrTtKjTZN6iecZPdxD67l6YUk26QL0raQ818tXOioabNh1mYpQxQfHw" width="30px" > PortfolioXp
+# <img src="https://lh6.googleusercontent.com/proxy/O0jtLgr-_kq0MLNcfc-mNens2PSj9oDn4296O8SgMRO2hv4SrTtKjTZN6iecZPdxD67l6YUk26QL0raQ818tXOioabNh1mYpQxQfHw" width="30px" > PortfolioXP
 
+[![GitHub package.json](https://img.shields.io/github/package-json/v/yonisabag11/portfolio/main)](https://github.com/yonisabag11/portfolio)
+[![GitHub repo size](https://img.shields.io/github/repo-size/yonisabag11/portfolio)](https://github.com/yonisabag11/portfolio)
+[![GitHub License](https://img.shields.io/github/license/yonisabag11/portfolio)](https://github.com/yonisabag11/portfolio/blob/main/LICENSE)
 
-![GitHub package.json ](https://img.shields.io/github/package-json/v/yonisabag/portfolio/main)
-![GitHub repo size](https://img.shields.io/github/repo-size/yonisabag/portfolio)
-![GitHub License](https://img.shields.io/github/license/yonisabag/portfolio)
+An interactive Windows XP-themed portfolio website showcasing my projects and skills in a nostalgic and engaging way.
 
-## 🌐 Website
+## Live Website
 
-![portfolio](https://github.com/user-attachments/assets/77a7b9c0-6276-43b4-8792-a1f6e86306f0)
+![portfolio](public/img/Preview.png)
 
-### [https://yonisabag.github.io/portfolio](https://yonisabag.github.io/portfolio)
+[https://yonisabag11.github.io/portfolio](https://yonisabag11.github.io/portfolio)
 
-## 👷 Disclaimers
+## About This Project
 
-**This is an ongoing project and it is not done yet**.
-If you encounter any bugs it will be really helpfull if you could provide the origin of that bug, the browser you used and the device.
+This portfolio is an **adapted and enhanced version** of the original Windows XP portfolio created by [Paul Jaguin](https://github.com/UnMugViolet/portfolio). I've customized it to showcase my own projects and added several improvements.
 
-**This design was not made by me**.
-All the icons, wallpaper and sounds belong to windows corporation, so there's nothing I've created here. All I did was copy and apply the design for the web.
+### What I Changed
 
-**The music component is ~~broken~~ working**.
-I've been waiting for the Spotify team to review my application for extension request, first review was mentionning the usage of old logo of spotify, they were right there is some guidelines about the graphics and I complied, second review said basically that there will not be enough user for that use case. I put all the code to the trash and start all over with songs played locally. 
+**Personalized Content** - Replaced all projects with my own work including:
+  - Discrete Math Escape Room (Godot game)
+  - Maze Escape (Unity game)
+  - NourishNet (React Native mobile app)
+  - Game Asset AI Agent (AI-powered web app)
+  - PortfolioXP (this portfolio!)
+  
+**Bilingual Support** - Enhanced internationalization with English and Hebrew (RTL) support
 
-## ✨ Features
+**Updated Technologies** - Migrated from Vuex to Pinia for state management
 
-- Loading Screen & Login
-- Internationalisation �🇸 En / 🇮🇱 He
-- Play Minesweeper
-- Play DOOM
-- Reach me by email
-- See my projects
-- Notepad
-- My CV
-- My Images
-- My Calendar
-- Listen to my playlist
-- Manage the volume in the website
+**Added Tailwind CSS** - Integrated Tailwind CSS alongside SCSS for modern styling
 
-## ⚡️ Consumption
+**Deployment Setup** - Configured for GitHub Pages deployment with automated CI/CD
 
-Since WindowsXp design was not really meant to be eco friendly _(thanks to the billions of linear gradients)_
-I did my best to make it as lightweight as possible.
+**Docker Support** - Added Docker containerization with nginx for easy deployment
 
-[Link to Website Carbon Calculator website](https://www.websitecarbon.com/website/pauljaguin-com-office/)
+**Content Updates** - Updated all legal notices, about sections, and contact information
 
-## 🎨 Webdesign
+**Project Documentation** - Added comprehensive project descriptions with objectives and technical details
 
-The original design was made by the windows xp team, there is nothing I've done here but copying it for my use using web languages.
+### Credits
 
-The design part was pretty straight forward on Figma, I used it more like a place where I could put ressources.
-You can still use the components created in the Figma Design they are free and no need to quote.
+**Original Concept**: This project is based on the brilliant Windows XP portfolio by [Paul Jaguin (UnMugViolet)](https://github.com/UnMugViolet/portfolio). The original design, Windows XP interface recreation, and core functionality were created by him. I am grateful for his open-source contribution that made this adaptation possible.
 
-[Link to Figma](https://www.figma.com/design/8tPMCpOidM1YSSAZt516iK/Portfolio?node-id=0-1&t=JnfahWXeIxcdy3UJ-1)
+**Windows XP Design**: All icons, wallpapers, sounds, and UI elements belong to Microsoft Corporation. This is a non-commercial educational project paying tribute to the classic Windows XP interface.
 
+## Features
 
-I used after that the docker image of windows xp, that helps a lot to see all the small interactions there is :
+- Authentic Windows XP interface with pixel-perfect design
+- Loading screen and login experience
+- Bilingual support (English / Hebrew)
+- Interactive games:
+  - Maze Escape and Discrete Math Escape Room via embedded players
+- Contact form powered by EmailJS
+- Browse projects in Windows XP-style folders
+- Notepad for viewing text documents
+- Interactive CV/Resume viewer
+- Image gallery with Windows Photo Viewer interface
+- Calendar with event management (.ics file support)
+- Music player with local playlist
+- Global volume control
+- Responsive design that adapts to different screen sizes
 
-[Link to Dockurr repo](https://github.com/dockur/windows)
+## Tech Stack
 
+- **Framework**: Vue.js 3 with Composition API
+- **Build Tool**: Vite
+- **State Management**: Pinia
+- **Routing**: Vue Router
+- **Styling**: SCSS + Tailwind CSS
+- **Internationalization**: Vue I18n
+- **Email Service**: EmailJS
+- **Deployment**: GitHub Pages
+- **Containerization**: Docker + nginx
 
-## ⌨️ Deployment
+## Design Resources
 
-This portfolio is deployed on GitHub Pages.
+The Windows XP interface was recreated using:
+- [Dockurr Windows XP](https://github.com/dockur/windows) for reference
+- Internet Archive for authentic Windows XP assets and resources
+- Original Windows XP design by Microsoft Corporation
 
-## 🔨 Usage
+## Getting Started
+
+### Prerequisites
+
+- Node.js (v18 or higher recommended)
+- npm or yarn
+
+### Installation
 
 ```sh
 npm install
 ```
 
-### Compile with Hot-Reload and Scss for Development
+### Development
+
+Run the development server with hot-reload and SCSS compilation:
 
 ```sh
 npm run dev:all
 ```
 
-### Compile and Minify for Production
+Or separately:
+
+```sh
+# Development server only
+npm run dev
+
+# SCSS compilation only
+npm run sass
+```
+
+### Production Build
 
 ```sh
 npm run build
 ```
 
-## Docker
+The built files will be in the `dist` folder.
 
-### Now you can run the project using docker
+### Preview Production Build
 
-See the Docker compose file bellow for deployement.
+```sh
+npm run preview
+```
+
+## Docker Deployment
+
+### Using Docker Compose
+
+Create a `docker-compose.yml` file:
 
 ```yml
 services:
   portfolio-xp:
-    image: yonisabag/portfolio-xp:latest
+    image: yonisabag11/portfolio-xp:latest
     container_name: portfolio_xp
     ports:
       - "35000:35000"
@@ -105,11 +150,59 @@ networks:
     driver: bridge
 ```
 
-### Run the Docker container
+Run the container:
 
 ```sh
 docker compose up -d
 ```
 
-Now you can access the website at [http://localhost:35000](http://localhost:35000)
+Access the website at: [http://localhost:35000](http://localhost:35000)
 
+### Building Your Own Image
+
+```sh
+docker build -t my-portfolio-xp .
+```
+
+## Project Structure
+
+```
+portfolio/
+├── public/              # Static assets (images, sounds, fonts)
+├── src/
+│   ├── components/      # Vue components
+│   ├── views/          # Page views
+│   ├── layouts/        # Layout components
+│   ├── stores/         # Pinia stores
+│   ├── router/         # Vue Router config
+│   ├── data/           # JSON data files
+│   ├── locales/        # i18n translation files
+│   └── main.js         # App entry point
+├── sass/               # SCSS stylesheets
+├── css/                # Compiled CSS
+├── Dockerfile          # Docker configuration
+├── nginx.conf          # Nginx configuration
+└── vite.config.js      # Vite configuration
+```
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+
+## Contributing
+
+This is a personal portfolio project, but feel free to fork it and create your own version. If you find bugs or have suggestions, please open an issue.
+
+## Contact
+
+Yoni Sabag
+- Email: yonisabag11@gmail.com
+- Portfolio: [https://yonisabag11.github.io/portfolio](https://yonisabag11.github.io/portfolio)
+- GitHub: [@yonisabag11](https://github.com/yonisabag11)
+
+## Acknowledgments
+
+- **Original Creator**: [Paul Jaguin (UnMugViolet)](https://github.com/UnMugViolet/portfolio) for the Windows XP portfolio concept
+- **Microsoft**: For the Windows XP design
+- **Dockurr**: For the Windows XP Docker image
+- **Open Source Community**: For the libraries and tools used in this project
