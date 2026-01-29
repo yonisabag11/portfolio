@@ -98,11 +98,20 @@
           {
             "id": 1,
             "subtitle": {
-              "en": "My Github",
+              "en": "My GitHub",
               "he": "הגיטהאב שלי"
             },
             "iconUrl": "/img/icons/side-menu/github-icon.webp",
             "url": "https://github.com/yonisabag11"
+          },
+          {
+            "id": 2,
+            "subtitle": {
+              "en": "My LinkedIn",
+              "he": "הלינקדאין שלי"
+            },
+            "iconUrl": "/img/icons/side-menu/linkedin-icon.webp",
+            "url": "https://www.linkedin.com/in/yonisabag11/"
           }
         ]
       }

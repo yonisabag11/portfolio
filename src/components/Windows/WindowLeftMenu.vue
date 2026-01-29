@@ -63,7 +63,7 @@ const getLocalizedSubtitle = (subtask) => {
         <img :src="item.iconSrc" :alt="$t('alt.expand')" class="w-3.5 h-3.5 sm:w-4 sm:h-4 drop-shadow-lg" />
       </div>
       <div class="px-1 py-0.5 md:py-0.75 md:px-2" v-for="subtask in item.subtasks" :key="subtask.id">
-        <a v-if="subtask.url" :href="subtask.url" target="_blank" class="flex flex-row items-center gap-1 cursor-pointer hover:underline hover:text-heroic-blue">
+        <a v-if="subtask.url" :href="subtask.url" target="_blank" class="flex flex-row items-center gap-1 cursor-pointer hover:underline hover:text-heroic-blue" style="direction: ltr;">
           <img :src="subtask.iconUrl" :alt="subtask.subtitle" class="w-2.5 h-2.5 sm:w-3.5 sm:h-3.5" />
           <p class="font-light text-xxs-mobile md:text-xxs">{{ getLocalizedSubtitle(subtask) }}</p>
         </a>
