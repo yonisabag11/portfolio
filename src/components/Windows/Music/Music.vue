@@ -1,5 +1,5 @@
 <template>
-  <div class="relative right-0 h-content-window flex overflow-y-auto bg-white pb-14">
+  <div class="relative right-0 h-content-window flex overflow-y-auto bg-white pb-20">
     <div v-if="loading" class="w-full h-full flex items-center text-center justify-center text-sm">{{ $t('common.loading') }}</div>
     <div v-else class="w-full font-trebuchet-pixel">
       <div class="w-full h-full overflow-x-hidden">
@@ -81,9 +81,24 @@
                   </p>
                 </div>
                 <!-- Title column with # and album cover - order 5 for RTL, 1 for LTR -->
-                <div class="col-span-7 sm:col-span-5 flex items-center gap-1" :class="localeStore.currentLocale === 'he' ? 'order-5 flex-row-reverse' : 'order-1'">
-                  <div :class="localeStore.currentLocale === 'he' ? 'pr-2' : 'pl-2'" class="w-8">
-                    <p class="text-xs font-trebuchet-pixel">{{ index + 1 }}</p>
+                <div 
+                  class="col-span-7 sm:col-span-5 flex items-center gap-1" 
+                  :class="localeStore.currentLocale === 'he' ? 'order-5 flex-row-reverse' : 'order-1'"
+                  @mouseenter="hoveredTrack = index"
+                  @mouseleave="hoveredTrack = null"
+                >
+                  <div :class="localeStore.currentLocale === 'he' ? 'pr-2' : 'pl-2'" class="w-8 flex items-center justify-center">
+                    <button 
+                      v-if="hoveredTrack === index" 
+                      @click="playTrack(track.id)"
+                      class="text-xs font-trebuchet-pixel hover:scale-110 transition-transform"
+                      :aria-label="'Play ' + track.name"
+                    >
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M8 5v14l11-7z"/>
+                      </svg>
+                    </button>
+                    <p v-else class="text-xs font-trebuchet-pixel">{{ index + 1 }}</p>
                   </div>
                   <div @click="playTrack(track.id)" class="flex items-center gap-2 cursor-pointer hover:underline" :class="localeStore.currentLocale === 'he' ? 'flex-row-reverse' : ''">
                     <img :src="track.album.images[0].url" :alt="$t('windows.music.albumCover') + ' ' + track.name" class="w-12 rounded-sm" />
@@ -119,6 +134,7 @@ const localeStore = useLocaleStore()
 const selectedTrack = ref('')
 const loading = ref(true)
 const playlist = ref({})
+const hoveredTrack = ref(null)
 
 onMounted(async () => {
   await InitPlaylist()

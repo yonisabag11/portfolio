@@ -110,14 +110,14 @@
                                               }
                                 },
                     "music":  {
-                                  "playlistName":  "פורטפוליו - פלייליסט",
+                                  "playlistName":  "פורטפוליו פלייליסט",
                                   "title":  "כותרת",
                                   "album":  "אלבום",
                                   "dateAdded":  "תאריך הוספה",
                                   "duration":  "משך",
                                   "link":  "קישור",
                                   "artist":  "אמן",
-                                  "description":  "פלייליסט שנוצר במיוחד עבור הפורטפוליו שלי, הוא מכיל את השירים האהובים עלי.",
+                                  "description":  "פלייליסט שנוצר במיוחד עבור הפורטפוליו שלי, הוא מכיל את חלק מהשירים האהובים עלי :)",
                                   "visitOnSpotify":  "האזן בספוטיפיי",
                                   "accessFirstSentence":  "כדי לגשת לתכונה זו,",
                                   "accessSecondSentence":  "חובה להתחבר ל-Spotify",
@@ -275,7 +275,7 @@
     "footer":  {
                    "fullscreen":  "מסך מלא",
                    "exitFullscreen":  "יציאה ממסך מלא",
-                   "volumeControl":  "עוצמת קול"
+                   "volumeControl":  "עוצמה"
                },
     "alt":  {
                 "logoStart":  "לוגו תיק XP שחור התחלה",

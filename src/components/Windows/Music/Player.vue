@@ -94,13 +94,13 @@ const togglePlay = () => {
 const previousTrack = () => {
   const currentIndex = props.playlist.findIndex((track) => track.id === currentTrack.value.id)
   const currentAudioFile = '/musics/' + currentTrack.value.id + '.mp3'
-  volumeStore.pauseAudio(currentAudioFile)
-  volumeStore.resetAudio(currentAudioFile)
-  currentTime.value = 0
-
+  
   if (audioElement) {
     audioElement.removeEventListener('timeupdate', updateCurrentTime)
   }
+  
+  volumeStore.removeAudio(currentAudioFile)
+  currentTime.value = 0
 
   if (currentIndex === 0) {
     currentTrack.value = props.playlist[props.playlist.length - 1]
@@ -119,13 +119,13 @@ const previousTrack = () => {
 const nextTrack = () => {
   const currentIndex = props.playlist.findIndex((track) => track.id === currentTrack.value.id)
   const currentAudioFile = '/musics/' + currentTrack.value.id + '.mp3'
-  volumeStore.pauseAudio(currentAudioFile)
-  volumeStore.resetAudio(currentAudioFile)
-  currentTime.value = 0
-
+  
   if (audioElement) {
     audioElement.removeEventListener('timeupdate', updateCurrentTime)
   }
+  
+  volumeStore.removeAudio(currentAudioFile)
+  currentTime.value = 0
 
   if (currentIndex === props.playlist.length - 1) {
     currentTrack.value = props.playlist[0]
@@ -163,23 +163,24 @@ function formatTime(ms) {
 watch(
   () => props.trackToggled,
   (newTrack) => {
-    if (newTrack !== currentTrack.value.id) {
+    if (newTrack && newTrack !== currentTrack.value.id) {
       const currentAudioFile = '/musics/' + currentTrack.value.id + '.mp3'
-      volumeStore.pauseAudio(currentAudioFile)
-      volumeStore.resetAudio(currentAudioFile)
-      currentTime.value = 0
-
+      
       if (audioElement) {
         audioElement.removeEventListener('timeupdate', updateCurrentTime)
       }
+      
+      volumeStore.removeAudio(currentAudioFile)
+      currentTime.value = 0
 
       currentTrack.value = props.playlist.find((track) => track.id === newTrack)
       const newAudioFile = '/musics/' + currentTrack.value.id + '.mp3'
-      if (isPlaying.value) {
-        volumeStore.playAudio(newAudioFile)
-        audioElement = volumeStore.audioElements[newAudioFile]
-        audioElement.addEventListener('timeupdate', updateCurrentTime)
-      }
+      
+      // Always start playing when clicking a track
+      isPlaying.value = true
+      volumeStore.playAudio(newAudioFile)
+      audioElement = volumeStore.audioElements[newAudioFile]
+      audioElement.addEventListener('timeupdate', updateCurrentTime)
     }
   }
 )
@@ -190,8 +191,7 @@ onUnmounted(() => {
   }
   // Reset component state if window is closed
   const currentAudioFile = '/musics/' + currentTrack.value.id + '.mp3'
-  volumeStore.pauseAudio(currentAudioFile)
-  volumeStore.resetAudio(currentAudioFile)
+  volumeStore.removeAudio(currentAudioFile)
   currentTime.value = 0
 })
 </script>

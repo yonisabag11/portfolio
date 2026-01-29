@@ -99,14 +99,14 @@
                                "frameworks":  "Frameworks \u0026 Tools"
                            },
                     "music":  {
-                                  "playlistName":  "Portfolio - Playlist",
+                                  "playlistName":  "Portfolio Playlist",
                                   "title":  "Title",
                                   "album":  "Album",
                                   "dateAdded":  "Date Added",
                                   "duration":  "Duration",
                                   "link":  "Link",
                                   "artist":  "Artist",
-                                  "description":  "A playlist created especially for my portfolio, it contains my favorite tracks.",
+                                  "description":  "A playlist created especially for my portfolio, it contains some of my favorite tracks :)",
                                   "visitOnSpotify":  "Listen on Spotify",
                                   "accessFirstSentence":  "To access this feature,",
                                   "accessSecondSentence":  "it is mandatory to connect to Spotify",
@@ -259,7 +259,7 @@
     "footer":  {
                    "fullscreen":  "Fullscreen mode",
                    "exitFullscreen":  "Exit fullscreen mode",
-                   "volumeControl":  "Volume level"
+                   "volumeControl":  "Volume"
                },
     "alt":  {
                 "logoStart":  "XP Portfolio black logo start",

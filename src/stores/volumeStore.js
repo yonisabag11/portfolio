@@ -44,6 +44,14 @@ export const useVolumeStore = defineStore('volume', {
         this.audioElements[audioFile].currentTime = 0
       }
     },
+    removeAudio(audioFile) {
+      if (this.audioElements[audioFile]) {
+        this.audioElements[audioFile].pause()
+        this.audioElements[audioFile].src = ''
+        this.audioElements[audioFile].load()
+        delete this.audioElements[audioFile]
+      }
+    },
     unmuteAudio() {
       Object.values(this.audioElements).forEach((audio) => {
         audio.volume = this.volume
