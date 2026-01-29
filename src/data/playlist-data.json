@@ -2,567 +2,323 @@
   "name": "Portfolio - Playlist",
   "images": [
     {
-      "url": "https://www.google.com/url?sa=i&url=https%3A%2F%2Ffr-nhvnaturalpetproducts.glopalstore.com%2Fcats%2Fremedies-by-breed%2Fscottish-straight%2F&psig=AOvVaw2XpKYU2_h6MAZN9lQNADH5&ust=1739875630694000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCIC2lPrDyosDFQAAAAAdAAAAABAK"
+      "url": "/img/playlist-cover.webp"
     }
   ],
   "external_urls": {
-    "spotify": "https://open.spotify.com/playlist/1hMzZICeyywzM40RKVahoU"
+    "spotify": "https://open.spotify.com/playlist/6nj97nSnUh29GHfurqX83j"
   },
   "tracks": {
     "items": [
       {
-        "id": "5PftEBX7NnidlsyL5I1YIB",
-        "name": "Roland, I Feel You",
+        "id": "6IV9MKVGRlKHcECMKG7obQ",
+        "name": "Underdog",
         "album": {
-          "name": "The Scarlet Beast O'Seven Heads",
+          "name": "Underdog",
           "images": [
             {
-              "url": "/img/album-covers/5PftEBX7NnidlsyL5I1YIB.webp"
+              "url": "/img/album-covers/6IV9MKVGRlKHcECMKG7obQ.webp"
             }
           ],
           "external_urls": {
-            "spotify": "https://open.spotify.com/track/5PftEBX7NnidlsyL5I1YIB",
-            "deezer": "https://www.deezer.com/us/track/2582912462"
+            "spotify": "https://open.spotify.com/track/6IV9MKVGRlKHcECMKG7obQ"
           }
         },
         "artists": [
           {
-            "name": "Get Well Soon"
+            "name": "Eve"
           }
         ],
-        "added_at": "2024-12-20T14:28:55Z",
-        "duration_ms": 274076
+        "added_at": "2026-01-28T12:00:00Z",
+        "duration_ms": 193000
       },
       {
-        "id": "5BH4zfMUbea376GQp5okHw",
-        "name": "Enough",
+        "id": "1jDJFeK9x3OZboIAHsY9k2",
+        "name": "I'm Still Standing",
         "album": {
-          "name": "Radiolove",
+          "name": "Too Low For Zero",
           "images": [
             {
-              "url": "/img/album-covers/5BH4zfMUbea376GQp5okHw.webp"
+              "url": "/img/album-covers/1jDJFeK9x3OZboIAHsY9k2.webp"
             }
           ],
           "external_urls": {
-            "spotify": "https://open.spotify.com/track/5BH4zfMUbea376GQp5okHw",
-            "deezer": "https://www.deezer.com/us/track/1655565142"
+            "spotify": "https://open.spotify.com/track/1jDJFeK9x3OZboIAHsY9k2"
           }
         },
         "artists": [
           {
-            "name": "Tanukichan"
+            "name": "Elton John"
           }
         ],
-        "added_at": "2024-12-20T13:24:00",
-        "duration_ms": 176196
+        "added_at": "2026-01-29T12:00:00Z",
+        "duration_ms": 183000
       },
       {
-        "id": "6EpQ1y9VipffuPRhI3GTQc",
-        "name": "Le sablier",
+        "id": "2KmT9xBwvQP7n8RjYsL4dE",
+        "name": "In the End",
         "album": {
-          "name": "\"X\"",
+          "name": "Hybrid Theory (Bonus Edition)",
           "images": [
             {
-              "url": "/img/album-covers/6EpQ1y9VipffuPRhI3GTQc.webp"
+              "url": "/img/album-covers/2KmT9xBwvQP7n8RjYsL4dE.webp"
             }
           ],
           "external_urls": {
-            "spotify": "https://open.spotify.com/track/6EpQ1y9VipffuPRhI3GTQc",
-            "deezer": "https://www.deezer.com/us/track/1772850617"
+            "spotify": "https://open.spotify.com/track/60a0Rd6pjrkxjPbaKzXjfq"
           }
         },
         "artists": [
           {
-            "name": "Fred Pallem, le Sacre du Tympan"
+            "name": "Linkin Park"
           }
         ],
-        "added_at": "2024-10-31T11:38:16Z",
-        "duration_ms": 341368
+        "added_at": "2026-01-29T14:30:00Z",
+        "duration_ms": 216000
       },
       {
-        "id": "7bu3H8JO7d0UbMoVzbo70s",
-        "name": "A Forest",
+        "id": "3HvN8p2Qw9Lr6kXm5YfT1Z",
+        "name": "Livin' On A Prayer",
         "album": {
-          "name": "Seventeen Seconds",
+          "name": "Slippery When Wet",
           "images": [
             {
-              "url": "/img/album-covers/7bu3H8JO7d0UbMoVzbo70s.webp"
+              "url": "/img/album-covers/3HvN8p2Qw9Lr6kXm5YfT1Z.webp"
             }
           ],
           "external_urls": {
-            "spotify": "https://open.spotify.com/track/4iVTSRiJAA18d3QglhyJ6Q",
-            "deezer": "https://www.deezer.com/us/track/1166205"
+            "spotify": "https://open.spotify.com/track/37ZJ0p5Jm13JPevGcx4SkF"
           }
         },
         "artists": [
           {
-            "name": "The Cure"
+            "name": "Bon Jovi"
           }
         ],
-        "added_at": "2024-10-31T11:38:16Z",
-        "duration_ms": 354346
+        "added_at": "2026-01-29T15:00:00Z",
+        "duration_ms": 249000
       },
       {
-        "id": "3uaKz4HTXFCGzIHmqRMLcO",
-        "name": "La nuit américaine",
+        "id": "7RjW4mN3cZvBx2PqKs8TaH",
+        "name": "Feel Invincible",
         "album": {
-          "name": "American Classics",
+          "name": "Unleashed",
           "images": [
             {
-              "url": "/img/album-covers/3uaKz4HTXFCGzIHmqRMLcO.webp"
+              "url": "/img/album-covers/7RjW4mN3cZvBx2PqKs8TaH.webp"
             }
           ],
           "external_urls": {
-            "spotify": "https://open.spotify.com/track/3uaKz4HTXFCGzIHmqRMLcO",
-            "deezer": "https://www.deezer.com/us/track/2165509787"
+            "spotify": "https://open.spotify.com/track/0i8JFpqe9cKwnrcvoNgl1L"
           }
         },
         "artists": [
           {
-            "name": "Georges Delerue, Eric Aubier, Sébastien Billard"
+            "name": "Skillet"
           }
         ],
-        "added_at": "2024-08-13T08:34:37Z",
-        "duration_ms": 138507
+        "added_at": "2026-01-29T15:30:00Z",
+        "duration_ms": 229000
       },
       {
-        "id": "1gl0S9pS0Zw0qfa14rDD3D",
-        "name": "Freaks",
+        "id": "5DkB2fLpW8nMx4QrVtY3sJ",
+        "name": "Boulevard of Broken Dreams",
         "album": {
-          "name": "Surf Curse",
+          "name": "Boulevard of Broken Dreams",
           "images": [
             {
-              "url": "/img/album-covers/1gl0S9pS0Zw0qfa14rDD3D.webp"
+              "url": "/img/album-covers/5DkB2fLpW8nMx4QrVtY3sJ.webp"
             }
           ],
           "external_urls": {
-            "spotify": "https://open.spotify.com/track/7EkWXAI1wn8Ii883ecd9xr",
-            "deezer": "https://www.deezer.com/us/track/1373268472"
+            "spotify": "https://open.spotify.com/track/1hwJKpe0BPUsq6UUrwBWTw"
           }
         },
         "artists": [
           {
-            "name": "Freaks"
+            "name": "Green Day"
           }
         ],
-        "added_at": "2024-08-12T17:04:18Z",
-        "duration_ms": 147098
+        "added_at": "2026-01-29T16:00:00Z",
+        "duration_ms": 261000
       },
       {
-        "id": "1QFh8OH1e78dGd3VyJZCAC",
-        "name": "Boys Don't Cry",
+        "id": "9YfG3vKn2Lw4xHpM6RtZ1B",
+        "name": "Bohemian Rhapsody",
         "album": {
-          "name": "Three Imaginary Boys",
+          "name": "Bohemian Rhapsody (The Original Soundtrack)",
           "images": [
             {
-              "url": "/img/album-covers/1QFh8OH1e78dGd3VyJZCAC.webp"
+              "url": "/img/album-covers/9YfG3vKn2Lw4xHpM6RtZ1B.webp"
             }
           ],
           "external_urls": {
-            "spotify": "https://open.spotify.com/track/1QFh8OH1e78dGd3VyJZCAC",
-            "deezer": "https://www.deezer.com/us/track/1143625"
+            "spotify": "https://open.spotify.com/track/3z8h0TU7ReDPLIbEnYhWZb"
           }
         },
         "artists": [
           {
-            "name": "The Cure"
+            "name": "Queen"
           }
         ],
-        "added_at": "2024-08-15T17:19:54Z",
-        "duration_ms": 154887
+        "added_at": "2026-01-29T16:30:00Z",
+        "duration_ms": 354000
       },
       {
-        "id": "7oG9qhZ0UaQEoUGJJVXh1U",
-        "name": "Favourite",
+        "id": "4TnX8pRs2Vj9Qw7LmKcF6N",
+        "name": "What You Won't Do for Love",
         "album": {
-          "name": "Favourite",
+          "name": "What You Won't Do for Love",
           "images": [
             {
-              "url": "/img/album-covers/7oG9qhZ0UaQEoUGJJVXh1U.webp"
+              "url": "/img/album-covers/4TnX8pRs2Vj9Qw7LmKcF6N.webp"
             }
           ],
           "external_urls": {
-            "spotify": "https://open.spotify.com/track/7oG9qhZ0UaQEoUGJJVXh1U",
-            "deezer": "https://www.deezer.com/us/track/2928358941"
+            "spotify": "https://open.spotify.com/track/6Dk5fHTvH897XrVzCO64Mx"
           }
         },
         "artists": [
           {
-            "name": "Fontaines D.C."
+            "name": "Bobby Caldwell"
           }
         ],
-        "added_at": "2024-08-12T17:46:20Z",
-        "duration_ms": 268016
+        "added_at": "2026-01-29T17:00:00Z",
+        "duration_ms": 286000
       },
       {
-        "id": "3dBVyJ7JuOMt4GE9607Qin",
-        "name": "Cosmic Dancer",
+        "id": "8KpZ5wHj3Tn2XrLm9VcB4D",
+        "name": "Maniac",
         "album": {
-          "name": "Electric Warrior",
+          "name": "Flashdance (Original Soundtrack From The Motion Picture)",
           "images": [
             {
-              "url": "/img/album-covers/3dBVyJ7JuOMt4GE9607Qin.webp"
+              "url": "/img/album-covers/8KpZ5wHj3Tn2XrLm9VcB4D.webp"
             }
           ],
           "external_urls": {
-            "spotify": "https://open.spotify.com/artist/3dBVyJ7JuOMt4GE9607Qin",
-            "deezer": "https://www.deezer.com/us/track/25003771"
+            "spotify": "https://open.spotify.com/track/0QKfiqpEU4h9ycPSzIFwYe"
           }
         },
         "artists": [
           {
-            "name": "T. Rex"
+            "name": "Michael Sembello"
           }
         ],
-        "added_at": "2024-08-13T08:36:46Z",
-        "duration_ms": 266579
+        "added_at": "2026-01-29T17:30:00Z",
+        "duration_ms": 244000
       },
       {
-        "id": "0IwlY33zbBXN7zlS9DP2Cj",
-        "name": "Sunday Morning",
+        "id": "1FmQ6nR4vTp8Zw3YsKxJ2G",
+        "name": "Paint It, Black",
         "album": {
-          "name": "The Velvet Underground & Nico 45th Anniversary",
+          "name": "Aftermath",
           "images": [
             {
-              "url": "/img/album-covers/0IwlY33zbBXN7zlS9DP2Cj.webp"
+              "url": "/img/album-covers/1FmQ6nR4vTp8Zw3YsKxJ2G.webp"
             }
           ],
           "external_urls": {
-            "spotify": "https://open.spotify.com/track/11607FzqoipskTsXrwEHnJ",
-            "deezer": "https://www.deezer.com/us/track/61292499"
+            "spotify": "https://open.spotify.com/track/63T7DJ1AFDD6Bn8VzG6JE8"
           }
         },
         "artists": [
           {
-            "name": "The Velvet Underground, Nico"
+            "name": "The Rolling Stones"
           }
         ],
-        "added_at": "2024-08-13T08:37:24Z",
-        "duration_ms": 176100
+        "added_at": "2026-01-29T18:00:00Z",
+        "duration_ms": 202000
       },
       {
-        "id": "1Clu0gbMFEvJ3bdpgmlMvh",
-        "name": "Mr. Fox in the Fields",
+        "id": "6WqY2jNs8Hv5Km3TpLx9Rc",
+        "name": "Heaven Is A Place On Earth",
         "album": {
-          "name": "Fantastic Mr. Fox (Original Soundtrack)",
+          "name": "Greatest Vol.1 - Belinda Carlisle",
           "images": [
             {
-              "url": "/img/album-covers/1Clu0gbMFEvJ3bdpgmlMvh.webp"
+              "url": "/img/album-covers/6WqY2jNs8Hv5Km3TpLx9Rc.webp"
             }
           ],
           "external_urls": {
-            "spotify": "https://open.spotify.com/track/1Clu0gbMFEvJ3bdpgmlMvh",
-            "deezer": "https://www.deezer.com/us/track/10102011"
+            "spotify": "https://open.spotify.com/track/37Q5anxoGWYdRsyeXkkNoI"
           }
         },
         "artists": [
           {
-            "name": "Alexandre Desplat"
+            "name": "Belinda Carlisle"
           }
         ],
-        "added_at": "2024-08-13T08:35:08Z",
-        "duration_ms": 62589
+        "added_at": "2026-01-29T18:30:00Z",
+        "duration_ms": 246000
       },
       {
-        "id": "7lTTDZv3adwmeoWRobZmbU",
-        "name": "Clicktivism",
+        "id": "2BvM7nPq4Rx5Dt8WjKs3Yc",
+        "name": "Don't You Worry Child",
         "album": {
-          "name": "Flickering i",
+          "name": "Don't You Worry Child",
           "images": [
             {
-              "url": "/img/album-covers/7lTTDZv3adwmeoWRobZmbU.webp"
+              "url": "/img/album-covers/2BvM7nPq4Rx5Dt8WjKs3Yc.webp"
             }
           ],
           "external_urls": {
-            "spotify": "https://open.spotify.com/track/7lTTDZv3adwmeoWRobZmbU",
-            "deezer": "https://www.deezer.com/us/track/1674218887"
+            "spotify": "https://open.spotify.com/track/67SgmtHYq1pM7YjT1P4Mrh"
           }
         },
         "artists": [
           {
-            "name": "Astrel K"
+            "name": "City Seesions"
           }
         ],
-        "added_at": "2024-08-13T09:20:28Z",
-        "duration_ms": 298605
+        "added_at": "2026-01-29T19:00:00Z",
+        "duration_ms": 171000
       },
       {
-        "id": "1JIzFhI9Lt5FyslawmHCBi",
-        "name": "Five Years - 2012 Remaster",
+        "id": "5NcW8jR2Hx9TkPq6VmLs4B",
+        "name": "Yellow",
         "album": {
-          "name": "The Rise and Fall of Ziggy Stardust and the Spiders from Mars (2012 Remaster)",
+          "name": "Parachutes",
           "images": [
             {
-              "url": "/img/album-covers/1JIzFhI9Lt5FyslawmHCBi.webp"
+              "url": "/img/album-covers/5NcW8jR2Hx9TkPq6VmLs4B.webp"
             }
           ],
           "external_urls": {
-            "spotify": "https://open.spotify.com/track/1JIzFhI9Lt5FyslawmHCBi",
-            "deezer": "https://www.deezer.com/us/track/107471920"
+            "spotify": "https://open.spotify.com/track/3AJwUDP919kvQ9QcozQPxg"
           }
         },
         "artists": [
           {
-            "name": "David Bowie"
+            "name": "Coldplay"
           }
         ],
-        "added_at": "2024-08-15T17:27:17Z",
-        "duration_ms": 283758
+        "added_at": "2026-01-29T19:30:00Z",
+        "duration_ms": 266000
       },
       {
-        "id": "6e65fH1wClamA2QPI5HUi3",
-        "name": "Prickly Pear",
+        "id": "3GxT7nPv9Qm2RkLs6WcH8F",
+        "name": "Rocketeer",
         "album": {
-          "name": "Knee-Deep In the North Sea",
+          "name": "Free Wired",
           "images": [
             {
-              "url": "/img/album-covers/6e65fH1wClamA2QPI5HUi3.webp"
+              "url": "/img/album-covers/3GxT7nPv9Qm2RkLs6WcH8F.webp"
             }
           ],
           "external_urls": {
-            "spotify": "https://open.spotify.com/track/6e65fH1wClamA2QPI5HUi3",
-            "deezer": "https://www.deezer.com/us/track/99279042"
+            "spotify": "https://open.spotify.com/track/3ZuiIFm9nRnkRz8AZAekjJ"
           }
         },
         "artists": [
           {
-            "name": "Portico Quartet"
+            "name": "Far East Movement"
           }
         ],
-        "added_at": "2024-08-17T19:11:55Z",
-        "duration_ms": 341942
-      },
-      {
-        "id": "2DPWQEfEW4ptmAQfTbZE76",
-        "name": "Tonight We Fly",
-        "album": {
-          "name": "Promenade",
-          "images": [
-            {
-              "url": "/img/album-covers/2DPWQEfEW4ptmAQfTbZE76.webp"
-            }
-          ],
-          "external_urls": {
-            "spotify": "https://open.spotify.com/track/2DPWQEfEW4ptmAQfTbZE76",
-            "deezer": "https://www.deezer.com/us/track/1091791272"
-          }
-        },
-        "artists": [
-          {
-            "name": "The Divine Comedy"
-          }
-        ],
-        "added_at": "2024-08-21T06:30:10Z",
-        "duration_ms": 181080
-      },
-      {
-        "id": "0sxx8bEWlTBmbw0X1Abgc3",
-        "name": "A Hero's Death",
-        "album": {
-          "name": "A Hero's Death",
-          "images": [
-            {
-              "url": "/img/album-covers/0sxx8bEWlTBmbw0X1Abgc3.webp"
-            }
-          ],
-          "external_urls": {
-            "spotify": "https://open.spotify.com/track/0sxx8bEWlTBmbw0X1Abgc3",
-            "deezer": "https://www.deezer.com/us/track/932332832"
-          }
-        },
-        "artists": [
-          {
-            "name": "Fontaines D.C."
-          }
-        ],
-        "added_at": "2024-08-21T07:27:02Z",
-        "duration_ms": 211512
-      },
-      {
-        "id": "2XXpCrhc1OF0oHvdKSd7SX",
-        "name": "Is It It Or Is It i?",
-        "album": {
-          "name": "Flickering i",
-          "images": [
-            {
-              "url": "/img/album-covers/2XXpCrhc1OF0oHvdKSd7SX.webp"
-            }
-          ],
-          "external_urls": {
-            "spotify": "https://open.spotify.com/track/2XXpCrhc1OF0oHvdKSd7SX",
-            "deezer": "https://www.deezer.com/us/track/1674218847"
-          }
-        },
-        "artists": [
-          {
-            "name": "Astrel K"
-          }
-        ],
-        "added_at": "2024-08-29T09:11:42Z",
-        "duration_ms": 356911
-      },
-      {
-        "id": "4PDPn7HosIycoXeoeibFc5",
-        "name": "The Jeweller's Hands",
-        "album": {
-          "name": "Humbug",
-          "images": [
-            {
-              "url": "/img/album-covers/4PDPn7HosIycoXeoeibFc5.webp"
-            }
-          ],
-          "external_urls": {
-            "spotify": "https://open.spotify.com/track/4PDPn7HosIycoXeoeibFc5",
-            "deezer": "https://www.deezer.com/us/track/4315586"
-          }
-        },
-        "artists": [
-          {
-            "name": "Arctic Monkeys"
-          }
-        ],
-        "added_at": "2024-09-04T11:56:50Z",
-        "duration_ms": 344111
-      },
-      {
-        "id": "5Tf1BtJ5v5PebDYSwQXGFv",
-        "name": "Worn / Wander",
-        "album": {
-          "name": "Gawk",
-          "images": [
-            {
-              "url": "/img/album-covers/5Tf1BtJ5v5PebDYSwQXGFv.webp"
-            }
-          ],
-          "external_urls": {
-            "spotify": "https://open.spotify.com/track/5Tf1BtJ5v5PebDYSwQXGFv",
-            "deezer": "https://www.deezer.com/us/track/396127372"
-          }
-        },
-        "artists": [
-          {
-            "name": "Vundabar"
-          }
-        ],
-        "added_at": "2024-09-04T12:21:06Z",
-        "duration_ms": 216476
-      },
-      {
-        "id": "3jjsRKEsF42ccXf8kWR3nu",
-        "name": "Washing Machine Heart",
-        "album": {
-          "name": "Be the Cowboy",
-          "images": [
-            {
-              "url": "/img/album-covers/3jjsRKEsF42ccXf8kWR3nu.webp"
-            }
-          ],
-          "external_urls": {
-            "spotify": "https://open.spotify.com/track/3jjsRKEsF42ccXf8kWR3nu",
-            "deezer": "https://www.deezer.com/us/track/526540852"
-          }
-        },
-        "artists": [
-          {
-            "name": "Mitski"
-          }
-        ],
-        "added_at": "2024-10-05T17:42:31Z",
-        "duration_ms": 127640
-      },
-      {
-        "id": "6YNfrgCOy1dCXZKKRUuZVq",
-        "name": "Everything Means Nothing To Me",
-        "album": {
-          "name": "Figure 8",
-          "images": [
-            {
-              "url": "/img/album-covers/6YNfrgCOy1dCXZKKRUuZVq.webp"
-            }
-          ],
-          "external_urls": {
-            "spotify": "https://open.spotify.com/track/6YNfrgCOy1dCXZKKRUuZVq",
-            "deezer": "https://www.deezer.com/us/track/2285241"
-          }
-        },
-        "artists": [
-          {
-            "name": "Elliott Smith"
-          }
-        ],
-        "added_at": "2024-10-09T14:19:43Z",
-        "duration_ms": 142942
-      },
-      {
-        "id": "1dMcNgBWGFNgnXAm4IJQZX",
-        "name": "Saint Simon",
-        "album": {
-          "name": "Chutes Too Narrow",
-          "images": [
-            {
-              "url": "/img/album-covers/1dMcNgBWGFNgnXAm4IJQZX.webp"
-            }
-          ],
-          "external_urls": {
-            "spotify": "https://open.spotify.com/track/1dMcNgBWGFNgnXAm4IJQZX",
-            "deezer": "https://www.deezer.com/us/track/2459694965"
-          }
-        },
-        "artists": [
-          {
-            "name": "The Shins"
-          }
-        ],
-        "added_at": "2024-10-17T08:48:32Z",
-        "duration_ms": 265613
-      },
-      {
-        "id": "0Qm0OG8rqj8OMbIx1gAAtE",
-        "name": "Matador",
-        "album": {
-          "name": "Danger in the Club",
-          "images": [
-            {
-              "url": "/img/album-covers/0Qm0OG8rqj8OMbIx1gAAtE.webp"
-            }
-          ],
-          "external_urls": {
-            "spotify": "https://open.spotify.com/track/0Qm0OG8rqj8OMbIx1gAAtE",
-            "deezer": "https://www.deezer.com/us/track/98826500"
-          }
-        },
-        "artists": [
-          {
-            "name": "Palma Violets"
-          }
-        ],
-        "added_at": "2025-01-03T07:12:42Z",
-        "duration_ms": 265560
-      },
-      {
-        "id": "7gNJfhbuxZ6i3xmLE2Tp4n",
-        "name": "Class Historian",
-        "album": {
-          "name": "Just Enough Hip to Be Woman",
-          "images": [
-            {
-              "url": "/img/album-covers/7gNJfhbuxZ6i3xmLE2Tp4n.webp"
-            }
-          ],
-          "external_urls": {
-            "spotify": "https://open.spotify.com/track/7gNJfhbuxZ6i3xmLE2Tp4n",
-            "deezer": "https://www.deezer.com/us/track/136282240"
-          }
-        },
-        "artists": [
-          {
-            "name": "BRONCHO"
-          }
-        ],
-        "added_at": "2025-01-03T07:20:12Z",
-        "duration_ms": 212323
+        "added_at": "2026-01-29T20:00:00Z",
+        "duration_ms": 211000
       }
     ],
-    "length": 24
+    "length": 14
   }
 }

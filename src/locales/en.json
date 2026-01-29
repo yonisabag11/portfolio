@@ -102,9 +102,9 @@
                                   "playlistName":  "Portfolio - Playlist",
                                   "title":  "Title",
                                   "album":  "Album",
-                                  "addedThe":  "Added the",
+                                  "dateAdded":  "Date Added",
                                   "duration":  "Duration",
-                                  "link":  "Links",
+                                  "link":  "Link",
                                   "artist":  "Artist",
                                   "description":  "A playlist created especially for my portfolio, it contains my favorite tracks.",
                                   "visitOnSpotify":  "Listen on Spotify",
@@ -252,7 +252,8 @@
                                         "tasksDoneThird":  "Internationalization and content management",
                                         "tasksDoneThirdDetails":  "Integrated Vue I18n for comprehensive internationalization supporting English and Hebrew (RTL) languages with over 250 translation keys across all UI elements, project descriptions, and system messages. Created a structured data management system using JSON files (projects-data.json, cv-data.json, playlist-data.json, pictures-data.json, terminal-data.json, windows-data.json, header-menu-data.json) for easy content updates without code changes. Implemented dynamic component loading based on project selection, allowing each project to have its own detailed content component with custom layouts and media.",
                                         "tasksDoneFourth":  "DevOps and deployment pipeline",
-                                        "tasksDoneFourthDetails":  "Established a complete CI/CD pipeline using Jenkins for automated builds and deployments, integrated SonarQube for code quality analysis and maintaining clean code standards, and created Docker containerization with nginx web server for consistent production deployments. Configured GitHub Pages deployment workflow for hosting the portfolio website with proper base path configuration. Implemented build optimization with Vite bundler for fast load times, code splitting, and efficient asset delivery. Added comprehensive E2E testing using Nightwatch.js to ensure functionality across different browsers and maintain quality assurance throughout development iterations."
+                                        "tasksDoneFourthDetails":  "Established a complete CI/CD pipeline using Jenkins for automated builds and deployments, integrated SonarQube for code quality analysis and maintaining clean code standards, and created Docker containerization with nginx web server for consistent production deployments. Configured GitHub Pages deployment workflow for hosting the portfolio website with proper base path configuration. Implemented build optimization with Vite bundler for fast load times, code splitting, and efficient asset delivery. Added comprehensive E2E testing using Nightwatch.js to ensure functionality across different browsers and maintain quality assurance throughout development iterations.",
+                                        "noPicturesMessage":  "There's no pictures for this project, just go look around :)"
                                     }
                 },
     "footer":  {

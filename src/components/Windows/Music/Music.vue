@@ -5,7 +5,7 @@
       <div class="w-full h-full overflow-x-hidden">
         <div>
           <div class="flex items-center p-1.5" :class="localeStore.currentLocale === 'he' ? 'flex-row-reverse gap-5' : 'gap-5'">
-            <img v-if="playlist.images" src="/img/icons/music/logo_spotify.svg" :alt="$t('windows.music.playlistCoverAlt')" class="w-24" />
+            <img v-if="playlist.images" :src="playlist.images[0].url" :alt="$t('windows.music.playlistCoverAlt')" class="w-24 h-24 object-cover rounded-sm" />
             <div :class="localeStore.currentLocale === 'he' ? 'text-right' : 'text-left'">
               <h2 class="text-xl font-bold">{{ $t('windows.music.playlistName') }}</h2>
               <p class="text-xs mb-1">{{ $t('windows.music.description') }}</p>
@@ -32,7 +32,7 @@
               </div>
               <!-- Added column - order 3 for RTL, 3 for LTR -->
               <div class="col-span-1 px-1" :class="localeStore.currentLocale === 'he' ? 'order-3' : 'order-3'">
-                <p class="text-xs font-trebuchet-pixel truncate">{{ $t('windows.music.addedThe') }}</p>
+                <p class="text-xs font-trebuchet-pixel truncate">{{ $t('windows.music.dateAdded') }}</p>
               </div>
               <!-- Album column - order 4 for RTL, 2 for LTR -->
               <div class="col-span-3 overflow-hidden px-1 hidden md:block" :class="localeStore.currentLocale === 'he' ? 'order-4' : 'order-2'">
@@ -63,14 +63,6 @@
                       />
                     </svg>
                   </Button>
-                  <Button :href="track.album.external_urls.deezer" :blank="true" layout="small">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24">
-                      <path
-                        fill="#000000"
-                        d="M18.774 5.051c.185-1.072.457-1.747.757-1.748c.561 0 1.015 2.341 1.015 5.228s-.455 5.229-1.016 5.229c-.23 0-.443-.4-.614-1.064c-.27 2.439-.831 4.115-1.48 4.115c-.5 0-.953-1.007-1.256-2.594c-.207 3.018-.727 5.161-1.334 5.161c-.381 0-.73-.848-.987-2.231C13.55 20 12.834 22 12 22s-1.551-2-1.86-4.853c-.255 1.383-.6 2.231-.986 2.231c-.609 0-1.128-2.142-1.335-5.161c-.3 1.587-.752 2.594-1.256 2.594c-.649 0-1.21-1.676-1.481-4.115c-.169.668-.382 1.064-.613 1.064c-.562 0-1.017-2.34-1.017-5.229S3.908 3.3 4.471 3.3c.3 0 .57.676.758 1.748C5.527 3.2 6.014 2 6.564 2c.653 0 1.219 1.7 1.487 4.168c.262-1.8.658-2.941 1.1-2.941c.624 0 1.154 2.252 1.351 5.393C10.874 7.01 11.41 6 12 6s1.128 1.011 1.5 2.62c.2-3.141.727-5.393 1.351-5.393c.444 0 .84 1.145 1.1 2.941C16.219 3.7 16.785 2 17.439 2c.547 0 1.035 1.2 1.335 3.051m-16.2 5.3C2.258 10.355 2 9.31 2 8.017s.258-2.337.576-2.337s.578 1.044.578 2.337s-.254 2.338-.578 2.338zm18.848 0c-.32 0-.577-1.045-.577-2.338s.257-2.337.577-2.337S22 6.724 22 8.017s-.258 2.338-.576 2.338z"
-                      />
-                    </svg>
-                  </Button>
                 </div>
                 <!-- Duration column - order 2 for RTL, 4 for LTR -->
                 <div class="col-span-1 px-1" :class="localeStore.currentLocale === 'he' ? 'order-2' : 'order-4'">
@@ -79,13 +71,7 @@
                 <!-- Added column - order 3 for RTL, 3 for LTR -->
                 <div class="col-span-1 px-1" :class="localeStore.currentLocale === 'he' ? 'order-3' : 'order-3'">
                   <p class="text-xs font-trebuchet-pixel truncate">
-                    {{
-                      isMoreThanOneMonth(track.added_at)
-                        ? formatDate(new Date(track.added_at))
-                        : formatDistanceToNow(new Date(track.added_at), {
-                            locale: localeMap[localeStore.currentLocale]
-                          })
-                    }}
+                    {{ formatDate(new Date(track.added_at)) }}
                   </p>
                 </div>
                 <!-- Album column - order 4 for RTL, 2 for LTR -->

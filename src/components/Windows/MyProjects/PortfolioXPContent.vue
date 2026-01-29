@@ -71,8 +71,8 @@
       <div class="w-full">
         <h3 class="mb-2 font-bold">{{ $t('common.design') }}</h3>
       </div>
-      <div class="w-full max-w-[750px] mb-2">
-        <img src="/img/projects/PortfolioXP/portfolioxp-preview.webp" :alt="ProjectName + ' - Preview'" class="w-full rounded-lg shadow-lg" />
+      <div class="w-full max-w-[750px] mb-2 text-center">
+        <p class="text-lg italic text-gray-600">{{ $t('project.portfolioXP.noPicturesMessage') }}</p>
       </div>
     </div>
   </section>
