@@ -1,6 +1,10 @@
 <script setup>
-import { ref } from 'vue'
+import { ref, computed } from 'vue'
 import { useVolumeStore } from '@/stores/volumeStore'
+import { useI18n } from 'vue-i18n'
+
+const { locale, t } = useI18n()
+const isRtl = computed(() => locale.value && locale.value.toString().startsWith('he'))
 
 const volumeStore = useVolumeStore()
 
@@ -11,6 +15,16 @@ const volume = ref(volumeStore.volume)
 const adjustVolume = () => {
   volumeStore.setVolume(volume.value)
 }
+
+const labelParts = computed(() => {
+  const text = (t('footer.volumeControl') || '') + ''
+  if (!text) return ['', '']
+  const parts = text.split(/\s+/)
+  if (parts.length === 1) return [parts[0], '']
+  if (parts.length === 2) return [parts[0], parts[1]]
+  const splitIndex = Math.ceil(parts.length / 2)
+  return [parts.slice(0, splitIndex).join(' '), parts.slice(splitIndex).join(' ')]
+})
 </script>
 
 <template>
@@ -21,8 +35,13 @@ const adjustVolume = () => {
     </div>
     <div class="bg-light-yellow h-52 mt-3 pr-1">
       <div class="h-full w-full flex items-center px-2">
-        <label class="text-black text-xs font-trebuchet-pixel pr-4" for="volume">Volume</label>
-        <input class="slider cursor-pointer" type="range" min="0" max="1" step="0.01" v-model.number="volume" @input="adjustVolume" />
+        <label class="text-black text-xs font-trebuchet-pixel w-10 text-left pr-1 whitespace-normal" :dir="isRtl ? 'rtl' : 'ltr'" for="volume">
+          <div class="leading-tight">{{ labelParts[0] }}</div>
+          <div class="leading-tight">{{ labelParts[1] }}</div>
+        </label>
+        <div class="flex-1 flex justify-end pr-3">
+          <input class="slider cursor-pointer" type="range" min="0" max="1" step="0.01" v-model.number="volume" @input="adjustVolume" />
+        </div>
       </div>
     </div>
   </section>

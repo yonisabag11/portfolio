@@ -1,6 +1,20 @@
 <template>
-  <div class="absolute bottom-0 w-full bg-player h-14 shadow-inner">
-    <div class="flex items-center justify-between h-full px-2" :class="localeStore.currentLocale === 'he' ? 'flex-row-reverse' : ''">
+  <div class="absolute bottom-0 w-full bg-player shadow-inner">
+    <!-- Progress Bar -->
+    <div class="w-full px-2 pt-1">
+      <input 
+        type="range" 
+        :min="0" 
+        :max="currentTrack.duration_ms" 
+        :value="currentTime" 
+        @input="seekTo" 
+        class="progress-slider w-full cursor-pointer"
+        :style="`--progress: ${(currentTime / currentTrack.duration_ms) * 100}%`"
+      />
+    </div>
+    
+    <!-- Controls -->
+    <div class="flex items-center justify-between h-14 px-2" :class="localeStore.currentLocale === 'he' ? 'flex-row-reverse' : ''">
       <div class="w-1/3">
         <div class="flex items-center gap-2" :class="localeStore.currentLocale === 'he' ? 'flex-row-reverse' : ''">
           <img v-if="currentTrack.album && currentTrack.album.images" :src="currentTrack.album.images[0].url" :alt="$t('alt.albumCover')" class="w-10 h-10 rounded-sm" />
@@ -127,6 +141,15 @@ const nextTrack = () => {
   }
 }
 
+const seekTo = (event) => {
+  const newTime = parseFloat(event.target.value)
+  currentTime.value = newTime
+  
+  if (audioElement) {
+    audioElement.currentTime = newTime / 1000 // Convert milliseconds to seconds
+  }
+}
+
 function formatTime(ms) {
   if (ms == null || isNaN(ms) || ms == undefined) {
     return '0:00'
@@ -179,6 +202,47 @@ onUnmounted(() => {
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
+
+/* Progress Slider */
+.progress-slider {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 6px;
+  background: linear-gradient(to right, #1db954 var(--progress), #ddd var(--progress));
+  border-radius: 3px;
+  outline: none;
+}
+
+.progress-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: #1db954;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.progress-slider::-webkit-slider-thumb:hover {
+  background: #1ed760;
+  transform: scale(1.2);
+}
+
+.progress-slider::-moz-range-thumb {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: #1db954;
+  cursor: pointer;
+  border: none;
+  transition: all 0.15s ease;
+}
+
+.progress-slider::-moz-range-thumb:hover {
+  background: #1ed760;
+  transform: scale(1.2);
+}
 }
 
 .play-button:hover {

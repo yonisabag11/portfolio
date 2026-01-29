@@ -259,7 +259,7 @@
     "footer":  {
                    "fullscreen":  "Fullscreen mode",
                    "exitFullscreen":  "Exit fullscreen mode",
-                   "volumeControl":  "Volume control"
+                   "volumeControl":  "Volume level"
                },
     "alt":  {
                 "logoStart":  "XP Portfolio black logo start",
