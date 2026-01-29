@@ -1,9 +1,6 @@
 # Env
 .env
 
-# Documentation
-HOW_TO_ADD_NEW_PROJECT.md
-
 # Logs
 logs
 *.log
