@@ -170,7 +170,7 @@ const openWindow = (windowId) => {
       windows.value.push({
         id: windowId,
         visible: true,
-        component: shallowRef(entity.component),
+        component: entity.component,
         iconSrc: entity.iconSrc,
         title: entity.title,
         zIndex: highestZIndex.value, // Use highestZIndex
