@@ -10,7 +10,7 @@
           <div>
             <div class="flex justify-end w-full">
               <div class="w-2/3">
-                <img src="/img/logo-portfolio-white.webp" :alt="$t('alt.logoLogin')" class="mb-3" />
+                <img :src="getAssetPath('/img/logo-portfolio-white.webp')" :alt="$t('alt.logoLogin')" class="mb-3" />
               </div>
             </div>
             <div class="w-full flex justify-end">
@@ -56,7 +56,7 @@
                       @click="changeLocale(locale)"
                       class="flex items-center md:gap-3 gap-2 md:py-2 py-1.5 cursor-pointer hover:bg-opacity-80 font-franklin"
                     >
-                      <img :src="`/img/icons/langs/flag-${locale}.webp`" :alt="localeNames[locale]" class="md:w-8 md:h-4.5 w-22 h-22 object-cover" />
+                      <img :src="getAssetPath(`/img/icons/langs/flag-${locale}.webp`)" :alt="localeNames[locale]" class="md:w-8 md:h-4.5 w-22 h-22 object-cover" />
                       <span class="md:text-xl text-sm">{{ localeNames[locale] }}</span>
                     </a>
                   </div>
@@ -79,6 +79,7 @@
 import { ref, computed, onMounted } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { useLocaleStore } from '@/stores/localeStore'
+import { getAssetPath } from '@/utils/assetPath'
 import LoginForm from '@/components/Loading/LoginForm.vue'
 import ContentCenter from '@/layouts/ContentCenter.vue'
 
@@ -97,7 +98,7 @@ onMounted(() => {
 })
 
 const flagSrc = computed(() => {
-  return `/img/icons/langs/flag-${localeStore.currentLocale}.webp`
+  return getAssetPath(`/img/icons/langs/flag-${localeStore.currentLocale}.webp`)
 })
 
 const toggleDropdown = () => {

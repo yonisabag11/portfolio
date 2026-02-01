@@ -1,4 +1,5 @@
 <script setup>
+import { getAssetPath } from '@/utils/assetPath'
 import ContentCenter from '@/layouts/ContentCenter.vue'
 </script>
 
@@ -10,7 +11,7 @@ import ContentCenter from '@/layouts/ContentCenter.vue'
 
     <template #center>
       <div class="md:w-4/12 w-64 ml-5 mb-10">
-        <img src="/img/logo-portfolio-white.webp" :alt="$t('alt.logoLoading')" />
+        <img :src="getAssetPath('/img/logo-portfolio-white.webp')" :alt="$t('alt.logoLoading')" />
       </div>
     </template>
 

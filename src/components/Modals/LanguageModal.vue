@@ -1,6 +1,7 @@
 <script setup>
 import { computed } from 'vue'
 import { useI18n } from 'vue-i18n'
+import { getAssetPath } from '@/utils/assetPath'
 
 const { locale } = useI18n()
 const localeNames = {
@@ -17,7 +18,7 @@ const props = defineProps({
 
 // Function to get the flag source based on the locale
 const getFlagSrc = (locale) => {
-  return `/img/icons/langs/flag-${locale}.webp`
+  return getAssetPath(`/img/icons/langs/flag-${locale}.webp`)
 }
 
 // Compute the opposite locale
