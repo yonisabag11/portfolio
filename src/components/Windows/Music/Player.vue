@@ -32,8 +32,13 @@
         </button>
         <button
           @click="togglePlay"
-          class="w-10 h-10 flex items-center justify-center rounded-full bg-white hover:bg-gray-200 relative overflow-hidden play-button cursor-pointer"
-          :class="{ 'is-playing': isPlaying }"
+          class="w-10 h-10 flex items-center justify-center rounded-full bg-white hover:bg-gray-200 relative overflow-hidden cursor-pointer"
+          :style="{
+            backgroundImage: `url(${isPlaying ? getAssetPath('/img/icons/music/pause-icon.webp') : getAssetPath('/img/icons/music/play-icon.webp')})`,
+            backgroundSize: 'contain',
+            backgroundRepeat: 'no-repeat',
+            backgroundPosition: 'center'
+          }"
         ></button>
         <button @click="nextTrack" class="w-6 h-6 flex items-center justify-center rounded-full bg-white hover:bg-gray-200 cursor-pointer">
           <img :src="getAssetPath('/img/icons/music/next-icon.webp')" :alt="$t('alt.nextMusic')" class="w-full h-full" />
@@ -79,7 +84,7 @@ const updateCurrentTime = () => {
 
 const togglePlay = () => {
   isPlaying.value = !isPlaying.value
-  const audioFile = '/musics/' + currentTrack.value.id + '.mp3'
+  const audioFile = getAssetPath('/musics/' + currentTrack.value.id + '.mp3')
   if (isPlaying.value) {
     volumeStore.playAudio(audioFile)
     audioElement = volumeStore.audioElements[audioFile]
@@ -94,7 +99,7 @@ const togglePlay = () => {
 
 const previousTrack = () => {
   const currentIndex = props.playlist.findIndex((track) => track.id === currentTrack.value.id)
-  const currentAudioFile = '/musics/' + currentTrack.value.id + '.mp3'
+  const currentAudioFile = getAssetPath('/musics/' + currentTrack.value.id + '.mp3')
   
   if (audioElement) {
     audioElement.removeEventListener('timeupdate', updateCurrentTime)
@@ -109,7 +114,7 @@ const previousTrack = () => {
     currentTrack.value = props.playlist[currentIndex - 1]
   }
 
-  const newAudioFile = '/musics/' + currentTrack.value.id + '.mp3'
+  const newAudioFile = getAssetPath('/musics/' + currentTrack.value.id + '.mp3')
   if (isPlaying.value) {
     volumeStore.playAudio(newAudioFile)
     audioElement = volumeStore.audioElements[newAudioFile]
@@ -119,7 +124,7 @@ const previousTrack = () => {
 
 const nextTrack = () => {
   const currentIndex = props.playlist.findIndex((track) => track.id === currentTrack.value.id)
-  const currentAudioFile = '/musics/' + currentTrack.value.id + '.mp3'
+  const currentAudioFile = getAssetPath('/musics/' + currentTrack.value.id + '.mp3')
   
   if (audioElement) {
     audioElement.removeEventListener('timeupdate', updateCurrentTime)
@@ -134,7 +139,7 @@ const nextTrack = () => {
     currentTrack.value = props.playlist[currentIndex + 1]
   }
 
-  const newAudioFile = '/musics/' + currentTrack.value.id + '.mp3'
+  const newAudioFile = getAssetPath('/musics/' + currentTrack.value.id + '.mp3')
   if (isPlaying.value) {
     volumeStore.playAudio(newAudioFile)
     audioElement = volumeStore.audioElements[newAudioFile]
@@ -165,7 +170,7 @@ watch(
   () => props.trackToggled,
   (newTrack) => {
     if (newTrack && newTrack !== currentTrack.value.id) {
-      const currentAudioFile = '/musics/' + currentTrack.value.id + '.mp3'
+      const currentAudioFile = getAssetPath('/musics/' + currentTrack.value.id + '.mp3')
       
       if (audioElement) {
         audioElement.removeEventListener('timeupdate', updateCurrentTime)
@@ -175,7 +180,7 @@ watch(
       currentTime.value = 0
 
       currentTrack.value = props.playlist.find((track) => track.id === newTrack)
-      const newAudioFile = '/musics/' + currentTrack.value.id + '.mp3'
+      const newAudioFile = getAssetPath('/musics/' + currentTrack.value.id + '.mp3')
       
       // Always start playing when clicking a track
       isPlaying.value = true
@@ -191,19 +196,13 @@ onUnmounted(() => {
     audioElement.removeEventListener('timeupdate', updateCurrentTime)
   }
   // Reset component state if window is closed
-  const currentAudioFile = '/musics/' + currentTrack.value.id + '.mp3'
+  const currentAudioFile = getAssetPath('/musics/' + currentTrack.value.id + '.mp3')
   volumeStore.removeAudio(currentAudioFile)
   currentTime.value = 0
 })
 </script>
 
 <style scoped>
-.play-button {
-  background-image: url('/img/icons/music/play-icon.webp');
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-
 /* Progress Slider */
 .progress-slider {
   -webkit-appearance: none;
@@ -243,14 +242,5 @@ onUnmounted(() => {
 .progress-slider::-moz-range-thumb:hover {
   background: #1ed760;
   transform: scale(1.2);
-}
-}
-
-.play-button:hover {
-  background-image: url('/img/icons/music/play-icon-hover.webp');
-}
-
-.play-button.is-playing {
-  background-image: url('/img/icons/music/pause-icon.webp');
 }
 </style>

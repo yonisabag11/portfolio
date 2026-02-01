@@ -36,13 +36,13 @@ const getLocalizedSubtitle = (subtask) => {
       :style="
         item.bgImage
           ? {
-              backgroundImage: `url(${item.bgImage})`
+              backgroundImage: `url(${getAssetPath(item.bgImage)})`
             }
           : {}
       "
     >
       <div v-if="item.iconHeader">
-        <img :src="item.iconHeader" :alt="getLocalizedTitle(item)" class="absolute w-5 h-5 md:w-7 md:h-7 top-3 md:top-2.5" />
+        <img :src="getAssetPath(item.iconHeader)" :alt="getLocalizedTitle(item)" class="absolute w-5 h-5 md:w-7 md:h-7 top-3 md:top-2.5" />
         <div
           :class="[
             'flex flex-row justify-between items-center bg-window-menu-card-header rounded-t-sm px-1 py-px sm:px-2 sm:py-0.5 text-xs-mobile md:text-xs font-bold cursor-pointer hover:text-heroic-blue',
@@ -61,15 +61,15 @@ const getLocalizedSubtitle = (subtask) => {
         ]"
       >
         <h3 class="text-xs-mobile md:text-xxs">{{ getLocalizedTitle(item) }}</h3>
-        <img :src="item.iconSrc" :alt="$t('alt.expand')" class="w-3.5 h-3.5 sm:w-4 sm:h-4 drop-shadow-lg" />
+        <img :src="getAssetPath(item.iconSrc)" :alt="$t('alt.expand')" class="w-3.5 h-3.5 sm:w-4 sm:h-4 drop-shadow-lg" />
       </div>
       <div class="px-1 py-0.5 md:py-0.75 md:px-2" v-for="subtask in item.subtasks" :key="subtask.id">
         <a v-if="subtask.url" :href="subtask.url" target="_blank" class="flex flex-row items-center gap-1 cursor-pointer hover:underline hover:text-heroic-blue" style="direction: ltr;">
-          <img :src="subtask.iconUrl" :alt="subtask.subtitle" class="w-2.5 h-2.5 sm:w-3.5 sm:h-3.5" />
+          <img :src="getAssetPath(subtask.iconUrl)" :alt="subtask.subtitle" class="w-2.5 h-2.5 sm:w-3.5 sm:h-3.5" />
           <p class="font-light text-xxs-mobile md:text-xxs">{{ getLocalizedSubtitle(subtask) }}</p>
         </a>
         <div v-else class="flex flex-row items-center gap-1 cursor-pointer hover:underline hover:text-heroic-blue">
-          <img :src="subtask.iconUrl" :alt="subtask.subtitle" class="w-2.5 h-2.5 sm:w-3.5 sm:h-3.5" />
+          <img :src="getAssetPath(subtask.iconUrl)" :alt="subtask.subtitle" class="w-2.5 h-2.5 sm:w-3.5 sm:h-3.5" />
           <p class="font-light text-xxs-mobile md:text-xxs">{{ getLocalizedSubtitle(subtask) }}</p>
         </div>
       </div>
