@@ -2,6 +2,7 @@
 import { computed } from 'vue'
 import { useLocaleStore } from '@/stores/localeStore'
 import leftMenuData from '@/data/left-menu-data.json'
+import { getAssetPath } from '@/utils/assetPath'
 
 const props = defineProps({
   leftMenuType: String
@@ -49,7 +50,7 @@ const getLocalizedSubtitle = (subtask) => {
           ]"
         >
           <h3 class="ml-4 md:ml-6 text-xs-mobile md:text-xxs">{{ getLocalizedTitle(item) }}</h3>
-          <img :src="item.iconSrc" :alt="$t('alt.expand')" class="w-3.5 h-3.5 sm:w-4 sm:h-4 drop-shadow-lg" />
+          <img :src="getAssetPath(item.iconSrc)" :alt="$t('alt.expand')" class="w-3.5 h-3.5 sm:w-4 sm:h-4 drop-shadow-lg" />
         </div>
       </div>
       <div

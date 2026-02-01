@@ -2,6 +2,7 @@
 import { computed, ref, watchEffect, onMounted, onUnmounted } from 'vue'
 import { useLocaleStore } from '@/stores/localeStore'
 import { useDesktopIconsStore } from '@/stores/desktopIconsStore'
+import { getAssetPath } from '@/utils/assetPath'
 
 const emit = defineEmits()
 
@@ -271,7 +272,7 @@ window.addEventListener('click', (e) => {
             ...entity.imageStyle,
             filter: entity.isActive ? 'opacity(0.5)' : 'opacity(1)'
           }"
-          :src="entity.imgSrc"
+          :src="getAssetPath(entity.imgSrc)"
           :alt="getLocalizedTitle(entity)"
           draggable="false"
         />

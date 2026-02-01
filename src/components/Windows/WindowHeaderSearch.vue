@@ -5,7 +5,7 @@
     </div>
     <div class="w-full h-full bg-white border border-blue-400 pl-1 flex items-center justify-between">
       <div class="flex items-center overflow-hidden">
-        <img :src="iconSrc" :alt="$t('alt.projectIcon')" class="w-3.5 h-3.5" />
+        <img :src="getAssetPath(iconSrc)" :alt="$t('alt.projectIcon')" class="w-3.5 h-3.5" />
         <p class="px-1 small-p cursor-default truncate mt-px">
           {{ title }}
         </p>

@@ -32,7 +32,7 @@
                   <div v-if="entity.headerPosition === 'right'">
                     <HeaderRightButton @toggle-button="toggleWindow" :buttonName="entity.id" class="cursor-pointer min-h-[44px]">
                       <template #img>
-                        <img :src="entity.iconSrc" :alt="getLocalizedTitle(entity)" class="w-6 h-6 sm:w-8 sm:h-8" />
+                        <img :src="getAssetPath(entity.iconSrc)" :alt="getLocalizedTitle(entity)" class="w-6 h-6 sm:w-8 sm:h-8" />
                       </template>
                       <template #text> {{ getLocalizedTitle(entity) }}</template>
                     </HeaderRightButton>

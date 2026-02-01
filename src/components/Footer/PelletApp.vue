@@ -5,7 +5,7 @@
       :class="activeWindow === entity.id ? 'bg-pellet-blue-active shadow-pellet-footer-active' : 'bg-pellet-blue-deactivated shadow-pellet-footer-deactivated'"
     >
       <div class="flex gap-1 mt-px">
-        <img :src="entity.iconSrc" :alt="$t('common.icon') + ' ' + getLocalizedTitle(entity)" class="w-4 h-4" />
+        <img :src="getAssetPath(entity.iconSrc)" :alt="$t('common.icon') + ' ' + getLocalizedTitle(entity)" class="w-4 h-4" />
         <p class="small-p text-white truncate hidden sm:block">{{ getLocalizedTitle(entity) }}</p>
       </div>
     </div>
