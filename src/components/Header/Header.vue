@@ -14,7 +14,7 @@
                 <div v-if="entity.headerPosition === 'left'" class="flex flex-col gap-2 sm:gap-3 py-1 sm:py-2">
                   <HeaderLeftButton @toggle-button="toggleWindow" :buttonName="entity.id">
                     <template #img>
-                      <img :src="entity.imgSrc" :alt="$t('common.icon') + ' ' + getLocalizedTitle(entity)" class="w-6 h-6 sm:w-8 sm:h-8" />
+                      <img :src="getAssetPath(entity.imgSrc)" :alt="$t('common.icon') + ' ' + getLocalizedTitle(entity)" class="w-6 h-6 sm:w-8 sm:h-8" />
                     </template>
                     <template #title>
                       {{ getLocalizedTitle(entity) }}
@@ -59,6 +59,7 @@
 import { ref, computed, watchEffect } from 'vue'
 import { useVolumeStore } from '@/stores/volumeStore.js'
 import { useLocaleStore } from '@/stores/localeStore'
+import { getAssetPath } from '@/utils/assetPath'
 
 import ProfilePicture from '@/components/ProfilePicture.vue'
 import HeaderLeftButton from '@/components/Buttons/HeaderLeftButton.vue'
