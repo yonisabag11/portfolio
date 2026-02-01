@@ -2,6 +2,7 @@
 import { ref, watch } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { useLocaleStore } from '@/stores/localeStore'
+import { getAssetPath } from '@/utils/assetPath'
 
 import emailjs from 'emailjs-com'
 import Button from '../Buttons/Button.vue'
@@ -106,52 +107,52 @@ watch([userEmail, userMessage, emailSubject], ([newUserEmail, newUserMessage, ne
         :isLoading="isLoading"
         class="flex items-center rounded-sm justify-center px-2 py-1 cursor-pointer flex-col hover:border-gray-300 hover:shadow-header-tools"
       >
-        <img src="/img/icons/contact/send-icon.webp" :alt="$t('windows.contact.send')" :class="[isFormComplete ? 'w-8' : 'filter grayscale w-8']" />
+        <img :src="getAssetPath('/img/icons/contact/send-icon.webp')" :alt="$t('windows.contact.send')" :class="[isFormComplete ? 'w-8' : 'filter grayscale w-8']" />
         <p>{{ $t('windows.contact.send') }}</p>
       </button>
       <div class="h-full w-px bg-gray-192 mx-1 md:mx-0.5" />
       <div class="flex gap-px">
         <div class="flex items-center rounded-sm justify-center px-2 py-1 cursor-pointer flex-col hover:border-gray-300 hover:shadow-header-tools">
-          <img src="/img/icons/contact/cut-icon.webp" :alt="$t('windows.contact.cut')" class="w-4 filter grayscale" />
+          <img :src="getAssetPath('/img/icons/contact/cut-icon.webp')" :alt="$t('windows.contact.cut')" class="w-4 filter grayscale" />
           <p>{{ $t('windows.contact.cut') }}</p>
         </div>
         <div class="flex items-center rounded-sm justify-center px-2 py-1 cursor-pointer flex-col hover:border-gray-300 hover:shadow-header-tools">
-          <img src="/img/icons/contact/copy-icon.webp" :alt="$t('windows.contact.copy')" class="w-4 filter grayscale" />
+          <img :src="getAssetPath('/img/icons/contact/copy-icon.webp')" :alt="$t('windows.contact.copy')" class="w-4 filter grayscale" />
           <p>{{ $t('windows.contact.copy') }}</p>
         </div>
         <div class="flex items-center rounded-sm justify-center px-2 py-1 cursor-pointer flex-col hover:border-gray-300 hover:shadow-header-tools">
-          <img src="/img/icons/contact/paste-icon.webp" :alt="$t('windows.contact.paste')" class="w-4 filter grayscale" />
+          <img :src="getAssetPath('/img/icons/contact/paste-icon.webp')" :alt="$t('windows.contact.paste')" class="w-4 filter grayscale" />
           <p>{{ $t('windows.contact.paste') }}</p>
         </div>
         <div class="flex items-center rounded-sm justify-center px-2 py-1 cursor-pointer flex-col hover:border-gray-300 hover:shadow-header-tools">
-          <img src="/img/icons/contact/undo-icon.webp" :alt="$t('windows.contact.undo')" class="w-4 filter grayscale" />
+          <img :src="getAssetPath('/img/icons/contact/undo-icon.webp')" :alt="$t('windows.contact.undo')" class="w-4 filter grayscale" />
           <p>{{ $t('windows.contact.undo') }}</p>
         </div>
       </div>
       <div class="h-full w-px bg-gray-192 mx-1 md:mx-0.5" />
       <div class="flex items-center rounded-sm justify-center px-2 py-1 cursor-pointer flex-col hover:border-gray-300 hover:shadow-header-tools">
-        <img src="/img/icons/contact/check-icon.webp" :alt="$t('windows.contact.check')" class="w-6" />
+        <img :src="getAssetPath('/img/icons/contact/check-icon.webp')" :alt="$t('windows.contact.check')" class="w-6" />
         <p>{{ $t('windows.contact.check') }}</p>
       </div>
       <div class="flex items-center rounded-sm justify-center px-2 py-1 cursor-pointer flex-col hover:border-gray-300 hover:shadow-header-tools">
-        <img src="/img/icons/contact/spelling-icon.webp" :alt="$t('windows.contact.spelling')" class="w-5" />
+        <img :src="getAssetPath('/img/icons/contact/spelling-icon.webp')" :alt="$t('windows.contact.spelling')" class="w-5" />
         <p>{{ $t('windows.contact.spelling') }}</p>
       </div>
       <div class="h-full w-px bg-gray-192 mx-1 md:mx-0.5" />
       <div class="flex items-center rounded-sm justify-center px-2 py-1 cursor-pointer flex-col hover:border-gray-300 hover:shadow-header-tools">
-        <img src="/img/icons/contact/attach-icon.webp" :alt="$t('windows.contact.attach')" class="w-5" />
+        <img :src="getAssetPath('/img/icons/contact/attach-icon.webp')" :alt="$t('windows.contact.attach')" class="w-5" />
         <p>{{ $t('windows.contact.attach') }}</p>
       </div>
       <div class="flex justify-center items-center rounded-sm px-1 py-1 hover:border-gray-300 hover:shadow-header-tools">
         <div class="flex items-center justify-center cursor-pointer flex-col">
-          <img src="/img/icons/contact/priority-icon.webp" :alt="$t('windows.contact.priority')" class="w-5" />
+          <img :src="getAssetPath('/img/icons/contact/priority-icon.webp')" :alt="$t('windows.contact.priority')" class="w-5" />
           <p>{{ $t('windows.contact.priority') }}</p>
         </div>
         <div class="block border-solid down-arrow ml-3"></div>
       </div>
       <div class="h-full w-px bg-gray-192 mx-1 md:mx-0.5" />
       <div class="flex items-center justify-center px-2 py-1 cursor-pointer flex-col hover:border-gray-300 hover:shadow-header-tools">
-        <img src="/img/icons/contact/sign-icon.webp" :alt="$t('windows.contact.sign')" class="w-6" />
+        <img :src="getAssetPath('/img/icons/contact/sign-icon.webp')" :alt="$t('windows.contact.sign')" class="w-6" />
         <p>{{ $t('windows.contact.sign') }}</p>
       </div>
     </div>
@@ -159,7 +160,7 @@ watch([userEmail, userMessage, emailSubject], ([newUserEmail, newUserMessage, ne
     <div class="bg-window-white border-window-header-bot w-full h-18 flex items-center flex-col p-2 text-xxs gap-2">
       <label class="w-full flex gap-2 font-trebuchet-pixel">
         <div class="flex gap-1 w-14 items-center cursor-default">
-          <img src="/img/icons/contact/mailto-icon.webp" :alt="$t('windows.contact.to')" class="w-4 h-4" />
+          <img :src="getAssetPath('/img/icons/contact/mailto-icon.webp')" :alt="$t('windows.contact.to')" class="w-4 h-4" />
           <p class="font-trebuchet-pixel">{{ $t('windows.contact.to') }}</p>
         </div>
         <input
@@ -171,7 +172,7 @@ watch([userEmail, userMessage, emailSubject], ([newUserEmail, newUserMessage, ne
       </label>
       <label class="w-full flex gap-2">
         <div class="flex gap-1 w-14 items-center cursor-default">
-          <img src="/img/icons/contact/mailto-icon.webp" :alt="$t('windows.contact.from')" class="w-4 h-4" />
+          <img :src="getAssetPath('/img/icons/contact/mailto-icon.webp')" :alt="$t('windows.contact.from')" class="w-4 h-4" />
           <p class="font-trebuchet-pixel">{{ $t('windows.contact.from') }}</p>
         </div>
         <input

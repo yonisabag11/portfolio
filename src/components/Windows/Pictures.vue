@@ -21,13 +21,13 @@
               @click="previousPicture"
               class="flex items-center w-7 h-7 cursor-pointer rounded-sm hover:border border border-pictures-blue hover:border-gray-300 hover:shadow-header-tools p-1"
             >
-              <img src="/img/icons/pictures/previous-icon.svg" :alt="$t('windows.pictures.previous')" />
+              <img :src="getAssetPath('/img/icons/pictures/previous-icon.svg')" :alt="$t('windows.pictures.previous')" />
             </button>
             <button
               @click="nextPicture"
               class="flex items-center w-7 h-7 cursor-pointer rounded-sm hover:border border border-pictures-blue hover:border-gray-300 hover:shadow-header-tools p-1"
             >
-              <img src="/img/icons/pictures/next-icon.svg" :alt="$t('windows.pictures.next')" />
+              <img :src="getAssetPath('/img/icons/pictures/next-icon.svg')" :alt="$t('windows.pictures.next')" />
             </button>
           </div>
           <hr class="w-px mx-2 h-full bg-moon-mist" />
@@ -36,13 +36,13 @@
               @click="rotateLeft"
               class="flex items-center w-7 h-7 cursor-pointer rounded-sm hover:border border border-pictures-blue hover:border-gray-300 hover:shadow-header-tools p-1"
             >
-              <img src="/img/icons/pictures/left.svg" :alt="$t('windows.pictures.rotateLeft')" />
+              <img :src="getAssetPath('/img/icons/pictures/left.svg')" :alt="$t('windows.pictures.rotateLeft')" />
             </button>
             <button
               @click="rotateRight"
               class="flex items-center w-7 h-7 cursor-pointer rounded-sm hover:border border border-pictures-blue hover:border-gray-300 hover:shadow-header-tools p-1"
             >
-              <img src="/img/icons/pictures/right.svg" :alt="$t('windows.pictures.rotateRight')" />
+              <img :src="getAssetPath('/img/icons/pictures/right.svg')" :alt="$t('windows.pictures.rotateRight')" />
             </button>
           </div>
         </div>
@@ -78,6 +78,7 @@
 
 <script setup>
 import { ref, onMounted, nextTick } from 'vue'
+import { getAssetPath } from '@/utils/assetPath'
 import WindowLeftMenu from '@/components/Windows/WindowLeftMenu.vue'
 import picturesData from '@/data/pictures-data.json'
 

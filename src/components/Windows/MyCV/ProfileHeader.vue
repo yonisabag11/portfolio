@@ -1,6 +1,7 @@
 <script setup>
 import { computed } from 'vue'
 import { useLocaleStore } from '@/stores/localeStore'
+import { getAssetPath } from '@/utils/assetPath'
 import { useI18n } from 'vue-i18n'
 
 const props = defineProps({
@@ -25,7 +26,7 @@ const displayAge = computed(() => {
 
 <template>
   <div class="flex items-center gap-2" :class="{ 'flex-row-reverse': localeStore.currentLocale === 'he' }">
-    <img src="/img/icons/cv/yoni-sabag-photo-cv.webp" :alt="$t('alt.cvPhoto')" class="w-20 h-20" />
+    <img :src="getAssetPath('/img/icons/cv/yoni-sabag-photo-cv.webp')" :alt="$t('alt.cvPhoto')" class="w-20 h-20" />
     <div class="flex justify-center flex-col">
       <h1 class="font-trebuchet-pixel">{{ displayName }}</h1>
       <h2 class="font-trebuchet-pixel">{{ displayAge }}</h2>

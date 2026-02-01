@@ -1,8 +1,12 @@
+<script setup>
+import { getAssetPath } from '@/utils/assetPath'
+</script>
+
 <template>
   <section>
     <div class="flex justify-between">
       <h1 class="font-semibold">{{ $t('windows.documents.about.title') }}</h1>
-      <img src="/img/windows-xp-badges.webp" alt="Windows XP badges" class="w-auto h-6" />
+      <img :src="getAssetPath('/img/windows-xp-badges.webp')" alt="Windows XP badges" class="w-auto h-6" />
     </div>
     <hr class="mt-2 mb-2 border-t-1 border-black" />
     <div class="flex flex-col gap-1.5 text-xs font-medium my-2">

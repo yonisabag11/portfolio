@@ -28,7 +28,7 @@
       </div>
       <div class="w-1/3 flex items-center justify-center">
         <button @click="previousTrack" class="w-6 h-6 flex items-center justify-center rounded-full bg-white hover:bg-gray-200 cursor-pointer">
-          <img src="/img/icons/music/previous-icon.webp" :alt="$t('alt.previousMusic')" class="w-full h-full" />
+          <img :src="getAssetPath('/img/icons/music/previous-icon.webp')" :alt="$t('alt.previousMusic')" class="w-full h-full" />
         </button>
         <button
           @click="togglePlay"
@@ -36,7 +36,7 @@
           :class="{ 'is-playing': isPlaying }"
         ></button>
         <button @click="nextTrack" class="w-6 h-6 flex items-center justify-center rounded-full bg-white hover:bg-gray-200 cursor-pointer">
-          <img src="/img/icons/music/next-icon.webp" :alt="$t('alt.nextMusic')" class="w-full h-full" />
+          <img :src="getAssetPath('/img/icons/music/next-icon.webp')" :alt="$t('alt.nextMusic')" class="w-full h-full" />
         </button>
       </div>
       <div class="w-1/3">
@@ -50,6 +50,7 @@
 import { ref, onUnmounted, watch } from 'vue'
 import { useVolumeStore } from '@/stores/volumeStore'
 import { useLocaleStore } from '@/stores/localeStore'
+import { getAssetPath } from '@/utils/assetPath'
 
 const props = defineProps({
   playlist: {

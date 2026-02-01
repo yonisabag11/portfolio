@@ -1,6 +1,7 @@
 <script setup>
 import { computed } from 'vue'
 import { useGoBackStore } from '@/stores/goBackStore'
+import { getAssetPath } from '@/utils/assetPath'
 import headerToolsData from '@/data/header-tools-data.json'
 
 const goBackStore = useGoBackStore()
@@ -47,12 +48,12 @@ const headerTools = computed(() => {
               'filter grayscale': !isGoBackAvailable
             }"
           >
-            <img src="/img/icons/windows-header-tools/right-arrow-green-icon.webp" :alt="$t('common.icon') + ' ' + $t('common.back')" class="w-7 h-7 flex-shrink-0" />
+            <img :src="getAssetPath('/img/icons/windows-header-tools/right-arrow-green-icon.webp')" :alt="$t('common.icon') + ' ' + $t('common.back')" class="w-7 h-7 flex-shrink-0" />
             <p class="small-p mr-2">{{ $t('common.back') }}</p>
             <div class="block border-solid down-arrow"></div>
           </div>
           <div class="flex items-center mr-1 filter grayscale">
-            <img src="/img/icons/windows-header-tools/left-arrow-green-icon.webp" :alt="$t('common.icon') + ' ' + $t('common.next')" class="w-7 h-7 flex-shrink-0" />
+            <img :src="getAssetPath('/img/icons/windows-header-tools/left-arrow-green-icon.webp')" :alt="$t('common.icon') + ' ' + $t('common.next')" class="w-7 h-7 flex-shrink-0" />
             <div class="block border-solid down-arrow ml-px"></div>
           </div>
         </div>

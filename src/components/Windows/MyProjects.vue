@@ -2,6 +2,7 @@
 import { ref, reactive, watch, computed, onUnmounted } from 'vue'
 import { useLocaleStore } from '@/stores/localeStore'
 import { useGoBackStore } from '@/stores/goBackStore'
+import { getAssetPath } from '@/utils/assetPath'
 
 import projectData from '@/data/projects-data.json'
 import WindowLeftMenu from '@/components/Windows/WindowLeftMenu.vue'
@@ -169,7 +170,7 @@ window.addEventListener('click', (e) => {
             class="flex items-center px-4 pb-2 gap-2.5 cursor-pointer project-card"
             :class="{ active: project.isFocus, 'flex-row-reverse': localeStore.currentLocale === 'he' }"
           >
-            <img :src="'/img/icons/' + project.icon" :alt="$t('alt.project')" class="w-10 h-10" :style="{ opacity: project.isFocus ? 0.5 : 1 }" />
+            <img :src="getAssetPath('/img/icons/' + project.icon)" :alt="$t('alt.project')" class="w-10 h-10" :style="{ opacity: project.isFocus ? 0.5 : 1 }" />
             <p
               class="text-xs font-tahoma font-medium"
               :style="{

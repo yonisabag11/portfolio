@@ -2,31 +2,31 @@
   <div class="text-xs md:text-header-window">
     <div class="flex w-full text-xs items-center justify-center md:justify-start ml-px flex-wrap gap-4 md:min-w-80 md:ml-1 project-tech-stack">
       <div class="flex flex-col items-center flex-wrap">
-        <img src="/img/icons/projects/tools/react.svg" :alt="$t('common.icon') + ' React Native'" class="w-9 h-9" />
+        <img :src="getAssetPath('/img/icons/projects/tools/react.svg')" :alt="$t('common.icon') + ' React Native'" class="w-9 h-9" />
         <p class="font-bold mt-px">React</p>
       </div>
       <div class="flex flex-col items-center flex-wrap">
-        <img src="/img/icons/projects/tools/firebase.svg" :alt="$t('common.icon') + ' Firebase'" class="w-9 h-9" />
+        <img :src="getAssetPath('/img/icons/projects/tools/firebase.svg')" :alt="$t('common.icon') + ' Firebase'" class="w-9 h-9" />
         <p class="font-bold mt-px">Firebase</p>
       </div>
       <div class="flex flex-col items-center flex-wrap">
-        <img src="/img/icons/projects/tools/expo.svg" :alt="$t('common.icon') + ' Expo'" class="w-9 h-9" />
+        <img :src="getAssetPath('/img/icons/projects/tools/expo.svg')" :alt="$t('common.icon') + ' Expo'" class="w-9 h-9" />
         <p class="font-bold mt-px">Expo</p>
       </div>
       <div class="flex flex-col items-center flex-wrap">
-        <img src="/img/icons/projects/tools/javascript.svg" :alt="$t('common.icon') + ' JavaScript'" class="w-9 h-9" />
+        <img :src="getAssetPath('/img/icons/projects/tools/javascript.svg')" :alt="$t('common.icon') + ' JavaScript'" class="w-9 h-9" />
         <p class="font-bold mt-px">JavaScript</p>
       </div>
       <div class="flex flex-col items-center flex-wrap">
-        <img src="/img/icons/projects/tools/html5.svg" :alt="$t('common.icon') + ' HTML5'" class="w-9 h-9" />
+        <img :src="getAssetPath('/img/icons/projects/tools/html5.svg')" :alt="$t('common.icon') + ' HTML5'" class="w-9 h-9" />
         <p class="font-bold mt-px">HTML</p>
       </div>
       <div class="flex flex-col items-center flex-wrap">
-        <img src="/img/icons/projects/tools/css3.svg" :alt="$t('common.icon') + ' CSS3'" class="w-9 h-9" />
+        <img :src="getAssetPath('/img/icons/projects/tools/css3.svg')" :alt="$t('common.icon') + ' CSS3'" class="w-9 h-9" />
         <p class="font-bold mt-px">CSS</p>
       </div>
       <div class="flex flex-col items-center flex-wrap">
-        <img src="/img/icons/projects/tools/vscode.svg" :alt="$t('common.icon') + ' Visual Studio Code'" class="w-9 h-9" />
+        <img :src="getAssetPath('/img/icons/projects/tools/vscode.svg')" :alt="$t('common.icon') + ' Visual Studio Code'" class="w-9 h-9" />
         <p class="font-bold mt-px">VsCode</p>
       </div>
     </div>
@@ -72,30 +72,32 @@
         <h3 class="mb-2 font-bold">{{ $t('common.design') }}</h3>
       </div>
       <div class="w-full grid grid-cols-3 md:grid-cols-6 gap-3 mb-2">
-        <img src="/img/projects/NourishNet/NourishNet1.webp" :alt="ProjectName + ' - Screenshot 1'" class="w-full rounded-lg shadow-lg" />
-        <img src="/img/projects/NourishNet/NourishNet2.webp" :alt="ProjectName + ' - Screenshot 2'" class="w-full rounded-lg shadow-lg" />
-        <img src="/img/projects/NourishNet/NourishNet3.webp" :alt="ProjectName + ' - Screenshot 3'" class="w-full rounded-lg shadow-lg" />
-        <img src="/img/projects/NourishNet/NourishNet4.webp" :alt="ProjectName + ' - Screenshot 4'" class="w-full rounded-lg shadow-lg" />
-        <img src="/img/projects/NourishNet/NourishNet5.webp" :alt="ProjectName + ' - Screenshot 5'" class="w-full rounded-lg shadow-lg" />
-        <img src="/img/projects/NourishNet/NourishNet6.webp" :alt="ProjectName + ' - Screenshot 6'" class="w-full rounded-lg shadow-lg" />
+        <img :src="getAssetPath('/img/projects/NourishNet/NourishNet1.webp')" :alt="ProjectName + ' - Screenshot 1'" class="w-full rounded-lg shadow-lg" />
+        <img :src="getAssetPath('/img/projects/NourishNet/NourishNet2.webp')" :alt="ProjectName + ' - Screenshot 2'" class="w-full rounded-lg shadow-lg" />
+        <img :src="getAssetPath('/img/projects/NourishNet/NourishNet3.webp')" :alt="ProjectName + ' - Screenshot 3'" class="w-full rounded-lg shadow-lg" />
+        <img :src="getAssetPath('/img/projects/NourishNet/NourishNet4.webp')" :alt="ProjectName + ' - Screenshot 4'" class="w-full rounded-lg shadow-lg" />
+        <img :src="getAssetPath('/img/projects/NourishNet/NourishNet5.webp')" :alt="ProjectName + ' - Screenshot 5'" class="w-full rounded-lg shadow-lg" />
+        <img :src="getAssetPath('/img/projects/NourishNet/NourishNet6.webp')" :alt="ProjectName + ' - Screenshot 6'" class="w-full rounded-lg shadow-lg" />
       </div>
       <div class="w-full grid grid-cols-3 md:grid-cols-6 gap-3 mb-2 mt-4">
-        <img src="/img/projects/NourishNet/NourishNet7.webp" :alt="ProjectName + ' - Screenshot 7'" class="w-full rounded-lg shadow-lg" />
-        <img src="/img/projects/NourishNet/NourishNet8.webp" :alt="ProjectName + ' - Screenshot 8'" class="w-full rounded-lg shadow-lg" />
-        <img src="/img/projects/NourishNet/NourishNet9.webp" :alt="ProjectName + ' - Screenshot 9'" class="w-full rounded-lg shadow-lg" />
-        <img src="/img/projects/NourishNet/NourishNet10.webp" :alt="ProjectName + ' - Screenshot 10'" class="w-full rounded-lg shadow-lg" />
-        <img src="/img/projects/NourishNet/NourishNet11.webp" :alt="ProjectName + ' - Screenshot 11'" class="w-full rounded-lg shadow-lg" />
-        <img src="/img/projects/NourishNet/NourishNet12.webp" :alt="ProjectName + ' - Screenshot 12'" class="w-full rounded-lg shadow-lg" />
+        <img :src="getAssetPath('/img/projects/NourishNet/NourishNet7.webp')" :alt="ProjectName + ' - Screenshot 7'" class="w-full rounded-lg shadow-lg" />
+        <img :src="getAssetPath('/img/projects/NourishNet/NourishNet8.webp')" :alt="ProjectName + ' - Screenshot 8'" class="w-full rounded-lg shadow-lg" />
+        <img :src="getAssetPath('/img/projects/NourishNet/NourishNet9.webp')" :alt="ProjectName + ' - Screenshot 9'" class="w-full rounded-lg shadow-lg" />
+        <img :src="getAssetPath('/img/projects/NourishNet/NourishNet10.webp')" :alt="ProjectName + ' - Screenshot 10'" class="w-full rounded-lg shadow-lg" />
+        <img :src="getAssetPath('/img/projects/NourishNet/NourishNet11.webp')" :alt="ProjectName + ' - Screenshot 11'" class="w-full rounded-lg shadow-lg" />
+        <img :src="getAssetPath('/img/projects/NourishNet/NourishNet12.webp')" :alt="ProjectName + ' - Screenshot 12'" class="w-full rounded-lg shadow-lg" />
       </div>
     </div>
   </div>
   <a rel="noopener" href="https://github.com/yonisabag11" target="_blank"
     class="absolute bottom-2 right-1 md:right-6 h-6 text-xxs border border-twilight-blue bg-button-submit rounded-sm leading-loose px-3 hover:shadow-button-submit-hover cursor-pointer active:bg-button-clicked flex items-center justify-center">
-    <img src="/img/icons/projects/tools/web.svg" :alt="'View website ' + ProjectName" class="w-3 h-3 mr-0.5" />
+    <img :src="getAssetPath('/img/icons/projects/tools/web.svg')" :alt="'View website ' + ProjectName" class="w-3 h-3 mr-0.5" />
     {{ $t('buttons.linkWebSite') }}
   </a>
 </template>
 
 <script setup>
+import { getAssetPath } from '@/utils/assetPath'
+
 let ProjectName = 'NourishNet';
 </script>

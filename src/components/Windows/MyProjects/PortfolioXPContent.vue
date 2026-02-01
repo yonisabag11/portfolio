@@ -2,31 +2,31 @@
   <section class="text-xs md:text-header-window">
     <div class="flex w-full text-xs items-center justify-center md:justify-start ml-px flex-wrap gap-4 md:min-w-80 md:ml-1 project-tech-stack">
       <div class="flex flex-col items-center flex-wrap">
-        <img src="/img/icons/projects/tools/vuejs.svg" :alt="$t('common.icon') + ' Vue.js'" class="w-9 h-9" />
+        <img :src="getAssetPath('/img/icons/projects/tools/vuejs.svg')" :alt="$t('common.icon') + ' Vue.js'" class="w-9 h-9" />
         <p class="font-bold mt-px">Vue.js</p>
       </div>
       <div class="flex flex-col items-center flex-wrap">
-        <img src="/img/icons/projects/tools/vite.svg" :alt="$t('common.icon') + ' Vite'" class="w-9 h-9" />
+        <img :src="getAssetPath('/img/icons/projects/tools/vite.svg')" :alt="$t('common.icon') + ' Vite'" class="w-9 h-9" />
         <p class="font-bold mt-px">Vite</p>
       </div>
       <div class="flex flex-col items-center flex-wrap">
-        <img src="/img/icons/projects/tools/tailwind.svg" :alt="$t('common.icon') + ' Tailwind CSS'" class="w-9 h-9" />
+        <img :src="getAssetPath('/img/icons/projects/tools/tailwind.svg')" :alt="$t('common.icon') + ' Tailwind CSS'" class="w-9 h-9" />
         <p class="font-bold mt-px">Tailwind</p>
       </div>
       <div class="flex flex-col items-center flex-wrap">
-        <img src="/img/icons/projects/tools/scss.svg" :alt="$t('common.icon') + ' SCSS'" class="w-9 h-9" />
+        <img :src="getAssetPath('/img/icons/projects/tools/scss.svg')" :alt="$t('common.icon') + ' SCSS'" class="w-9 h-9" />
         <p class="font-bold mt-px">SCSS</p>
       </div>
       <div class="flex flex-col items-center flex-wrap">
-        <img src="/img/icons/projects/tools/javascript.svg" :alt="$t('common.icon') + ' JavaScript'" class="w-9 h-9" />
+        <img :src="getAssetPath('/img/icons/projects/tools/javascript.svg')" :alt="$t('common.icon') + ' JavaScript'" class="w-9 h-9" />
         <p class="font-bold mt-px">JavaScript</p>
       </div>
       <div class="flex flex-col items-center flex-wrap">
-        <img src="/img/icons/projects/tools/docker.svg" :alt="$t('common.icon') + ' Docker'" class="w-9 h-9" />
+        <img :src="getAssetPath('/img/icons/projects/tools/docker.svg')" :alt="$t('common.icon') + ' Docker'" class="w-9 h-9" />
         <p class="font-bold mt-px">Docker</p>
       </div>
       <div class="flex flex-col items-center flex-wrap">
-        <img src="/img/icons/projects/tools/jenkins.svg" :alt="$t('common.icon') + ' Jenkins'" class="w-9 h-9" />
+        <img :src="getAssetPath('/img/icons/projects/tools/jenkins.svg')" :alt="$t('common.icon') + ' Jenkins'" class="w-9 h-9" />
         <p class="font-bold mt-px">Jenkins</p>
       </div>
     </div>
@@ -78,11 +78,13 @@
   </section>
   <a rel="noopener" href="https://github.com/yonisabag11/portfolio" target="_blank"
     class="absolute bottom-2 right-1 md:right-6 h-6 text-xxs border border-twilight-blue bg-button-submit rounded-sm leading-loose px-3 hover:shadow-button-submit-hover cursor-pointer active:bg-button-clicked flex items-center justify-center">
-    <img src="/img/icons/projects/tools/web.svg" :alt="'View website ' + ProjectName" class="w-3 h-3 mr-0.5" />
+    <img :src="getAssetPath('/img/icons/projects/tools/web.svg')" :alt="'View website ' + ProjectName" class="w-3 h-3 mr-0.5" />
     {{ $t('buttons.linkWebSite') }}
   </a>
 </template>
 
 <script setup>
+import { getAssetPath } from '@/utils/assetPath'
+
 let ProjectName = 'PortfolioXP';
 </script>

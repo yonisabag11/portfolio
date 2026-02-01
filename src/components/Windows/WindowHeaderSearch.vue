@@ -11,11 +11,11 @@
         </p>
       </div>
       <div class="mr-0.5 hover:brightness-110">
-        <img src="/img/icons/windows-header-tools/down-icon.webp" :alt="$t('alt.dropdown')" class="w-3.5 h-3.5" />
+        <img :src="getAssetPath('/img/icons/windows-header-tools/down-icon.webp')" :alt="$t('alt.dropdown')" class="w-3.5 h-3.5" />
       </div>
     </div>
     <div class="flex items-center px-2 gap-1 w-20">
-      <img src="/img/icons/windows-header-tools/right-green-arrow-icon.webp" :alt="$t('common.icon') + ' ' + $t('common.go')" class="w-3.5 h-3.5" />
+      <img :src="getAssetPath('/img/icons/windows-header-tools/right-green-arrow-icon.webp')" :alt="$t('common.icon') + ' ' + $t('common.go')" class="w-3.5 h-3.5" />
       <p class="small-p cursor-default">{{ $t('common.go') }}</p>
     </div>
   </div>
@@ -24,6 +24,7 @@
 <script setup>
 import { computed } from 'vue'
 import { useGoBackStore } from '@/stores/goBackStore'
+import { getAssetPath } from '@/utils/assetPath'
 import { useI18n } from 'vue-i18n'
 
 const goBackStore = useGoBackStore()

@@ -2,11 +2,11 @@
   <div class="text-xs md:text-header-window">
     <div class="flex w-full text-xs items-center justify-center md:justify-start ml-px flex-wrap gap-4 md:min-w-80 md:ml-1 project-tech-stack">
       <div class="flex flex-col items-center flex-wrap">
-        <img src="/img/icons/projects/tools/godot.svg" :alt="$t('common.icon') + ' godot'" class="w-9 h-9 p-px" />
+        <img :src="getAssetPath('/img/icons/projects/tools/godot.svg')" :alt="$t('common.icon') + ' godot'" class="w-9 h-9 p-px" />
         <p class="font-bold mt-px">Godot</p>
       </div>
       <div class="flex flex-col items-center flex-wrap">
-        <img src="/img/icons/projects/tools/vscode.svg" :alt="$t('common.icon') + ' Visual Studio Code'" class="w-9 h-9" />
+        <img :src="getAssetPath('/img/icons/projects/tools/vscode.svg')" :alt="$t('common.icon') + ' Visual Studio Code'" class="w-9 h-9" />
         <p class="font-bold mt-px">VsCode</p>
       </div>
     </div>
@@ -52,22 +52,24 @@
         <h3 class="mb-2 font-bold">{{ $t('common.design') }}</h3>
       </div>
       <div class="w-full grid grid-cols-2 md:grid-cols-3 gap-4 mb-2">
-        <img src="/img/projects/DiscreteMathEscapeRoom/DiscreteMath1.webp" :alt="ProjectName + ' - Screenshot 1'" class="w-full rounded-lg shadow-lg" />
-        <img src="/img/projects/DiscreteMathEscapeRoom/DiscreteMath2.webp" :alt="ProjectName + ' - Screenshot 2'" class="w-full rounded-lg shadow-lg" />
-        <img src="/img/projects/DiscreteMathEscapeRoom/DiscreteMath3.webp" :alt="ProjectName + ' - Screenshot 3'" class="w-full rounded-lg shadow-lg" />
-        <img src="/img/projects/DiscreteMathEscapeRoom/DiscreteMath4.webp" :alt="ProjectName + ' - Screenshot 4'" class="w-full rounded-lg shadow-lg" />
-        <img src="/img/projects/DiscreteMathEscapeRoom/DiscreteMath5.webp" :alt="ProjectName + ' - Screenshot 5'" class="w-full rounded-lg shadow-lg" />
-        <img src="/img/projects/DiscreteMathEscapeRoom/DiscreteMath6.webp" :alt="ProjectName + ' - Screenshot 6'" class="w-full rounded-lg shadow-lg" />
+        <img :src="getAssetPath('/img/projects/DiscreteMathEscapeRoom/DiscreteMath1.webp')" :alt="ProjectName + ' - Screenshot 1'" class="w-full rounded-lg shadow-lg" />
+        <img :src="getAssetPath('/img/projects/DiscreteMathEscapeRoom/DiscreteMath2.webp')" :alt="ProjectName + ' - Screenshot 2'" class="w-full rounded-lg shadow-lg" />
+        <img :src="getAssetPath('/img/projects/DiscreteMathEscapeRoom/DiscreteMath3.webp')" :alt="ProjectName + ' - Screenshot 3'" class="w-full rounded-lg shadow-lg" />
+        <img :src="getAssetPath('/img/projects/DiscreteMathEscapeRoom/DiscreteMath4.webp')" :alt="ProjectName + ' - Screenshot 4'" class="w-full rounded-lg shadow-lg" />
+        <img :src="getAssetPath('/img/projects/DiscreteMathEscapeRoom/DiscreteMath5.webp')" :alt="ProjectName + ' - Screenshot 5'" class="w-full rounded-lg shadow-lg" />
+        <img :src="getAssetPath('/img/projects/DiscreteMathEscapeRoom/DiscreteMath6.webp')" :alt="ProjectName + ' - Screenshot 6'" class="w-full rounded-lg shadow-lg" />
       </div>
     </div>
   </div>
   <a rel="noopener" href="https://misterchopy.itch.io/discrete-math-escape-room" target="_blank"
     class="absolute bottom-2 right-1 md:right-6 h-6 text-xxs border border-twilight-blue bg-button-submit rounded-sm leading-loose px-3 hover:shadow-button-submit-hover cursor-pointer active:bg-button-clicked flex items-center justify-center">
-    <img src="/img/icons/projects/tools/web.svg" :alt="'View website ' + ProjectName" class="w-3 h-3 mr-0.5" />
+    <img :src="getAssetPath('/img/icons/projects/tools/web.svg')" :alt="'View website ' + ProjectName" class="w-3 h-3 mr-0.5" />
     {{ $t('buttons.linkWebSite') }}
   </a>
 </template>
 
 <script setup>
+import { getAssetPath } from '@/utils/assetPath'
+
 let ProjectName = 'Discrete Math Escape Room';
 </script>

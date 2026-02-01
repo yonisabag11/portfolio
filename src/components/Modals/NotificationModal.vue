@@ -1,5 +1,6 @@
 <script setup>
 import { ref } from 'vue'
+import { getAssetPath } from '@/utils/assetPath'
 
 const showNotificationModal = ref(false)
 
@@ -23,7 +24,7 @@ const closeNotificationModal = () => {
     >
       <button @click="closeNotificationModal" class="modal-close cursor-pointer"></button>
       <div class="flex items-center">
-        <img class="w-3.5 h-3.5" src="/img/icons/info-icon.webp" alt="risk" />
+        <img class="w-3.5 h-3.5" :src="getAssetPath('/img/icons/info-icon.webp')" alt="risk" />
         <span class="ml-2">{{ $t('modale.fullscreenTitle') }}</span>
       </div>
       <p>{{ $t('modale.fullscreenFirstText') }}</p>
