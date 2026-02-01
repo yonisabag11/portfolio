@@ -58,6 +58,7 @@
 <script setup>
 import { ref, computed, inject, watch, onUnmounted } from 'vue'
 import { useLocaleStore } from '@/stores/localeStore'
+import { getAssetPath } from '@/utils/assetPath'
 import WindowMinimize from '../components/Buttons/WindowMinimize.vue'
 import WindowMaximize from '../components/Buttons/WindowMaximize.vue'
 import WindowClose from '../components/Buttons/WindowClose.vue'

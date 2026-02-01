@@ -74,7 +74,7 @@
 </style>
 
 <script setup>
-import { ref, shallowRef, provide, onMounted, onUnmounted } from 'vue'
+import { ref, provide, onMounted, onUnmounted } from 'vue'
 import { useWindowsStore } from '@/stores/windowsStore.js'
 import { useVolumeStore } from '@/stores/volumeStore.js'
 import { useLocaleStore } from '@/stores/localeStore'
@@ -132,17 +132,17 @@ provide('activeWindow', activeWindow)
 
 // Create components from data json
 const components = {
-  MyProjects: shallowRef(MyProjects),
-  ContactMe: shallowRef(ContactMe),
-  MyCV: shallowRef(MyCV),
-  Music: shallowRef(Music),
-  DiscreteMath: shallowRef(DiscreteMath),
-  Documents: shallowRef(Documents),
-  Pictures: shallowRef(Pictures),
-  Calendar: shallowRef(Calendar),
-  Notepad: shallowRef(Notepad),
-  MazeEscape: shallowRef(MazeEscape),
-  Terminal: shallowRef(Terminal)
+  MyProjects,
+  ContactMe,
+  MyCV,
+  Music,
+  DiscreteMath,
+  Documents,
+  Pictures,
+  Calendar,
+  Notepad,
+  MazeEscape,
+  Terminal
 }
 
 // Create the entities array from the data.json
