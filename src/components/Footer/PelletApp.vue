@@ -15,6 +15,7 @@
 <script setup>
 import { inject } from 'vue'
 import { useLocaleStore } from '@/stores/localeStore'
+import { getAssetPath } from '@/utils/assetPath'
 
 // Define props
 const props = defineProps({
