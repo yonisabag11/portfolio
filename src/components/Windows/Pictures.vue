@@ -9,7 +9,7 @@
           <div
             class="w-full h-full bg-contain bg-center bg-no-repeat"
             :style="{
-              backgroundImage: `url(${currentPicture.url})`,
+              backgroundImage: `url(${getAssetPath(currentPicture.url)})`,
               transform: `rotate(${rotation}deg)`
             }"
           ></div>
@@ -58,7 +58,7 @@
                 'w-full h-full min-w-20 bg-no-repeat bg-contain bg-center cursor-pointer' +
                 (currentPicture && currentPicture.id === picture.id ? ' border-3 border-focus-blue' : ' border border-gray-300')
               "
-              :style="{ backgroundImage: 'url(' + picture.url + ')' }"
+              :style="{ backgroundImage: 'url(' + getAssetPath(picture.url) + ')' }"
             />
             <p
               @click="setCurrentPicture(picture)"

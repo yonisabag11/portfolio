@@ -5,7 +5,7 @@
       <div class="w-full h-full overflow-x-hidden">
         <div>
           <div class="flex items-center p-1.5" :class="localeStore.currentLocale === 'he' ? 'flex-row-reverse gap-5' : 'gap-5'">
-            <img v-if="playlist.images" :src="playlist.images[0].url" :alt="$t('windows.music.playlistCoverAlt')" class="w-24 h-24 object-cover rounded-sm" />
+            <img v-if="playlist.images" :src="getAssetPath(playlist.images[0].url)" :alt="$t('windows.music.playlistCoverAlt')" class="w-24 h-24 object-cover rounded-sm" />
             <div :class="localeStore.currentLocale === 'he' ? 'text-right' : 'text-left'">
               <h2 class="text-xl font-bold">{{ $t('windows.music.playlistName') }}</h2>
               <p class="text-xs mb-1">{{ $t('windows.music.description') }}</p>
@@ -101,7 +101,7 @@
                     <p v-else class="text-xs font-trebuchet-pixel">{{ index + 1 }}</p>
                   </div>
                   <div @click="playTrack(track.id)" class="flex items-center gap-2 cursor-pointer hover:underline" :class="localeStore.currentLocale === 'he' ? 'flex-row-reverse' : ''">
-                    <img :src="track.album.images[0].url" :alt="$t('windows.music.albumCover') + ' ' + track.name" class="w-12 rounded-sm" />
+                    <img :src="getAssetPath(track.album.images[0].url)" :alt="$t('windows.music.albumCover') + ' ' + track.name" class="w-12 rounded-sm" />
                     <div class="flex flex-col max-w-48">
                       <p class="text-sm font-trebuchet-pixel">{{ track.name }}</p>
                       <p class="text-xs font-trebuchet-pixel">{{ track.artists[0].name }}</p>
@@ -125,6 +125,7 @@ import { ref, onMounted } from 'vue'
 import { formatDistanceToNow, format } from 'date-fns'
 import { enUS, he } from 'date-fns/locale'
 import { useLocaleStore } from '@/stores/localeStore'
+import { getAssetPath } from '@/utils/assetPath'
 import Button from '@/components/Buttons/Button.vue'
 import Player from '@/components/Windows/Music/Player.vue'
 import playlistData from '@/data/playlist-data.json'

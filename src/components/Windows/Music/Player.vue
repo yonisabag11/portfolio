@@ -17,7 +17,7 @@
     <div class="flex items-center justify-between h-14 px-2" :class="localeStore.currentLocale === 'he' ? 'flex-row-reverse' : ''">
       <div class="w-1/3">
         <div class="flex items-center gap-2" :class="localeStore.currentLocale === 'he' ? 'flex-row-reverse' : ''">
-          <img v-if="currentTrack.album && currentTrack.album.images" :src="currentTrack.album.images[0].url" :alt="$t('alt.albumCover')" class="w-10 h-10 rounded-sm" />
+          <img v-if="currentTrack.album && currentTrack.album.images" :src="getAssetPath(currentTrack.album.images[0].url)" :alt="$t('alt.albumCover')" class="w-10 h-10 rounded-sm" />
           <div class="flex flex-col w-full" :class="localeStore.currentLocale === 'he' ? 'ml-5' : 'mr-5'">
             <p class="text-xs font-trebuchet-pixel truncate">{{ currentTrack.name }}</p>
             <p class="text-xs font-trebuchet-pixel truncate">
