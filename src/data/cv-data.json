@@ -1,0 +1,98 @@
+{
+  "he": {
+    "education": [
+      {
+        "degree": "תואר ראשון במדעי המחשב",
+        "institution": "אוניברסיטת ג'ון קרול",
+        "year": "סיים דצמבר 2025",
+        "description": "התמחויות: פיתוח משחקים, פיתוח אתרים, פיתוח תוכנה | ממוצע: 3.84 | רשימת דיקן: 5 סמסטרים"
+      }
+    ],
+    "workExperience": [
+      {
+        "jobTitle": "רכז לוגיסטיקה",
+        "company": "צבא ההגנה לישראל (צה״ל)",
+        "year": "דצמבר 2017 - דצמבר 2020",
+        "responsibilities": [
+          "ניהול פעולות לוגיסטיות ליחידת מילואים של כ-1,000 איש באמצעות SAP ERP",
+          "ייעול זרימת עבודה של דרישות חומרים והפצה, שיפור יעילות תפעולית",
+          "הדרכה וליווי של כוח אדם חדש בנהלי SAP וניהול מלאי",
+          "ניתוח והתאמת נתוני מלאי לזיהוי אי התאמות ותמיכה בהחלטות מבוססות נתונים"
+        ]
+      }
+    ],
+    "projects": [
+      {
+        "name": "חדר בריחה למתמטיקה בדידה",
+        "year": "ספטמבר 2025 - דצמבר 2025",
+        "description": [
+          "פיתוח משחק RPG תצוגה מלמעלה ב-Godot Engine (GDScript) שנועד ללמד מושגי מדעי המחשב דרך משחקיות אינטראקטיבית",
+          "פיתוח מערכת מיני-משחקים מודולרית המיישמת חידות לוגיות עבור צפני Affine, תורת הקבוצות וטבלאות אמת",
+          "בניית מערכת אינטראקציה חזקה ומנהל דיאלוגים מבוסס Singleton לניהול מצב המשחק והתקדמות הסיפור",
+          "עיצוב והטמעה של זרימות UI/UX מלאות כולל תפריט ראשי, תפריט השהיה ו-HUD דינמי לשחקן"
+        ]
+      },
+      {
+        "name": "NourishNet",
+        "year": "נובמבר 2025 - דצמבר 2025",
+        "description": [
+          "פיתוח אפליקציית מובייל חוצת פלטפורמות ב-React Native (Expo) ו-Firebase לחיבור משתמשים למשאבי קהילה מקומיים כמו בנקי מזון ומקלטים",
+          "שילוב Google Maps API ו-Expo Location לאספקת שירותי מיקום בזמן אמת, המאפשרים למשתמשים למצוא משאבים קרובים עם החלפות מפה/רשימה אינטראקטיביות וסינון מבוסס מרחק",
+          "הטמעת Backend חזק עם Firestore לאחזור נתונים דינמי ו-AsyncStorage לשמירה מקומית של מועדפים והעדפות משתמש"
+        ]
+      }
+    ],
+    "technicalSkills": {
+      "languages": "Python, C#, Java, JavaScript, TypeScript, HTML, CSS, GDScript",
+      "frameworks": "React Native, React.js, Node.js, Unity, Godot, Docker, Git, Linux, Firebase, SAP/ERP"
+    }
+  },
+  "en": {
+    "education": [
+      {
+        "degree": "BACHELOR OF SCIENCE IN COMPUTER SCIENCE",
+        "institution": "John Carroll University",
+        "year": "Graduated December 2025",
+        "description": "Concentrations: Game Development, Web Development, Software Development | GPA: 3.84 | Dean's List: 5 semesters"
+      }
+    ],
+    "workExperience": [
+      {
+        "jobTitle": "LOGISTICS COORDINATOR",
+        "company": "Israel Defense Forces (IDF)",
+        "year": "December 2017 - December 2020",
+        "responsibilities": [
+          "Managed logistics operations for a reserve unit of ~1,000 personnel using SAP ERP (MM/WM)",
+          "Streamlined material requisition and distribution workflows, improving operational efficiency",
+          "Trained and guided new personnel on SAP procedures, inventory management, and supply-chain compliance",
+          "Analyzed and reconciled inventory data to identify discrepancies, supporting data-driven decisions"
+        ]
+      }
+    ],
+    "projects": [
+      {
+        "name": "DISCRETE MATH ESCAPE ROOM",
+        "year": "September 2025 - December 2025",
+        "description": [
+          "Developed a 2D top-down RPG in Godot Engine (GDScript) designed to teach Computer Science concepts through interactive gameplay",
+          "Engineered a modular mini-game system implementing logic puzzles for Affine Ciphers, Set Theory, and Truth Tables",
+          "Built a robust Interaction System and Singleton-based Dialogue Manager to handle game state and narrative progression",
+          "Designed and implemented complete UI/UX flows including Main Menu, Pause Menu, and dynamic Player HUD"
+        ]
+      },
+      {
+        "name": "NOURISHNET",
+        "year": "November 2025 - December 2025",
+        "description": [
+          "Developed a cross-platform mobile application using React Native (Expo) and Firebase to connect users with local community resources like food banks and shelters",
+          "Integrated Google Maps API and Expo Location to provide real-time geolocation services, enabling users to find nearby resources with interactive map/list toggles and distance-based filtering",
+          "Implemented a robust backend with Firestore for dynamic data retrieval and AsyncStorage for local persistence of user favorites and preferences"
+        ]
+      }
+    ],
+    "technicalSkills": {
+      "languages": "Python, C#, Java, JavaScript, TypeScript, HTML, CSS, GDScript",
+      "frameworks": "React Native, React.js, Node.js, Unity, Godot, Docker, Git, Linux, Firebase, SAP/ERP"
+    }
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "menuHeaderItems": {
+    "default": {
+      "en": ["File", "Edit", "View", "Tools"],
+      "he": ["קובץ", "עריכה", "תצוגה", "כלים"]
+    },
+    "minesweeper": {
+      "en": ["Game", "Help"],
+      "he": ["משחק", "עזרה"]
+    },
+    "notepad": {
+      "en": ["File", "Edit", "View", "Help"],
+      "he": ["קובץ", "עריכה", "תצוגה", "עזרה"]
+    },
+    "images": {
+      "en": ["File", "Edit", "Favorites", "Tools", "Help"],
+      "he": ["קובץ", "עריכה", "מועדפים", "כלים", "עזרה"]
+    },
+    "documents": {
+      "en": ["File", "Edit", "View", "Favorites", "Tools", "Help"],
+      "he": ["קובץ", "עריכה", "תצוגה", "מועדפים", "כלים", "עזרה"]
+    },
+    "contact": {
+      "en": ["File", "Edit", "View", "Insert", "Format", "Tools", "Message", "Help"],
+      "he": ["קובץ", "עריכה", "תצוגה", "הכנסה", "עיצוב", "כלים", "הודעה", "עזרה"]
+    },
+    "none": {
+      "en": [],
+      "he": []
+    }
+  }
+}

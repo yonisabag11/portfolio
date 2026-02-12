@@ -1,0 +1,115 @@
+# <img src="https://lh6.googleusercontent.com/proxy/O0jtLgr-_kq0MLNcfc-mNens2PSj9oDn4296O8SgMRO2hv4SrTtKjTZN6iecZPdxD67l6YUk26QL0raQ818tXOioabNh1mYpQxQfHw" width="30px" > PortfolioXp
+
+
+![GitHub package.json ](https://img.shields.io/github/package-json/v/yonisabag/portfolio/main)
+![GitHub repo size](https://img.shields.io/github/repo-size/yonisabag/portfolio)
+![GitHub License](https://img.shields.io/github/license/yonisabag/portfolio)
+
+## 🌐 Website
+
+![portfolio](https://github.com/user-attachments/assets/77a7b9c0-6276-43b4-8792-a1f6e86306f0)
+
+### [https://yonisabag.github.io/portfolio](https://yonisabag.github.io/portfolio)
+
+## 👷 Disclaimers
+
+**This is an ongoing project and it is not done yet**.
+If you encounter any bugs it will be really helpfull if you could provide the origin of that bug, the browser you used and the device.
+
+**This design was not made by me**.
+All the icons, wallpaper and sounds belong to windows corporation, so there's nothing I've created here. All I did was copy and apply the design for the web.
+
+**The music component is ~~broken~~ working**.
+I've been waiting for the Spotify team to review my application for extension request, first review was mentionning the usage of old logo of spotify, they were right there is some guidelines about the graphics and I complied, second review said basically that there will not be enough user for that use case. I put all the code to the trash and start all over with songs played locally. 
+
+## ✨ Features
+
+- Loading Screen & Login
+- Internationalisation �🇸 En / 🇮🇱 He
+- Play Minesweeper
+- Play DOOM
+- Reach me by email
+- See my projects
+- Notepad
+- My CV
+- My Images
+- My Calendar
+- Listen to my playlist
+- Manage the volume in the website
+
+## ⚡️ Consumption
+
+Since WindowsXp design was not really meant to be eco friendly _(thanks to the billions of linear gradients)_
+I did my best to make it as lightweight as possible.
+
+[Link to Website Carbon Calculator website](https://www.websitecarbon.com/website/pauljaguin-com-office/)
+
+## 🎨 Webdesign
+
+The original design was made by the windows xp team, there is nothing I've done here but copying it for my use using web languages.
+
+The design part was pretty straight forward on Figma, I used it more like a place where I could put ressources.
+You can still use the components created in the Figma Design they are free and no need to quote.
+
+[Link to Figma](https://www.figma.com/design/8tPMCpOidM1YSSAZt516iK/Portfolio?node-id=0-1&t=JnfahWXeIxcdy3UJ-1)
+
+
+I used after that the docker image of windows xp, that helps a lot to see all the small interactions there is :
+
+[Link to Dockurr repo](https://github.com/dockur/windows)
+
+
+## ⌨️ Deployment
+
+This portfolio is deployed on GitHub Pages.
+
+## 🔨 Usage
+
+```sh
+npm install
+```
+
+### Compile with Hot-Reload and Scss for Development
+
+```sh
+npm run dev:all
+```
+
+### Compile and Minify for Production
+
+```sh
+npm run build
+```
+
+## Docker
+
+### Now you can run the project using docker
+
+See the Docker compose file bellow for deployement.
+
+```yml
+services:
+  portfolio-xp:
+    image: yonisabag/portfolio-xp:latest
+    container_name: portfolio_xp
+    ports:
+      - "35000:35000"
+    volumes:
+      - .:/app/data
+    networks:
+      - portfolio_network
+    restart: unless-stopped
+
+networks:
+  portfolio_network:
+    driver: bridge
+```
+
+### Run the Docker container
+
+```sh
+docker compose up -d
+```
+
+Now you can access the website at [http://localhost:35000](http://localhost:35000)
+

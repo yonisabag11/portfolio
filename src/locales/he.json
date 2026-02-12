@@ -1,0 +1,150 @@
+{
+  "common": {
+    "name": "שם",
+    "tiny": "קטן",
+    "errorVideo": "הדפדפן שלך לא תומך בוידאו.",
+    "context": "הקשר",
+    "objectives": "מטרות",
+    "icon": "אייקון",
+    "back": "חזרה",
+    "search": "חיפוש",
+    "files": "קבצים",
+    "folder": "תיקייה",
+    "next": "הבא",
+    "projects": "פרויקטים",
+    "go": "ללכת",
+    "address": "כתובת",
+    "design": "עיצוב",
+    "tasksDone": "משימות שבוצעו בפרויקט",
+    "techInfo": "מידע טכני",
+    "componentsDot": "רכיבים :",
+    "components": "רכיבים",
+    "models": "מודלים",
+    "model": "מודל",
+    "links": "קישורים",
+    "link": "קישור",
+    "hddDots": "HDD :",
+    "disks": "דיסקים",
+    "quantity": "כמות",
+    "viewModel": "לראות מודל",
+    "CDM": "CDM",
+    "PDM": "PDM",
+    "years": "שנים",
+    "gamedev": "מפתח משחקים",
+    "webdev": "מפתח אתרים",
+    "softwaredev": "מפתח תוכנה",
+    "textDocument": "מסמך טקסט",
+    "list": "רשימה",
+    "modifications": "שינויים",
+    "loading": "טוען...",
+    "language": "שפה",
+    "french": "צרפתית",
+    "english": "אנגלית",
+    "hebrew": "עברית"
+  },
+  "message": {
+    "welcome": "ברוכים הבאים למחשב שלי.",
+    "toBegin": "כדי להתחיל את המסע, לחץ על שם המשתמש שלי.",
+    "explainer": "לאחר ההתחברות, תוכל לדפדף בתיקיות במחשב שלי. עבור לשולחן העבודה ולחץ על תיקיית הפרויקטים כדי לראות את כל הפרויקטים שלי."
+  },
+  "header": {
+    "disconnect": "התנתק",
+    "shutdown": "כבה מחשב"
+  },
+  "startMenu": {
+    "allPrograms": "כל התוכניות",
+    "myDocuments": "המסמכים שלי",
+    "myRecentDocuments": "מסמכים אחרונים",
+    "myPictures": "התמונות שלי",
+    "myMusic": "המוזיקה שלי",
+    "myComputer": "המחשב שלי",
+    "controlPanel": "לוח בקרה",
+    "connectTo": "התחבר אל",
+    "helpAndSupport": "עזרה ותמיכה",
+    "search": "חיפוש",
+    "run": "הרץ"
+  },
+  "windows": {
+    "title": "חלונות",
+    "myProjects": "הפרויקטים שלי",
+    "myCV": "קורות החיים שלי",
+    "cv": {
+      "education": "השכלה",
+      "proExperience": "ניסיון מקצועי",
+      "projects": "פרויקטים",
+      "technicalSkills": "כישורים טכניים",
+      "languages": "שפות תכנות",
+      "frameworks": "כלים וטכנולוגיות"
+    },
+    "contact": {
+      "title": "צור קשר",
+      "to": "אל",
+      "subject": "נושא",
+      "message": "הודעה",
+      "send": "שלח"
+    },
+    "music": {
+      "title": "המוזיקה שלי"
+    },
+    "documents": {
+      "about": {
+        "title": "אודות",
+        "contextFirstParagraph": "הפרויקט הזה נולד מהרצון ליצור תיק עבודות שהוא גם מהנה וגם מקורי.",
+        "contextSecondParagraph": "הרעיון היה ליצור את ממשק המחשב של Windows XP, שיאפשר למבקרים לנווט בתיקיות ובקבצים בהפעלת המחשב שלי.",
+        "contextThirdParagraph": "רציתי להציג את הפרויקטים שלי מזווית אחרת, שבה משתמשים יכולים לשוטט. משהו יותר מסתם כרטיס ביקור באינטרנט. משהו אינטראקטיבי.",
+        "contextFourthParagraph": "הפרויקט תוכנן להיות קרוב ככל האפשר לממשק מחשב אמיתי של Windows XP, עם שולחן עבודה, תיקיות וקבצים.",
+        "contextFifthParagraph": "Windows XP היא מערכת ההפעלה הראשונה שבה השתמשתי, והעיצוב שלה הוא נוסטלגיה עבורי. רציתי לחלוק לה כבוד.",
+        "contextSixthParagraph": "הפרויקט הזה נוצר עם Vue.js, Vuex, Vue Router ו-SCSS. לקח לי בערך שנה להשלים (לסירוגין).",
+        "contextSeventhParagraph": "הפרויקט הזה נעשה עם הרבה תשוקה וסבלנות, ואני מקווה שתהנה לדפדף במחשב שלי!",
+        "secondTitle": "תודות",
+        "helpFirst": "הפרויקט הזה בוצע בעזרת Dockurr Windows XP, שאיפשר לי להריץ סביבת Windows XP על המחשב שלי בקלות רבה.",
+        "helpSecond": "ה-API של Spotify אפשר לי לאחזר את מידע הפלייליסט שלי, להציג אותו באתר שלי ולהוסיף נגן משולב.",
+        "helpThird": "לצד השרת, השתמשתי בשרת Node.js כדי לקמפל את האתר ולנהל את טופס יצירת הקשר. האתר מתארח ב-Hostinger וה-CI/CD נעשה באמצעות השרת הביתי שלי.",
+        "helpFourth": "הצלחתי לשחזר את תמונות Windows XP ולשלב אותן בפרויקט שלי הודות לאתר ארכיון האינטרנט. תודה רבה להם.",
+        "helpFifth": "החתול שלי עזר בחלקו על ידי דריכה על המקלדת שלי, אבל בעיקר היא הייתה תמיכה מוסרית."
+      },
+      "legal": {
+        "title": "הודעה משפטית",
+        "firstParagraph": "בהתאם להוראות החוק, משתמשי אתר התיק של יוני סבג מתוודעים לזהות הצדדים השונים המעורבים ביצירתו ובניטורו.",
+        "edit": "עריכת האתר",
+        "secondParagraph": "אתר זה נערך על ידי:",
+        "thirdParagraph": "יוני סבג",
+        "hosting": "אירוח",
+        "fourthParagraph": "האתר מתארח על ידי GitHub Pages.",
+        "dirPublication": "מנהל פרסום",
+        "fifthParagraph": "מנהל הפרסום הוא: יוני סבג.",
+        "contact": "צור קשר",
+        "sixthParagraph": "לכל שאלה, מידע על המוצרים המוצגים באתר, או לגבי האתר עצמו, תוכל להשאיר הודעה בכתובת הדוא\"ל הבאה:"
+      }
+    }
+  },
+  "buttons": {
+    "close": "סגור",
+    "minimize": "מזער",
+    "maximize": "הגדל",
+    "restore": "שחזר",
+    "downloadCV": "הורד קורות חיים",
+    "linkRepository": "קישור למאגר",
+    "visitWebsite": "בקר באתר",
+    "seeMore": "ראה עוד"
+  },
+  "footer": {
+    "fullscreen": "מסך מלא",
+    "exitFullscreen": "יציאה ממסך מלא",
+    "volumeControl": "שליטת עוצמה"
+  },
+  "alt": {
+    "logoStart": "לוגו תיק XP שחור התחלה",
+    "logoLoading": "לוגו תיק XP שחור טעינה",
+    "logoLogin": "לוגו תיק XP לבן כניסה",
+    "currLang": "שפה נוכחית",
+    "cvPhoto": "תמונת קורות חיים",
+    "albumCover": "עטיפת אלבום",
+    "previousMusic": "שיר קודם",
+    "nextMusic": "שיר הבא",
+    "dropdown": "תפריט נפתח",
+    "expand": "הרחבה",
+    "project": "פרויקט",
+    "projectIcon": "איקון פרויקט"
+  }
+}

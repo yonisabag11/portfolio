@@ -1,0 +1,125 @@
+{
+  "categories": [
+    {
+      "name": {
+        "en": "Websites",
+        "he": "אתרי אינטרנט"
+      },
+      "projects": [
+        {
+          "name": "Logma Production",
+          "icon": "projects/folder-logma-icon.webp",
+          "title": {
+            "en": "Logma Production - Showcase website",
+            "he": "Logma Production - אתר תדמית"
+          },
+          "date": {
+            "en": "2023 - 2 months",
+            "he": "2023 - חודשיים"
+          },
+          "componentName": "LogmaContent",
+          "isFocus": false,
+          "isActive": false
+        },
+        {
+          "name": "Pangaia",
+          "icon": "projects/folder-pangaia-icon.webp",
+          "title": {
+            "en": "Pangaia - Web Application",
+            "he": "Pangaia - אפליקציית אינטרנט"
+          },
+          "date": {
+            "en": "2023 - Current",
+            "he": "2023 - נוכחי"
+          },
+          "componentName": "PangaiaContent",
+          "isFocus": false,
+          "isActive": false
+        },
+        {
+          "name": "Clench",
+          "icon": "projects/folder-clench-icon.webp",
+          "title": {
+            "en": "Clench - Web Application",
+            "he": "Clench - אפליקציית אינטרנט"
+          },
+          "date": {
+            "en": "2024 - 1 weeks",
+            "he": "2024 - שבוע אחד"
+          },
+          "componentName": "ClenchContent",
+          "isFocus": false,
+          "isActive": false
+        },
+        {
+          "name": "EMC2 (ScreenUp)",
+          "icon": "projects/folder-emc2-icon.webp",
+          "title": {
+            "en": "L'EMC2 - Wordpress website (ScreenUp)",
+            "he": "L'EMC2 - אתר Wordpress (ScreenUp)"
+          },
+          "date": {
+            "en": "2024 - 1 month",
+            "he": "2024 - חודש אחד"
+          },
+          "componentName": "Emc2Content",
+          "isFocus": false,
+          "isActive": false
+        },
+        {
+          "name": "Aidella",
+          "icon": "projects/folder-aidella-icon.webp",
+          "title": {
+            "en": "Les Terres d'Aidella - Blog website",
+            "he": "Les Terres d'Aidella - בלוג"
+          },
+          "date": {
+            "en": "2025 - 3 weeks",
+            "he": "2025 - 3 שבועות"
+          },
+          "componentName": "AidellaContent",
+          "isFocus": false,
+          "isActive": false
+        },
+        {
+          "name": "Portfolio Fanny",
+          "icon": "projects/folder-fanny-icon.webp",
+          "title": {
+            "en": "Fanny Séraudie - Portfolio website",
+            "he": "Fanny Séraudie - תיק עבודות"
+          },
+          "date": {
+            "en": "2025 - 2 weeks",
+            "he": "2025 - שבועיים"
+          },
+          "componentName": "FannyContent",
+          "isFocus": false,
+          "isActive": false
+        }
+      ]
+    },
+    {
+      "name": {
+        "en": "Servers",
+        "he": "שרתים"
+      },
+      "projects": [
+        {
+          "name": "Homeserver",
+          "icon": "projects/homeserver-icon.webp",
+          "title": {
+            "en": "Application server & NAS",
+            "he": "שרת אפליקציות & NAS"
+          },
+          "date": {
+            "en": "2023 - Current",
+            "he": "2023 - נוכחי"
+          },
+          "componentName": "HomeserverContent",
+          "isFocus": false,
+          "isActive": false
+        }
+      ]
+    }
+  ]
+}

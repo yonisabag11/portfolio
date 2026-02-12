@@ -1,0 +1,343 @@
+{
+  "leftMenuItems": {
+    "default": [
+      {
+        "id": 1,
+        "title": {
+          "en": "System Tasks",
+          "he": "משימות מערכת"
+        },
+        "bgColor": "bg-window-menu-card",
+        "iconSrc": "/img/icons/side-menu/top-icon-card-window.webp",
+        "headerActive": false,
+        "subtasks": [
+          {
+            "id": 1,
+            "subtitle": {
+              "en": "View system information",
+              "he": "מידע על המערכת"
+            },
+            "iconUrl": "/img/icons/side-menu/info-system-icon.webp"
+          },
+          {
+            "id": 2,
+            "subtitle": {
+              "en": "Add or remove programs",
+              "he": "ניהול תוכניות"
+            },
+            "iconUrl": "/img/icons/side-menu/programs-icon.webp"
+          },
+          {
+            "id": 3,
+            "subtitle": {
+              "en": "Change a settings",
+              "he": "שינוי הגדרות"
+            },
+            "iconUrl": "/img/icons/side-menu/settings-icon.webp"
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "title": {
+          "en": "Other",
+          "he": "אחר"
+        },
+        "bgColor": "bg-window-menu-card",
+        "iconSrc": "/img/icons/side-menu/top-icon-card-window.webp",
+        "headerActive": false,
+        "subtasks": [
+          {
+            "id": 1,
+            "subtitle": {
+              "en": "My network places",
+              "he": "מיקומי רשת"
+            },
+            "iconUrl": "/img/icons/side-menu/networking-icon.webp",
+            "url": ""
+          },
+          {
+            "id": 2,
+            "subtitle": {
+              "en": "My documents",
+              "he": "המסמכים שלי"
+            },
+            "iconUrl": "/img/icons/side-menu/documents-icon.webp",
+            "url": ""
+          },
+          {
+            "id": 3,
+            "subtitle": {
+              "en": "Shared documents",
+              "he": "מסמכים משותפים"
+            },
+            "iconUrl": "/img/icons/side-menu/shared-documents-icon.webp",
+            "url": ""
+          },
+          {
+            "id": 4,
+            "subtitle": {
+              "en": "Control panel",
+              "he": "לוח בקרה"
+            },
+            "iconUrl": "/img/icons/side-menu/settings-icon.webp",
+            "url": ""
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "title": {
+          "en": "Details",
+          "he": "פרטים"
+        },
+        "bgColor": "bg-window-menu-card",
+        "iconSrc": "/img/icons/side-menu/top-icon-card-window.webp",
+        "headerActive": false,
+        "subtasks": [
+          {
+            "id": 1,
+            "subtitle": {
+              "en": "My Github",
+              "he": "הגיטהאב שלי"
+            },
+            "iconUrl": "/img/icons/side-menu/github-icon.webp",
+            "url": "https://github.com/UnMugViolet"
+          }
+        ]
+      }
+    ],
+    "pictures": [
+      {
+        "id": 1,
+        "title": {
+          "en": "Pictures Tasks",
+          "he": "משימות תמונות"
+        },
+        "iconHeader": "/img/icons/side-menu/image.webp",
+        "bgImage": "/img/icons/pictures/bg-picture-menu.webp",
+        "iconSrc": "/img/icons/side-menu/top-icon-card-window-active.webp",
+        "bgColor": "bg-solitude-blue",
+        "headerActive": true,
+        "subtasks": [
+          {
+            "id": 1,
+            "subtitle": {
+              "en": "View as a slide show",
+              "he": "צפייה כמצגת"
+            },
+            "iconUrl": "/img/icons/side-menu/screen-icon.webp"
+          },
+          {
+            "id": 2,
+            "subtitle": {
+              "en": "Order prints online",
+              "he": "הזמנת הדפסות אונליין"
+            },
+            "iconUrl": "/img/icons/side-menu/picture-online-icon.webp"
+          },
+          {
+            "id": 3,
+            "subtitle": {
+              "en": "Print pictures",
+              "he": "הדפסת תמונות"
+            },
+            "iconUrl": "/img/icons/side-menu/print-picture-icon.webp"
+          },
+          {
+            "id": 4,
+            "subtitle": {
+              "en": "Shop for pictures online",
+              "he": "קניית תמונות אונליין"
+            },
+            "iconUrl": "/img/icons/side-menu/picture-online-icon.webp"
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "title": {
+          "en": "File and folder tasks",
+          "he": "משימות קבצים ותיקיות"
+        },
+        "bgColor": "bg-window-menu-card",
+        "iconSrc": "/img/icons/side-menu/top-icon-card-window.webp",
+        "headerActive": false,
+        "subtasks": [
+          {
+            "id": 1,
+            "subtitle": {
+              "en": "Make a new folder",
+              "he": "יצירת תיקייה חדשה"
+            },
+            "iconUrl": "/img/icons/side-menu/new-folder-icon.webp"
+          },
+          {
+            "id": 2,
+            "subtitle": {
+              "en": "Publish this folder to the web",
+              "he": "פרסום תיקייה זו לאינטרנט"
+            },
+            "iconUrl": "/img/icons/side-menu/publish-web-icon.webp"
+          },
+          {
+            "id": 3,
+            "subtitle": {
+              "en": "Share this folder",
+              "he": "שיתוף תיקייה זו"
+            },
+            "iconUrl": "/img/icons/side-menu/share-folder-icon.webp"
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "title": {
+          "en": "Other places",
+          "he": "מיקומים אחרים"
+        },
+        "bgColor": "bg-window-menu-card",
+        "iconSrc": "/img/icons/side-menu/top-icon-card-window.webp",
+        "headerActive": false,
+        "subtasks": [
+          {
+            "id": 1,
+            "subtitle": {
+              "en": "Shared pictures",
+              "he": "תמונות משותפות"
+            },
+            "iconUrl": "/img/icons/side-menu/folder-image-icon.webp"
+          },
+          {
+            "id": 2,
+            "subtitle": {
+              "en": "My pictures",
+              "he": "התמונות שלי"
+            },
+            "iconUrl": "/img/icons/side-menu/folder-image-icon.webp"
+          },
+          {
+            "id": 3,
+            "subtitle": {
+              "en": "My computer",
+              "he": "המחשב שלי"
+            },
+            "iconUrl": "/img/icons/side-menu/computer-icon.webp"
+          },
+          {
+            "id": 4,
+            "subtitle": {
+              "en": "My network places",
+              "he": "מיקומי רשת"
+            },
+            "iconUrl": "/img/icons/side-menu/networking-icon.webp"
+          }
+        ]
+      },
+      {
+        "id": 4,
+        "title": {
+          "en": "Details",
+          "he": "פרטים"
+        },
+        "bgColor": "bg-window-menu-card",
+        "iconSrc": "/img/icons/side-menu/top-icon-card-window.webp",
+        "headerActive": false,
+        "subtasks": []
+      }
+    ],
+    "documents": [
+      {
+        "id": 1,
+        "title": {
+          "en": "File and folder tasks",
+          "he": "משימות קבצים ותיקיות"
+        },
+        "bgColor": "bg-window-menu-card",
+        "iconSrc": "/img/icons/side-menu/top-icon-card-window.webp",
+        "headerActive": false,
+        "subtasks": [
+          {
+            "id": 1,
+            "subtitle": {
+              "en": "Make a new folder",
+              "he": "יצירת תיקייה חדשה"
+            },
+            "iconUrl": "/img/icons/side-menu/new-folder-icon.webp"
+          },
+          {
+            "id": 2,
+            "subtitle": {
+              "en": "Publish this folder to the web",
+              "he": "פרסום תיקייה זו לאינטרנט"
+            },
+            "iconUrl": "/img/icons/side-menu/publish-web-icon.webp"
+          },
+          {
+            "id": 3,
+            "subtitle": {
+              "en": "Share this folder",
+              "he": "שיתוף תיקייה זו"
+            },
+            "iconUrl": "/img/icons/side-menu/share-folder-icon.webp"
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "title": {
+          "en": "Other places",
+          "he": "מיקומים אחרים"
+        },
+        "bgColor": "bg-window-menu-card",
+        "iconSrc": "/img/icons/side-menu/top-icon-card-window.webp",
+        "headerActive": false,
+        "subtasks": [
+          {
+            "id": 1,
+            "subtitle": {
+              "en": "Desktop",
+              "he": "שולחן עבודה"
+            },
+            "iconUrl": "/img/icons/side-menu/board-icon.webp"
+          },
+          {
+            "id": 2,
+            "subtitle": {
+              "en": "Shared documents",
+              "he": "מסמכים משותפים"
+            },
+            "iconUrl": "/img/icons/side-menu/shared-documents-icon.webp"
+          },
+          {
+            "id": 3,
+            "subtitle": {
+              "en": "My computer",
+              "he": "המחשב שלי"
+            },
+            "iconUrl": "/img/icons/side-menu/computer-icon.webp"
+          },
+          {
+            "id": 4,
+            "subtitle": {
+              "en": "My network places",
+              "he": "מיקומי רשת"
+            },
+            "iconUrl": "/img/icons/side-menu/networking-icon.webp"
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "title": {
+          "en": "Details",
+          "he": "פרטים"
+        },
+        "bgColor": "bg-window-menu-card",
+        "iconSrc": "/img/icons/side-menu/top-icon-card-window.webp",
+        "headerActive": false,
+        "subtasks": []
+      }
+    ]
+  }
+}
