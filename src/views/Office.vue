@@ -78,6 +78,7 @@ import { ref, provide, onMounted, onUnmounted } from 'vue'
 import { useWindowsStore } from '@/stores/windowsStore.js'
 import { useVolumeStore } from '@/stores/volumeStore.js'
 import { useLocaleStore } from '@/stores/localeStore'
+import { getAssetPath } from '@/utils/assetPath'
 
 import MetaUpdater from '../MetaUpdater.vue'
 import Header from '@/components/Header/Header.vue'
@@ -111,7 +112,7 @@ onMounted(() => {
   localeStore.setLocale(storedLocale)
 
   windowsStore.loadState()
-  volumeStore.playAudio(['/sounds/start-windows.mp3'])
+  volumeStore.playAudio(getAssetPath('/sounds/start-windows.mp3'))
   volumeStore.unmuteAudio()
 })
 

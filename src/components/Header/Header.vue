@@ -99,7 +99,7 @@ const toggleWindow = (buttonName) => {
 }
 
 const shutdown = () => {
-  volumeStore.playAudio(['/sounds/shutdown-windows.mp3'])
+  volumeStore.playAudio(getAssetPath('/sounds/shutdown-windows.mp3'))
   volumeStore.unmuteAudio()
 }
 
