@@ -73,7 +73,8 @@
                                     "error":  {
                                                   "email":  " is not a valid e-mail address",
                                                   "empty":  "Please fill in all fields before sending your message",
-                                                  "unknown":  "The message could not be sent. You can contact me directly at the following email address: "
+                                                  "unknown":  "The message could not be sent. You can contact me directly at the following email address: ",
+                                                  "cooldown":  "Please wait {time} before sending another message."
                                               },
                                     "send":  "Send",
                                     "cut":  "Cut",
@@ -87,7 +88,10 @@
                                     "sign":  "Sign",
                                     "to":  "To :",
                                     "from":  "From :",
-                                    "subject":  "Subject :"
+                                    "subject":  "Subject :",
+                                    "characters":  "characters",
+                                    "cooldownWait":  "Please wait",
+                                    "beforeSending":  "before sending another message"
                                 },
                     "cv":  {
                                "altPicture":  "presentation CV",
