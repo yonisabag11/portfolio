@@ -274,8 +274,8 @@ watch([userEmail, userMessage, emailSubject], ([newUserEmail, newUserMessage, ne
       />
     </div>
     <!-- Main content -->
-    <div class="flex flex-col w-full h-content-contact bg-white overflow-auto font-trebuchet-pixel p-2 gap-2">
-      <div class="flex-1 w-full overflow-auto">
+    <div class="flex flex-col w-full h-content-contact bg-white overflow-y-auto font-trebuchet-pixel">
+      <div class="flex-1 min-h-0 p-2">
         <textarea
           v-model="userMessage"
           class="w-full h-full min-h-40 border border-input-blue p-2 text-xs outline-none resize-none"
@@ -285,20 +285,20 @@ watch([userEmail, userMessage, emailSubject], ([newUserEmail, newUserMessage, ne
           :maxlength="MAX_MESSAGE_LENGTH"
         ></textarea>
       </div>
-      <div class="flex flex-col gap-2">
+      <div class="flex-shrink-0 px-2 pb-2 space-y-2">
         <p class="text-xxs text-gray-500">
           {{ userMessage.length }} / {{ MAX_MESSAGE_LENGTH }} {{ $t('windows.contact.characters') || 'characters' }}
         </p>
-        <p class="text-xs font-trebuchet-pixel italic">
+        <p class="text-xs font-trebuchet-pixel italic whitespace-pre-wrap">
           {{ $t('windows.contact.description') }}
         </p>
-        <div class="flex flex-col gap-1">
+        <div class="space-y-1">
           <p class="text-xs text-green-600 font-medium" v-show="emailSent">
             {{ $t('windows.contact.success') }}
           </p>
-          <p class="text-xs text-red font-medium break-words" v-show="errorMessage">{{ errorMessage }}</p>
+          <p class="text-xs text-red font-medium break-words whitespace-pre-wrap" v-show="errorMessage">{{ errorMessage }}</p>
           <p 
-            class="text-xs text-orange-600 font-medium break-words" 
+            class="text-xs text-orange-600 font-medium break-words whitespace-pre-wrap" 
             v-show="isInCooldown && !errorMessage"
             :dir="localeStore.currentLocale === 'he' ? 'rtl' : 'ltr'"
           >
