@@ -70,10 +70,14 @@
                                     "email":  "Email",
                                     "msgPlaceholder":  "Message here...",
                                     "success":  "Message sent successfully",
+                                    "characters":  "characters",
+                                    "cooldownWait":  "Please wait",
+                                    "beforeSending":  "before sending another message",
                                     "error":  {
                                                   "email":  " is not a valid e-mail address",
                                                   "empty":  "Please fill in all fields before sending your message",
-                                                  "unknown":  "The message could not be sent. You can contact me directly at the following email address: "
+                                                  "unknown":  "The message could not be sent. You can contact me directly at the following email address: ",
+                                                  "cooldown":  "Please wait {time} before sending another message"
                                               },
                                     "send":  "Send",
                                     "cut":  "Cut",

@@ -1,5 +1,5 @@
 <script setup>
-import { ref, watch } from 'vue'
+import { ref, watch, computed, onMounted } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { useLocaleStore } from '@/stores/localeStore'
 import { getAssetPath } from '@/utils/assetPath'
@@ -17,6 +17,14 @@ const emailSent = ref(false)
 const isLoading = ref(false)
 const isFormComplete = ref(false)
 
+// Spam protection
+const honeypot = ref('') // Hidden field to catch bots
+const lastSentTime = ref(0)
+const cooldownRemaining = ref(0)
+const COOLDOWN_PERIOD = 5 * 60 * 1000 // 5 minutes in milliseconds
+const MAX_MESSAGE_LENGTH = 5000
+const MAX_SUBJECT_LENGTH = 200
+
 // Get variables from .env
 const adminName = import.meta.env.VITE_APP_ADMIN_NAME
 const adminEmailAddress = import.meta.env.VITE_APP_ADMIN_EMAIL_ADDRESS
@@ -24,7 +32,53 @@ const publicKey = import.meta.env.VITE_APP_PUBLIC_API_EMAILJS_KEY
 const serviceId = import.meta.env.VITE_APP_EMAILJS_SERVICE_ID
 const templateId = import.meta.env.VITE_APP_EMAILJS_TEMPLATE_ID
 
+// Load last sent time from localStorage
+onMounted(() => {
+  const stored = localStorage.getItem('lastEmailSentTime')
+  if (stored) {
+    lastSentTime.value = parseInt(stored, 10)
+    updateCooldown()
+  }
+})
+
+// Computed property to check if user is in cooldown
+const isInCooldown = computed(() => {
+  const timePassed = Date.now() - lastSentTime.value
+  return timePassed < COOLDOWN_PERIOD
+})
+
+// Update cooldown remaining time
+const updateCooldown = () => {
+  if (isInCooldown.value) {
+    cooldownRemaining.value = Math.ceil((COOLDOWN_PERIOD - (Date.now() - lastSentTime.value)) / 1000)
+    setTimeout(updateCooldown, 1000)
+  } else {
+    cooldownRemaining.value = 0
+  }
+}
+
+// Format cooldown time as MM:SS
+const formatCooldownTime = computed(() => {
+  const minutes = Math.floor(cooldownRemaining.value / 60)
+  const seconds = cooldownRemaining.value % 60
+  return `${minutes}:${seconds.toString().padStart(2, '0')}`
+})
+
 const sendEmail = async () => {
+  // Anti-spam: Check honeypot field (should be empty)
+  if (honeypot.value) {
+    console.log('Bot detected via honeypot')
+    return // Silently fail for bots
+  }
+
+  // Anti-spam: Check rate limiting
+  if (isInCooldown.value) {
+    emailSent.value = false
+    errorMessage.value = t('windows.contact.error.cooldown', { time: formatCooldownTime.value }) || 
+      `Please wait ${formatCooldownTime.value} before sending another message.`
+    return
+  }
+
   if (!userEmail.value || !userMessage.value || !emailSubject.value) {
     emailSent.value = false
     errorMessage.value = t('windows.contact.error.empty')
@@ -36,6 +90,20 @@ const sendEmail = async () => {
   if (!emailRegex.test(userEmail.value)) {
     emailSent.value = false
     errorMessage.value = userEmail.value + t('windows.contact.error.email')
+    return
+  }
+
+  // Anti-spam: Check message length
+  if (userMessage.value.length > MAX_MESSAGE_LENGTH) {
+    emailSent.value = false
+    errorMessage.value = `Message too long. Maximum ${MAX_MESSAGE_LENGTH} characters allowed.`
+    return
+  }
+
+  // Anti-spam: Check subject length
+  if (emailSubject.value.length > MAX_SUBJECT_LENGTH) {
+    emailSent.value = false
+    errorMessage.value = `Subject too long. Maximum ${MAX_SUBJECT_LENGTH} characters allowed.`
     return
   }
 
@@ -53,6 +121,11 @@ const sendEmail = async () => {
       },
       publicKey
     )
+
+    // Set rate limit
+    lastSentTime.value = Date.now()
+    localStorage.setItem('lastEmailSentTime', lastSentTime.value.toString())
+    updateCooldown()
 
     // Reset form and error message
     errorMessage.value = ''
@@ -102,12 +175,12 @@ watch([userEmail, userMessage, emailSubject], ([newUserEmail, newUserMessage, ne
     <!-- Header tools -->
     <div class="bg-window-white border-window-header-bot w-full h-12 py-1 flex items-center px-1 text-xxs gap-0.5">
       <button
-        :disabled="isLoading || !isFormComplete"
+        :disabled="isLoading || !isFormComplete || isInCooldown"
         @click="sendEmail"
         :isLoading="isLoading"
-        class="flex items-center rounded-sm justify-center px-2 py-1 cursor-pointer flex-col hover:border-gray-300 hover:shadow-header-tools"
+        class="flex items-center rounded-sm justify-center px-2 py-1 cursor-pointer flex-col hover:border-gray-300 hover:shadow-header-tools disabled:cursor-not-allowed disabled:opacity-50"
       >
-        <img :src="getAssetPath('/img/icons/contact/send-icon.webp')" :alt="$t('windows.contact.send')" :class="[isFormComplete ? 'w-8' : 'filter grayscale w-8']" />
+        <img :src="getAssetPath('/img/icons/contact/send-icon.webp')" :alt="$t('windows.contact.send')" :class="[isFormComplete && !isInCooldown ? 'w-8' : 'filter grayscale w-8']" />
         <p>{{ $t('windows.contact.send') }}</p>
       </button>
       <div class="h-full w-px bg-gray-192 mx-1 md:mx-0.5" />
@@ -186,8 +259,19 @@ watch([userEmail, userMessage, emailSubject], ([newUserEmail, newUserMessage, ne
         <div class="flex gap-1 w-14 items-center justify-center font-trebuchet-pixel cursor-default">
           {{ $t('windows.contact.subject') }}
         </div>
-        <input type="text" v-model="emailSubject" class="w-full h-5 border border-input-blue p-1.5 text-xs outline-none font-trebuchet-pixel" />
+        <input type="text" v-model="emailSubject" class="w-full h-5 border border-input-blue p-1.5 text-xs outline-none font-trebuchet-pixel" :maxlength="MAX_SUBJECT_LENGTH" />
       </label>
+      
+      <!-- Honeypot field - hidden from users, catches bots -->
+      <input 
+        type="text" 
+        v-model="honeypot" 
+        name="website" 
+        autocomplete="off"
+        tabindex="-1"
+        aria-hidden="true"
+        style="position: absolute; left: -9999px; width: 1px; height: 1px;"
+      />
     </div>
     <!-- Main content -->
     <div class="flex flex-col w-full h-content-contact bg-white overflow-auto gap-2 font-trebuchet-pixel">
@@ -199,16 +283,23 @@ watch([userEmail, userMessage, emailSubject], ([newUserEmail, newUserMessage, ne
             :class="{ 'text-right': localeStore.currentLocale === 'he' }"
             :placeholder="$t('windows.contact.msgPlaceholder')"
             :dir="localeStore.currentLocale === 'he' ? 'rtl' : 'ltr'"
+            :maxlength="MAX_MESSAGE_LENGTH"
           ></textarea>
+          <p class="text-xxs text-gray-500 mt-1">
+            {{ userMessage.length }} / {{ MAX_MESSAGE_LENGTH }} {{ $t('windows.contact.characters') || 'characters' }}
+          </p>
         </div>
         <p class="text-xs font-trebuchet-pixel italic mb-2 mt-2">
           {{ $t('windows.contact.description') }}
         </p>
-        <div class="flex gap-2 items-center">
+        <div class="flex gap-2 items-center flex-wrap">
           <p class="text-xs text-green-600 font-medium" v-show="emailSent">
             {{ $t('windows.contact.success') }}
           </p>
           <p class="text-xs text-red font-medium" v-show="errorMessage">{{ errorMessage }}</p>
+          <p class="text-xs text-orange-600 font-medium" v-show="isInCooldown && !errorMessage">
+            ⏳ {{ $t('windows.contact.cooldownWait') || 'Please wait' }} {{ formatCooldownTime }} {{ $t('windows.contact.beforeSending') || 'before sending another message' }}
+          </p>
         </div>
       </div>
     </div>
