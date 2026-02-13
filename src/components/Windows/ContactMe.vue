@@ -274,30 +274,34 @@ watch([userEmail, userMessage, emailSubject], ([newUserEmail, newUserMessage, ne
       />
     </div>
     <!-- Main content -->
-    <div class="flex flex-col w-full h-content-contact bg-white overflow-auto gap-2 font-trebuchet-pixel">
-      <div class="m-2 flex-1 flex flex-col">
-        <div class="flex-1 w-full">
-          <textarea
-            v-model="userMessage"
-            class="w-full h-full min-h-40 border border-input-blue p-2 text-xs outline-none resize-none"
-            :class="{ 'text-right': localeStore.currentLocale === 'he' }"
-            :placeholder="$t('windows.contact.msgPlaceholder')"
-            :dir="localeStore.currentLocale === 'he' ? 'rtl' : 'ltr'"
-            :maxlength="MAX_MESSAGE_LENGTH"
-          ></textarea>
-          <p class="text-xxs text-gray-500 mt-1">
-            {{ userMessage.length }} / {{ MAX_MESSAGE_LENGTH }} {{ $t('windows.contact.characters') || 'characters' }}
-          </p>
-        </div>
-        <p class="text-xs font-trebuchet-pixel italic mb-2 mt-2">
+    <div class="flex flex-col w-full h-content-contact bg-white overflow-auto font-trebuchet-pixel p-2 gap-2">
+      <div class="flex-1 w-full overflow-auto">
+        <textarea
+          v-model="userMessage"
+          class="w-full h-full min-h-40 border border-input-blue p-2 text-xs outline-none resize-none"
+          :class="{ 'text-right': localeStore.currentLocale === 'he' }"
+          :placeholder="$t('windows.contact.msgPlaceholder')"
+          :dir="localeStore.currentLocale === 'he' ? 'rtl' : 'ltr'"
+          :maxlength="MAX_MESSAGE_LENGTH"
+        ></textarea>
+      </div>
+      <div class="flex flex-col gap-2">
+        <p class="text-xxs text-gray-500">
+          {{ userMessage.length }} / {{ MAX_MESSAGE_LENGTH }} {{ $t('windows.contact.characters') || 'characters' }}
+        </p>
+        <p class="text-xs font-trebuchet-pixel italic">
           {{ $t('windows.contact.description') }}
         </p>
-        <div class="flex gap-2 items-center flex-wrap">
+        <div class="flex flex-col gap-1">
           <p class="text-xs text-green-600 font-medium" v-show="emailSent">
             {{ $t('windows.contact.success') }}
           </p>
-          <p class="text-xs text-red font-medium" v-show="errorMessage">{{ errorMessage }}</p>
-          <p class="text-xs text-orange-600 font-medium" v-show="isInCooldown && !errorMessage">
+          <p class="text-xs text-red font-medium break-words" v-show="errorMessage">{{ errorMessage }}</p>
+          <p 
+            class="text-xs text-orange-600 font-medium break-words" 
+            v-show="isInCooldown && !errorMessage"
+            :dir="localeStore.currentLocale === 'he' ? 'rtl' : 'ltr'"
+          >
             ⏳ {{ $t('windows.contact.cooldownWait') || 'Please wait' }} {{ formatCooldownTime }} {{ $t('windows.contact.beforeSending') || 'before sending another message' }}
           </p>
         </div>
