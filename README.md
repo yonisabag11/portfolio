@@ -37,6 +37,8 @@ This portfolio is an **adapted and enhanced version** of the original Windows XP
 
 **Content Updates** - Updated all legal notices, about sections, and contact information
 
+**Spam Protection** - Implemented anti-spam measures for the contact form including rate limiting and honeypot protection
+
 **Project Documentation** - Added comprehensive project descriptions with objectives and technical details
 
 ### Credits
