@@ -95,12 +95,14 @@
                                 },
                     "cv":  {
                                "altPicture":  "presentation CV",
+                               "summary":  "Summary",
                                "education":  "Education",
                                "proExperience":  "Professional experiences",
                                "projects":  "Projects",
                                "technicalSkills":  "Technical Skills",
                                "languages":  "Languages",
-                               "frameworks":  "Frameworks \u0026 Tools"
+                               "frameworks":  "Frameworks \u0026 Tools",
+                               "spokenLanguages":  "Languages"
                            },
                     "music":  {
                                   "playlistName":  "Portfolio Playlist",

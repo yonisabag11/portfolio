@@ -37,6 +37,16 @@ const projectsData = computed(() => {
 const technicalSkills = computed(() => {
   return cvData[currentLocale.value]?.technicalSkills || {}
 })
+
+// Computed property to get the localized summary
+const summary = computed(() => {
+  return cvData[currentLocale.value]?.summary || ''
+})
+
+// Computed property to get the localized spoken languages
+const spokenLanguages = computed(() => {
+  return cvData[currentLocale.value]?.spokenLanguages || ''
+})
 </script>
 
 <template>
@@ -44,9 +54,16 @@ const technicalSkills = computed(() => {
     <div class="w-full h-full bg-white overflow-auto p-2">
       <div>
         <ProfileHeader :age="age" />
-        <section class="mt-5">
-          <h2 class="font-trebuchet-pixel underline">{{ $t('windows.cv.education') }}</h2>
-          <EducationItem v-for="education in educationData" :key="education.id" :education="education" />
+        <section class="mt-3" v-if="summary">
+          <h2 class="font-trebuchet-pixel underline">{{ $t('windows.cv.summary') }}</h2>
+          <p class="font-trebuchet-pixel text-xs mt-1">{{ summary }}</p>
+        </section>
+        <section class="mt-5" v-if="technicalSkills.languages">
+          <h2 class="font-trebuchet-pixel underline">{{ $t('windows.cv.technicalSkills') }}</h2>
+          <div class="mt-2">
+            <p class="font-trebuchet-pixel text-xs"><strong>{{ $t('windows.cv.languages') }}:</strong> {{ technicalSkills.languages }}</p>
+            <p class="font-trebuchet-pixel text-xs mt-1"><strong>{{ $t('windows.cv.frameworks') }}:</strong> {{ technicalSkills.frameworks }}</p>
+          </div>
         </section>
         <div class="mt-3">
           <h2 class="font-trebuchet-pixel mt-5 underline">{{ $t('windows.cv.proExperience') }}</h2>
@@ -55,19 +72,19 @@ const technicalSkills = computed(() => {
         <section class="mt-5" v-if="projectsData.length > 0">
           <h2 class="font-trebuchet-pixel underline">{{ $t('windows.cv.projects') }}</h2>
           <div v-for="(project, index) in projectsData" :key="index" class="mt-2">
-            <h4 class="font-trebuchet-pixel uppercase text-xs">{{ project.name }}</h4>
-            <p class="font-trebuchet-pixel font-medium text-xs">{{ project.year }}</p>
+            <h4 class="font-trebuchet-pixel uppercase text-xs">{{ project.name }}<span v-if="project.subtitle" class="normal-case"> - {{ project.subtitle }}</span></h4>
             <ul class="list-disc list-inside mt-1">
               <li v-for="(desc, i) in project.description" :key="i" class="font-trebuchet-pixel text-xs">{{ desc }}</li>
             </ul>
           </div>
         </section>
-        <section class="mt-5" v-if="technicalSkills.languages">
-          <h2 class="font-trebuchet-pixel underline">{{ $t('windows.cv.technicalSkills') }}</h2>
-          <div class="mt-2">
-            <p class="font-trebuchet-pixel text-xs"><strong>{{ $t('windows.cv.languages') }}:</strong> {{ technicalSkills.languages }}</p>
-            <p class="font-trebuchet-pixel text-xs mt-1"><strong>{{ $t('windows.cv.frameworks') }}:</strong> {{ technicalSkills.frameworks }}</p>
-          </div>
+        <section class="mt-5">
+          <h2 class="font-trebuchet-pixel underline">{{ $t('windows.cv.education') }}</h2>
+          <EducationItem v-for="education in educationData" :key="education.id" :education="education" />
+        </section>
+        <section class="mt-5" v-if="spokenLanguages">
+          <h2 class="font-trebuchet-pixel underline">{{ $t('windows.cv.spokenLanguages') }}</h2>
+          <p class="font-trebuchet-pixel text-xs mt-2">{{ spokenLanguages }}</p>
         </section>
       </div>
     </div>

@@ -1,7 +1,6 @@
 <template>
   <div class="mt-2 mb-5">
-    <h4 class="font-trebuchet-pixel uppercase text-xs">{{ education.degree }}</h4>
-    <p class="font-trebuchet-pixel font-medium text-xs">{{ education.institution }} | {{ education.year }}</p>
+    <h4 class="font-trebuchet-pixel uppercase text-xs">{{ education.degree }} - <span class="normal-case">{{ education.institution }}</span></h4>
     <p class="font-trebuchet-pixel font-medium text-xs">{{ education.description }}</p>
   </div>
 </template>

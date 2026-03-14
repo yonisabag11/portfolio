@@ -10,7 +10,7 @@ const router = createRouter({
       name: 'home',
       component: Loader,
       meta: {
-        title: 'Portfolio | Yoni Sabag - Game Developer / Web Developer',
+        title: 'Portfolio | Yoni Sabag - Game Developer / Web Developer / Software Developer',
         metaTags: [
           {
             rel: 'canonical',
@@ -18,16 +18,16 @@ const router = createRouter({
           },
           {
             name: 'title',
-            content: 'Portfolio | Yoni Sabag - Game Developer / Web Developer'
+            content: 'Portfolio | Yoni Sabag - Game Developer / Web Developer / Software Developer'
           },
           {
             name: 'description',
             content:
-              "Discover the portfolio of Yoni Sabag, passionate game developer and web developer. Creator of games like Maze Escape and Discrete Math Escape Room, and web applications."
+              "Discover the portfolio of Yoni Sabag, passionate game developer, web developer and software developer. Creator of games like Maze Escape and Discrete Math Escape Room, and web applications."
           },
           {
             name: 'keywords',
-            content: 'portfolio, yoni sabag, game developer, web developer, maze escape, discrete math, games, web applications, itch.io'
+            content: 'portfolio, yoni sabag, game developer, web developer, software developer, maze escape, discrete math, games, web applications, itch.io'
           },
           {
             name: 'author',
@@ -51,11 +51,11 @@ const router = createRouter({
           },
           {
             name: 'apple-mobile-web-app-title',
-            content: 'Portfolio | Yoni Sabag - Game Developer / Web Developer'
+            content: 'Portfolio | Yoni Sabag - Game Developer / Web Developer / Software Developer'
           },
           {
             name: 'application-name',
-            content: 'Portfolio | Yoni Sabag - Game Developer / Web Developer'
+            content: 'Portfolio | Yoni Sabag - Game Developer / Web Developer / Software Developer'
           },
           {
             name: 'twitter:card',
@@ -63,12 +63,12 @@ const router = createRouter({
           },
           {
             name: 'twitter:title',
-            content: 'Portfolio | Yoni Sabag - Game Developer / Web Developer'
+            content: 'Portfolio | Yoni Sabag - Game Developer / Web Developer / Software Developer'
           },
           {
             name: 'twitter:description',
             content:
-              "Discover the portfolio of Yoni Sabag, passionate game developer and web developer. Creator of games like Maze Escape and Discrete Math Escape Room, and web applications."
+              "Discover the portfolio of Yoni Sabag, passionate game developer, web developer and software developer. Creator of games like Maze Escape and Discrete Math Escape Room, and web applications."
           },
           {
             name: 'twitter:image',
@@ -84,16 +84,16 @@ const router = createRouter({
           },
           {
             property: 'og:title',
-            content: 'Portfolio | Yoni Sabag - Game Developer / Web Developer'
+            content: 'Portfolio | Yoni Sabag - Game Developer / Web Developer / Software Developer'
           },
           {
             property: 'og:description',
             content:
-              "Discover the portfolio of Yoni Sabag, passionate game developer and web developer. Creator of games like Maze Escape and Discrete Math Escape Room, and web applications."
+              "Discover the portfolio of Yoni Sabag, passionate game developer, web developer and software developer. Creator of games like Maze Escape and Discrete Math Escape Room, and web applications."
           },
           {
             property: 'og:site_name',
-            content: 'Portfolio | Yoni Sabag - Game Developer / Web Developer'
+            content: 'Portfolio | Yoni Sabag - Game Developer / Web Developer / Software Developer'
           },
           {
             property: 'og:url',
@@ -123,7 +123,7 @@ const router = createRouter({
       name: 'Office',
       component: Office,
       meta: {
-        title: 'Office | Yoni Sabag - Game Developer / Web Developer',
+        title: 'Office | Yoni Sabag - Game Developer / Web Developer / Software Developer',
         metaTags: [
           {
             rel: 'canonical',
@@ -131,16 +131,16 @@ const router = createRouter({
           },
           {
             name: 'title',
-            content: 'Office | Yoni Sabag - Game Developer / Web Developer'
+            content: 'Office | Yoni Sabag - Game Developer / Web Developer / Software Developer'
           },
           {
             name: 'description',
             content:
-              "Discover the office of Yoni Sabag, passionate game developer and web developer. Creator of games like Maze Escape and Discrete Math Escape Room, and web applications."
+              "Discover the office of Yoni Sabag, passionate game developer, web developer and software developer. Creator of games like Maze Escape and Discrete Math Escape Room, and web applications."
           },
           {
             name: 'keywords',
-            content: 'office, yoni sabag, game developer, web developer, maze escape, discrete math, games, web applications, itch.io'
+            content: 'office, yoni sabag, game developer, web developer, software developer, maze escape, discrete math, games, web applications, itch.io'
           },
           {
             name: 'author',
@@ -164,11 +164,11 @@ const router = createRouter({
           },
           {
             name: 'apple-mobile-web-app-title',
-            content: 'Office | Yoni Sabag - Game Developer / Web Developer'
+            content: 'Office | Yoni Sabag - Game Developer / Web Developer / Software Developer'
           },
           {
             name: 'application-name',
-            content: 'Office | Yoni Sabag - Game Developer / Web Developer'
+            content: 'Office | Yoni Sabag - Game Developer / Web Developer / Software Developer'
           },
           {
             name: 'twitter:card',
@@ -176,12 +176,12 @@ const router = createRouter({
           },
           {
             name: 'twitter:title',
-            content: 'Office | Yoni Sabag - Game Developer / Web Developer'
+            content: 'Office | Yoni Sabag - Game Developer / Web Developer / Software Developer'
           },
           {
             name: 'twitter:description',
             content:
-              "Discover the office of Yoni Sabag, passionate game developer and web developer. Creator of games like Maze Escape and Discrete Math Escape Room, and web applications."
+              "Discover the office of Yoni Sabag, passionate game developer, web developer and software developer. Creator of games like Maze Escape and Discrete Math Escape Room, and web applications."
           },
           {
             name: 'twitter:image',
@@ -197,16 +197,16 @@ const router = createRouter({
           },
           {
             name: 'og:title',
-            content: 'Office | Yoni Sabag - Game Developer / Web Developer'
+            content: 'Office | Yoni Sabag - Game Developer / Web Developer / Software Developer'
           },
           {
             name: 'og:description',
             content:
-              "Discover the office of Yoni Sabag, passionate game developer and web developer. Creator of games like Maze Escape and Discrete Math Escape Room, and web applications."
+              "Discover the office of Yoni Sabag, passionate game developer, web developer and software developer. Creator of games like Maze Escape and Discrete Math Escape Room, and web applications."
           },
           {
             name: 'og:site_name',
-            content: 'Office | Yoni Sabag - Game Developer / Web Developer'
+            content: 'Office | Yoni Sabag - Game Developer / Web Developer / Software Developer'
           },
           {
             name: 'og:url',

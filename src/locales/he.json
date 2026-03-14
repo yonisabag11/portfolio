@@ -74,12 +74,14 @@
                     "myProjects":  "הפרויקטים שלי",
                     "myCV":  "קורות החיים שלי",
                     "cv":  {
+                               "summary":  "סיכום",
                                "education":  "השכלה",
                                "proExperience":  "ניסיון מקצועי",
                                "projects":  "פרויקטים",
                                "technicalSkills":  "כישורים טכניים",
                                "languages":  "שפות תכנות",
-                               "frameworks":  "כלים וטכנולוגיות"
+                               "frameworks":  "כלים וטכנולוגיות",
+                               "spokenLanguages":  "שפות"
                            },
                     "contact":  {
                                     "title":  "צור קשר",

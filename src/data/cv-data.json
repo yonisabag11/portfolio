@@ -1,98 +1,96 @@
 {
   "he": {
+    "summary": "מהנדס תוכנה נלהב מבניית מוצרים בעלי השפעה. בעל ניסיון בפיתוח אפליקציות ווב רספונסיביות, אפליקציות מובייל חוצות פלטפורמות עם React Native ומערכות אינטראקטיביות באמצעות Godot ושירותי ענן מודרניים. פותר בעיות חזק עם בסיס מוצק במדעי המחשב ודגש על ביצועים, שימושיות וקוד נקי. מתפקד היטב בסביבות דינמיות בהן הטכנולוגיה יכולה לעשות הבדל אמיתי.",
     "education": [
       {
-        "degree": "תואר ראשון במדעי המחשב",
+        "degree": "בוגר מדעי המחשב",
         "institution": "אוניברסיטת ג'ון קרול",
-        "year": "סיים דצמבר 2025",
-        "description": "התמחויות: פיתוח משחקים, פיתוח אתרים, פיתוח תוכנה | רשימת דיקן | ממוצע 3.84"
+        "description": "ממוצע: 3.84 | רשימת דיקן | התמחויות: פיתוח משחקים, פיתוח אתרים, פיתוח תוכנה"
       }
     ],
     "workExperience": [
       {
-        "jobTitle": "רכז לוגיסטיקה",
-        "company": "צבא ההגנה לישראל (צה״ל)",
-        "year": "דצמבר 2017 - דצמבר 2020",
+        "jobTitle": "מפתח ווב עצמאי (פבר׳ 2026 – הווה)",
+        "company": "",
         "responsibilities": [
-          "ניהול פעולות לוגיסטיות ליחידת מילואים של כ-1,000 איש באמצעות SAP ERP",
-          "ייעול זרימת עבודה של דרישות חומרים והפצה, שיפור יעילות תפעולית",
-          "הדרכה וליווי של כוח אדם חדש בנהלי SAP וניהול מלאי",
-          "ניתוח והתאמת נתוני מלאי לזיהוי אי התאמות ותמיכה בהחלטות מבוססות נתונים"
+          "בנה אתר דף יחיד רספונסיבי לחלוטין לעסק קייטרינג באמצעות HTML5, CSS3 ו-Vanilla JavaScript ללא תלויות חיצוניות.",
+          "הטמעת תכונות מותאמות אישית כולל lightbox תמונות, אנימציות scroll-reveal עם IntersectionObserver, navbar מוצמד בסגנון glassmorphism וכפתורי יצירת קשר ישירים (טלפון, WhatsApp, דוא\"ל).",
+          "סיפוק תמיכה מלאה ב-RTL/עברית, פריסת CSS Grid mobile-first ואופטימיזציות ביצועים (טעינה עצלה, passive scroll listeners, טיפוגרפיה נזילה)."
         ]
       }
     ],
     "projects": [
       {
+        "name": "NourishNet",
+        "subtitle": "React Native (Expo), Firebase, Google Maps API",
+        "description": [
+          "פיתוח אפליקציית מובייל חוצת פלטפורמות ב-React Native (Expo) ו-Firebase לחיבור משתמשים למשאבי קהילה מקומיים כמו בנקי מזון ומקלטים",
+          "שילוב Google Maps API ו-Expo Location לאספקת שירותי מיקום בזמן אמת, המאפשרים למשתמשים למצוא משאבים קרובים עם החלפות מפה/רשימה אינטראקטיביות וסינון מבוסס מרחק",
+          "הטמעת Backend חזק עם Firestore לאחזור נתונים דינמי ו-AsyncStorage לשמירה מקומית של מועדפים והעדפות משתמש"
+        ]
+      },
+      {
         "name": "חדר בריחה למתמטיקה בדידה",
-        "year": "ספטמבר 2025 - דצמבר 2025",
+        "subtitle": "Godot Engine / GDScript",
         "description": [
           "פיתוח משחק RPG תצוגה מלמעלה ב-Godot Engine (GDScript) שנועד ללמד מושגי מדעי המחשב דרך משחקיות אינטראקטיבית",
           "פיתוח מערכת מיני-משחקים מודולרית המיישמת חידות לוגיות עבור צפני Affine, תורת הקבוצות וטבלאות אמת",
           "בניית מערכת אינטראקציה חזקה ומנהל דיאלוגים מבוסס Singleton לניהול מצב המשחק והתקדמות הסיפור",
           "עיצוב והטמעה של זרימות UI/UX מלאות כולל תפריט ראשי, תפריט השהיה ו-HUD דינמי לשחקן"
         ]
-      },
-      {
-        "name": "NourishNet",
-        "year": "נובמבר 2025 - דצמבר 2025",
-        "description": [
-          "פיתוח אפליקציית מובייל חוצת פלטפורמות ב-React Native (Expo) ו-Firebase לחיבור משתמשים למשאבי קהילה מקומיים כמו בנקי מזון ומקלטים",
-          "שילוב Google Maps API ו-Expo Location לאספקת שירותי מיקום בזמן אמת, המאפשרים למשתמשים למצוא משאבים קרובים עם החלפות מפה/רשימה אינטראקטיביות וסינון מבוסס מרחק",
-          "הטמעת Backend חזק עם Firestore לאחזור נתונים דינמי ו-AsyncStorage לשמירה מקומית של מועדפים והעדפות משתמש"
-        ]
       }
     ],
     "technicalSkills": {
       "languages": "Python, C#, Java, JavaScript, TypeScript, HTML, CSS, GDScript",
-      "frameworks": "React Native, React.js, Node.js, Unity, Godot, Docker, Git, Linux, Firebase, SAP/ERP"
-    }
+      "frameworks": "React Native, React, Node.js, Unity, Godot, Docker, Git, Linux, Firebase"
+    },
+    "spokenLanguages": "עברית (שפת אם), אנגלית (מתקדם)"
   },
   "en": {
+    "summary": "Software Engineer passionate about building impactful products. Experienced developing responsive web applications, cross-platform mobile apps with React Native, and interactive systems using Godot and modern cloud services. Strong problem-solver with a solid CS foundation and a focus on performance, usability, and clean code. Thrive in fast-moving environments where technology can make a real difference.",
     "education": [
       {
-        "degree": "BACHELOR OF SCIENCE IN COMPUTER SCIENCE",
+        "degree": "B.S. COMPUTER SCIENCE",
         "institution": "John Carroll University",
-        "year": "Graduated December 2025",
-        "description": "Concentrations: Game Development, Web Development, Software Development | Dean's List | GPA: 3.84"
+        "description": "GPA: 3.84 | Dean's List | Concentrations: Game Dev, Web Dev, Software Dev"
       }
     ],
     "workExperience": [
       {
-        "jobTitle": "LOGISTICS COORDINATOR",
-        "company": "Israel Defense Forces (IDF)",
-        "year": "December 2017 - December 2020",
+        "jobTitle": "FREELANCE WEB DEVELOPER (Feb 2026 – Present)",
+        "company": "",
         "responsibilities": [
-          "Managed logistics operations for a reserve unit of ~1,000 personnel using SAP ERP (MM/WM)",
-          "Streamlined material requisition and distribution workflows, improving operational efficiency",
-          "Trained and guided new personnel on SAP procedures, inventory management, and supply-chain compliance",
-          "Analyzed and reconciled inventory data to identify discrepancies, supporting data-driven decisions"
+          "Built a fully responsive single-page website for a catering business using HTML5, CSS3, and Vanilla JavaScript with zero dependencies or build tooling.",
+          "Implemented custom features including a vanilla JS image lightbox, IntersectionObserver scroll-reveal animations, glassmorphism sticky navbar, and direct contact CTAs (phone, WhatsApp, email).",
+          "Delivered full RTL/Hebrew support, mobile-first CSS Grid layout, and performance optimizations (lazy loading, passive scroll listeners, fluid clamp() typography)."
         ]
       }
     ],
     "projects": [
       {
+        "name": "NOURISHNET",
+        "subtitle": "React Native (Expo), Firebase, Google Maps API",
+        "description": [
+          "Developed a cross-platform mobile application using React Native (Expo) and Firebase to connect users with local community resources like food banks and shelters",
+          "Integrated Google Maps API and Expo Location to provide real-time geolocation services, enabling users to find nearby resources with interactive map/list toggles and distance-based filtering",
+          "Implemented a robust backend with Firestore for dynamic data retrieval and AsyncStorage for local persistence of user favorites and preferences"
+        ]
+      },
+      {
         "name": "DISCRETE MATH ESCAPE ROOM",
-        "year": "September 2025 - December 2025",
+        "subtitle": "Godot Engine / GDScript",
         "description": [
           "Developed a 2D top-down RPG in Godot Engine (GDScript) designed to teach Computer Science concepts through interactive gameplay",
           "Engineered a modular mini-game system implementing logic puzzles for Affine Ciphers, Set Theory, and Truth Tables",
           "Built a robust Interaction System and Singleton-based Dialogue Manager to handle game state and narrative progression",
           "Designed and implemented complete UI/UX flows including Main Menu, Pause Menu, and dynamic Player HUD"
         ]
-      },
-      {
-        "name": "NOURISHNET",
-        "year": "November 2025 - December 2025",
-        "description": [
-          "Developed a cross-platform mobile application using React Native (Expo) and Firebase to connect users with local community resources like food banks and shelters",
-          "Integrated Google Maps API and Expo Location to provide real-time geolocation services, enabling users to find nearby resources with interactive map/list toggles and distance-based filtering",
-          "Implemented a robust backend with Firestore for dynamic data retrieval and AsyncStorage for local persistence of user favorites and preferences"
-        ]
       }
     ],
     "technicalSkills": {
       "languages": "Python, C#, Java, JavaScript, TypeScript, HTML, CSS, GDScript",
-      "frameworks": "React Native, React.js, Node.js, Unity, Godot, Docker, Git, Linux, Firebase, SAP/ERP"
-    }
+      "frameworks": "React Native, React, Node.js, Unity, Godot, Docker, Git, Linux, Firebase"
+    },
+    "spokenLanguages": "Hebrew (Native), English (Advanced)"
   }
 }
