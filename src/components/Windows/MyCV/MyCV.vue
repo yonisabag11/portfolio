@@ -61,8 +61,8 @@ const spokenLanguages = computed(() => {
         <section class="mt-5" v-if="technicalSkills.languages">
           <h2 class="font-trebuchet-pixel underline">{{ $t('windows.cv.technicalSkills') }}</h2>
           <div class="mt-2">
-            <p class="font-trebuchet-pixel text-xs"><strong>{{ $t('windows.cv.languages') }}:</strong> {{ technicalSkills.languages }}</p>
-            <p class="font-trebuchet-pixel text-xs mt-1"><strong>{{ $t('windows.cv.frameworks') }}:</strong> {{ technicalSkills.frameworks }}</p>
+            <p class="font-trebuchet-pixel text-xs"> {{ $t('windows.cv.languages') }}: {{ technicalSkills.languages }}</p>
+            <p class="font-trebuchet-pixel text-xs mt-1"> {{ $t('windows.cv.frameworks') }}: {{ technicalSkills.frameworks }}</p>
           </div>
         </section>
         <div class="mt-3">
